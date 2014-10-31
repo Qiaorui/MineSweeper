@@ -7,7 +7,7 @@ public class Jugador extends UsuariRegistrat {
 
     private String email;
     private Partida partidaActual;
-    private Partida partidaJugada[];
+    private Partida[] partidaJugada;
 
     public Jugador() {
 
