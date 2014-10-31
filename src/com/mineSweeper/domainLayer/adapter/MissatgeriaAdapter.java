@@ -6,4 +6,8 @@ package com.mineSweeper.domainLayer.adapter;
 public interface MissatgeriaAdapter {
 
 
+
+
+
+    public void enviarMissatge (String missatge);
 }
