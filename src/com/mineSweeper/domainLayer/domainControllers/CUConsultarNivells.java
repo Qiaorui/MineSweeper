@@ -1,6 +1,7 @@
 package com.mineSweeper.domainLayer.domainControllers;
 
-import com.mineSweeper.domainLayer.dataInterface.CtrlUsuariRegistrat;
+
+import com.mineSweeper.domainLayer.dataInterface.DataControllerFactory;
 import com.mineSweeper.domainLayer.domainModel.Nivell;
 
 import java.util.Set;
@@ -15,6 +16,9 @@ public class CUConsultarNivells {
     }
 
     public Set<Nivell.Dades> consultarNivells() {
+        DataControllerFactory dataControllerFactory = DataControllerFactory.getInstance();
+        Nivell[] nivells = dataControllerFactory.getCtrlNivell().getAll();
+
         return null;
     }
 

@@ -7,5 +7,5 @@ import com.mineSweeper.domainLayer.domainModel.Jugador;
  */
 public interface CtrlJugador {
 
-    public Jugador getJugador(String userName);
+    public Jugador getJugador(String username);
 }

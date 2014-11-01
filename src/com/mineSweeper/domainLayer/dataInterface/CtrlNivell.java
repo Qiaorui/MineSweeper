@@ -8,4 +8,6 @@ import com.mineSweeper.domainLayer.domainModel.Nivell;
 public interface CtrlNivell {
 
     public Nivell getNivell(String nom);
+
+    public Nivell[] getAll();
 }

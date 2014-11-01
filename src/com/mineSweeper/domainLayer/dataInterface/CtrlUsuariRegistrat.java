@@ -7,5 +7,5 @@ import com.mineSweeper.domainLayer.domainModel.UsuariRegistrat;
  */
 public interface CtrlUsuariRegistrat {
 
-    public UsuariRegistrat getUsuariRegistrat(String userName);
+    public UsuariRegistrat getUsuariRegistrat(String username);
 }

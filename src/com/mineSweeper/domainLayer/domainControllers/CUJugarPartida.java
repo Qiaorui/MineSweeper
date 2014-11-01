@@ -1,5 +1,6 @@
 package com.mineSweeper.domainLayer.domainControllers;
 
+import com.mineSweeper.domainLayer.dataInterface.DataControllerFactory;
 import com.mineSweeper.domainLayer.domainModel.Jugador;
 import com.mineSweeper.domainLayer.domainModel.Nivell;
 import com.mineSweeper.domainLayer.domainModel.Partida;
@@ -18,8 +19,11 @@ public class CUJugarPartida {
 
     }
 
-    public void ferAutenticaicio() {
-
+    public void ferAutenticaicio(String username, String password) {
+        CULogin cuLogin = new CULogin();
+        cuLogin.Login(username, password);
+        DataControllerFactory dataControllerFactory = DataControllerFactory.getInstance();
+        jugador = dataControllerFactory.getCtrlJugador().getJugador(username);
     }
 
     public Set<Nivell.Dades> obtenirNivells() {

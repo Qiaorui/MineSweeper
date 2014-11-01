@@ -25,11 +25,11 @@ public class Buscamines {
     }
 
     public int getIdPartida() {
-        return 0;
+        return idPartida;
     }
 
     public void incrementaId() {
-
+        ++idPartida;
     }
     
 }
