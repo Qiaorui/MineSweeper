@@ -1,5 +1,7 @@
 package com.mineSweeper.domainLayer.domainModel;
 
+import com.mineSweeper.domainLayer.struct.Resultat;
+
 /**
  * Created by qiaorui on 14-10-29.
  */
@@ -13,11 +15,6 @@ public class Partida {
     private boolean estaguanyada;
     private int nombreTirades;
 
-    public class Resultat {
-        public boolean acabada;
-        public boolean guanyada;
-        public int puntuacio;
-    }
 
     public Partida(Nivell nivell) {
 

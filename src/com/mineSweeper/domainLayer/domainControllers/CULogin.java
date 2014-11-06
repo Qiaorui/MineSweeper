@@ -15,7 +15,7 @@ public class CULogin {
     public boolean Login(String username, String password) {
         DataControllerFactory dataControllerFactory = DataControllerFactory.getInstance();
         UsuariRegistrat usuariRegistrat = dataControllerFactory.getCtrlUsuariRegistrat().getUsuariRegistrat(username);
-        usuariRegistrat.comprovaPwd(password);
+        if (!usuariRegistrat.comprovaPwd(password)); //excepcio: password not valid
         return true;
     }
 }

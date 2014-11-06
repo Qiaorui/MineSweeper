@@ -4,6 +4,8 @@ import com.mineSweeper.domainLayer.dataInterface.DataControllerFactory;
 import com.mineSweeper.domainLayer.domainModel.Jugador;
 import com.mineSweeper.domainLayer.domainModel.Nivell;
 import com.mineSweeper.domainLayer.domainModel.Partida;
+import com.mineSweeper.domainLayer.struct.Dades;
+import com.mineSweeper.domainLayer.struct.Resultat;
 
 import java.util.Set;
 
@@ -26,7 +28,7 @@ public class CUJugarPartida {
         jugador = dataControllerFactory.getCtrlJugador().getJugador(username);
     }
 
-    public Set<Nivell.Dades> obtenirNivells() {
+    public Set<Dades> obtenirNivells() {
 
         return null;
     }
@@ -35,7 +37,7 @@ public class CUJugarPartida {
 
     }
 
-    public Partida.Resultat descobrirCasella(int fila, int columna) {
+    public Resultat descobrirCasella(int fila, int columna) {
         return null;
     }
 
