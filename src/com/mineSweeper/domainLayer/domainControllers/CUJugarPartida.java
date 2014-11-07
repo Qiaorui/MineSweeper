@@ -24,28 +24,31 @@ public class CUJugarPartida {
     public void ferAutenticaicio(String username, String password) {
         CULogin cuLogin = new CULogin();
         cuLogin.Login(username, password);
-        DataControllerFactory dataControllerFactory = DataControllerFactory.getInstance();
-        jugador = dataControllerFactory.getCtrlJugador().getJugador(username);
+        jugador = DataControllerFactory.getInstance().getCtrlJugador().getJugador(username);
     }
 
-    public Set<Dades> obtenirNivells() {
-
-        return null;
+    public Dades[] obtenirNivells() {
+        CUConsultarNivells cuConsultarNivells = new CUConsultarNivells();
+        return cuConsultarNivells.consultarNivells();
     }
 
-    public void crearPartida(String nivell) {
-
+    public void crearPartida(String nivellNom) {
+        Nivell nivell = DataControllerFactory.getInstance().getCtrlNivell().getNivell(nivellNom);
+        partida = new Partida(nivell);
+        jugador.jugaParida(partida);
     }
 
     public Resultat descobrirCasella(int fila, int columna) {
-        return null;
+        Resultat resultat = partida.descobrirCasella(fila, columna);
+        if (resultat.acabada) jugador.acabaPartidaAcutual();
+        return resultat;
     }
 
     public void marcarCasella(int fila, int columna) {
-
+        partida.marcarPartida(fila, columna);
     }
 
     public void desmarcarCasella(int fila, int columna) {
-
+        partida.desmarcarPartida(fila, columna);
     }
 }

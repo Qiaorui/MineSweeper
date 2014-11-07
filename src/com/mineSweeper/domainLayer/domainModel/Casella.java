@@ -13,7 +13,12 @@ public class Casella {
     private boolean teMina;
 
     public Casella(int numeroFila, int numeroColumna) {
-
+        this.numeroFila = numeroFila;
+        this.numeroColumna = numeroColumna;
+        numero = 0;
+        estaDescoberta = false;
+        estaMarcada = false;
+        teMina = false;
     }
 
     public int getNumero() {
@@ -21,15 +26,19 @@ public class Casella {
     }
 
     public void marcarCasella() {
-
+        if (estaDescoberta); //exc jaDescoberta
+        else if (estaMarcada); //exc jaMarcada
+        else estaMarcada = true;
     }
 
     public void desmarcarCasella() {
-
+        if (estaDescoberta); //exc jaDescoberta
+        else if (!estaMarcada); //exc noMarcada
+        else estaMarcada = false;
     }
 
     public void assignarMina() {
-
+        teMina = true;
     }
 
     public boolean teMina() {
@@ -45,10 +54,13 @@ public class Casella {
     }
 
     public void sumNum() {
-
+        numero++;
     }
 
     public boolean descobrirCasella() {
+        if (estaMarcada); //exc: jaMarcada
+        else if (estaDescoberta); //exc: jaDescoberta
+        else estaDescoberta = true;
         return teMina;
     }
 }

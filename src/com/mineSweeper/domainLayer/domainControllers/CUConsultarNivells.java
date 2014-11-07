@@ -6,6 +6,7 @@ import com.mineSweeper.domainLayer.domainModel.Nivell;
 import com.mineSweeper.domainLayer.struct.Dades;
 
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
 /**
@@ -20,8 +21,12 @@ public class CUConsultarNivells {
     public Dades[] consultarNivells() {
         DataControllerFactory dataControllerFactory = DataControllerFactory.getInstance();
         Nivell[] nivells = dataControllerFactory.getCtrlNivell().getAll();
-
-        return null;
+        Dades[] dades = new Dades[nivells.length];
+        for (int i=0; i < nivells.length; ++i) {
+            dades[i] = nivells[i].getDades();
+        }
+        if (nivells.length == 0); //excepcio: no hi ha nivell
+        return dades;
     }
 
 }
