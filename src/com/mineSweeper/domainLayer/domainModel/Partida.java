@@ -1,5 +1,6 @@
 package com.mineSweeper.domainLayer.domainModel;
 
+import com.mineSweeper.domainLayer.adapter.ServiceFactory;
 import com.mineSweeper.domainLayer.stragedyFactory.EstrategiaPuntuacioFactory;
 import com.mineSweeper.domainLayer.struct.Resultat;
 
@@ -70,6 +71,8 @@ public class Partida {
             resultat.acabada = estaAcabada = guanyada;
             if (guanyada) {
                 resultat.puntuacio = estrategiaPuntuacio.getPuntuacio(nombreTirades);
+                ServiceFactory.getInstance().getMissatgeria().enviarMissatge(
+                        "partida:"+idPartida+" té punt "+resultat.puntuacio);
             }
         }
         return resultat;

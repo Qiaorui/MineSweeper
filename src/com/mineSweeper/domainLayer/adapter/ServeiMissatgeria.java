@@ -10,7 +10,6 @@ public class ServeiMissatgeria implements MissatgeriaAdapter {
 
     }
 
-    @Override
     public void enviarMissatge(String missatge) {
 
     }
