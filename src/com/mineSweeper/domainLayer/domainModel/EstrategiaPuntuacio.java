@@ -5,5 +5,5 @@ package com.mineSweeper.domainLayer.domainModel;
  */
 public interface EstrategiaPuntuacio {
 
-    public int getPuntuacio(int nombreTirades);
+    public int getPuntuacio(Partida partida);
 }

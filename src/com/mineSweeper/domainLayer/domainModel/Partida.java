@@ -1,11 +1,10 @@
 package com.mineSweeper.domainLayer.domainModel;
 
-import com.mineSweeper.domainLayer.adapter.ServiceFactory;
+import com.mineSweeper.domainLayer.adapter.AdapterFactory;
 import com.mineSweeper.domainLayer.stragedyFactory.EstrategiaPuntuacioFactory;
 import com.mineSweeper.domainLayer.struct.Resultat;
 
 import java.util.HashSet;
-import java.util.Iterator;
 
 /**
  * Created by qiaorui on 14-10-29.
@@ -70,12 +69,16 @@ public class Partida {
             resultat.guanyada = estaguanyada = guanyada;
             resultat.acabada = estaAcabada = guanyada;
             if (guanyada) {
-                resultat.puntuacio = estrategiaPuntuacio.getPuntuacio(nombreTirades);
-                ServiceFactory.getInstance().getMissatgeria().enviarMissatge(
+                resultat.puntuacio = estrategiaPuntuacio.getPuntuacio(this);
+                AdapterFactory.getInstance().getMissatgeria().enviarMissatge(
                         "partida:"+idPartida+" té punt "+resultat.puntuacio);
             }
         }
         return resultat;
+    }
+
+    public int getNombreTirades() {
+        return nombreTirades;
     }
 
     private void descobrirVeins(int fila, int columna) {

@@ -17,4 +17,5 @@ public class UsuariRegistrat {
     public boolean comprovaPwd(String pwd) {
         return this.pwd.equals(pwd);
     }
+
 }

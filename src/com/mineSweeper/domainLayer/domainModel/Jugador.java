@@ -12,7 +12,7 @@ public class Jugador extends UsuariRegistrat {
     private ArrayList<Partida> partidaJugada;
 
     public Jugador() {
-
+        partidaJugada = new ArrayList<Partida>();
     }
 
     public void jugaParida(Partida partida) {

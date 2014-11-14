@@ -8,7 +8,7 @@ public class DataControllerFactory {
     private CtrlJugador ctrlJugador;
     private CtrlNivell ctrlNivell;
     private CtrlUsuariRegistrat ctrlUsuariRegistrat;
-
+    private CtrlPuntuarPerTirades ctrlPuntuarPerTirades;
 
     private DataControllerFactory() {
     }
@@ -34,5 +34,9 @@ public class DataControllerFactory {
 
     public CtrlUsuariRegistrat getCtrlUsuariRegistrat() {
         return ctrlUsuariRegistrat;
+    }
+
+    public CtrlPuntuarPerTirades getCtrlPuntuarPerTirades() {
+        return ctrlPuntuarPerTirades;
     }
 }

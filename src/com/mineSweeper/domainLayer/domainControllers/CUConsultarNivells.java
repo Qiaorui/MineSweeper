@@ -21,11 +21,11 @@ public class CUConsultarNivells {
     public Dades[] consultarNivells() {
         DataControllerFactory dataControllerFactory = DataControllerFactory.getInstance();
         Nivell[] nivells = dataControllerFactory.getCtrlNivell().getAll();
+        if (nivells.length == 0);
         Dades[] dades = new Dades[nivells.length];
-        for (int i=0; i < nivells.length; ++i) {
+        for (int i = 0; i < nivells.length; ++i) {
             dades[i] = nivells[i].getDades();
         }
-        if (nivells.length == 0); //excepcio: no hi ha nivell
         return dades;
     }
 

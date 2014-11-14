@@ -1,23 +1,23 @@
 package com.mineSweeper.domainLayer.adapter;
 
 /**
- * Created by qiaorui on 11/7/14.
+ * Created by qiaorui on 11/13/14.
  */
-public class ServiceFactory {
-    
-    private static volatile ServiceFactory instance;
+public class AdapterFactory {
+
+    private static volatile AdapterFactory instance;
     private MissatgeriaAdapter missatgeriaAdapter;
 
-    private ServiceFactory(){
+    private AdapterFactory(){
         missatgeriaAdapter = new ServeiMissatgeria();
     }
 
 
-    public static ServiceFactory getInstance() {
+    public static AdapterFactory getInstance() {
         if (instance == null) {
-            synchronized (ServiceFactory.class) {
+            synchronized (AdapterFactory.class) {
                 if (instance == null) {
-                    instance = new ServiceFactory();
+                    instance = new AdapterFactory();
                 }
             }
         }

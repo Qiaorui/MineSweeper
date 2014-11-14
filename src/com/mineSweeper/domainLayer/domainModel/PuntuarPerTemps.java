@@ -1,6 +1,5 @@
 package com.mineSweeper.domainLayer.domainModel;
 
-import java.util.Calendar;
 
 /**
  * Created by qiaorui on 14-10-29.
@@ -18,7 +17,7 @@ public class PuntuarPerTemps implements EstrategiaPuntuacio {
         tempsIni = System.currentTimeMillis()/1000;
     }
 
-    public int getPuntuacio(int nombreTirades) {
+    public int getPuntuacio(Partida partida) {
         return (int)(maxSegons - (System.currentTimeMillis()/1000 - tempsIni));
     }
 

@@ -14,8 +14,8 @@ public class PuntuarPerTirades implements EstrategiaPuntuacio {
         this.maxTirades = maxTirades;
     }
 
-    public int getPuntuacio(int nombreTirades) {
-        return maxTirades - nombreTirades;
+    public int getPuntuacio(Partida partida) {
+        return maxTirades - partida.getNombreTirades();
     }
 
     public int getMaxTirades() {
