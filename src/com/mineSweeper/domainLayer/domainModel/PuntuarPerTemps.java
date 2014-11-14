@@ -12,11 +12,13 @@ public class PuntuarPerTemps implements EstrategiaPuntuacio {
     public PuntuarPerTemps() {
     }
 
+
     public PuntuarPerTemps(int maxSegons) {
         this.maxSegons = maxSegons;
         tempsIni = System.currentTimeMillis()/1000;
     }
 
+    @Override
     public int getPuntuacio(Partida partida) {
         return (int)(maxSegons - (System.currentTimeMillis()/1000 - tempsIni));
     }

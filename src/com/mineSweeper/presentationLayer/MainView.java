@@ -17,9 +17,11 @@ public class MainView extends JFrame implements ActionListener{
     private JButton loginButton;
     private JButton consultarNivellButton;
     private JButton sortirButton;
+    private CJugarPartida cJugarPartida;
 
     private final int ancho = 350;
     private final int altura = 550;
+
     public MainView () {
         /*try {
             UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName()) ;
@@ -27,6 +29,7 @@ public class MainView extends JFrame implements ActionListener{
         catch (Exception e) {
 
         }*/
+        cJugarPartida = new CJugarPartida();
     }
 
 
@@ -94,9 +97,25 @@ public class MainView extends JFrame implements ActionListener{
         sortirButton.addActionListener(this);
     }
 
-
+    @Override
     public void actionPerformed (ActionEvent event) {
+        if (event.getSource() == sortirButton) {
+            System.exit(0);
+        }
+        else if (event.getSource() == loginButton) {
 
+        }
+        else if (event.getSource() == consultarNivellButton) {
+
+        }
+        else if (event.getSource() == jugarPartidaButton) {
+            jugarPartida();
+        }
+    }
+
+    public void jugarPartida() {
+        cJugarPartida.inicializar();
+        //setVisible(false);
     }
 
 }

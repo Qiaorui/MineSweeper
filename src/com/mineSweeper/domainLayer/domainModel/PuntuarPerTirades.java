@@ -14,6 +14,7 @@ public class PuntuarPerTirades implements EstrategiaPuntuacio {
         this.maxTirades = maxTirades;
     }
 
+    @Override
     public int getPuntuacio(Partida partida) {
         return maxTirades - partida.getNombreTirades();
     }
