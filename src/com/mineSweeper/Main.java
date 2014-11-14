@@ -1,8 +1,11 @@
 package com.mineSweeper;
 
+import com.mineSweeper.presentationLayer.MainView;
+
 public class Main {
 
     public static void main(String[] args) {
-        System.out.print("Time: "+System.currentTimeMillis()/1000);
+        MainView mainView = new MainView();
+        mainView.inicializar();
     }
 }
