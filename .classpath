@@ -12,5 +12,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Gradle: fest-assert-1.2"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Gradle: fest-reflect-1.2"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Gradle: jcip-annotations-1.0"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/SubstanceLAF"/>
 	<classpathentry kind="output" path="build/classes/main"/>
 </classpath>

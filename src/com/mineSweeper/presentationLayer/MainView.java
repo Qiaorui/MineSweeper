@@ -4,7 +4,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Map;
+
+import org.pushingpixels.substance.api.SubstanceLookAndFeel;
+import org.pushingpixels.substance.api.skin.*;
 
 /**
  * Created by qiaorui on 11/14/14.
@@ -21,15 +23,14 @@ public class MainView extends JFrame implements ActionListener{
     private CLogin cLogin;
 
     private final int ancho = 350;
-    private final int altura = 550;
+    private final int altura = 600;
+
+
+    private JButton nextSkin;
+    private JButton previousSkin;
+    private int skinId = 24;
 
     public MainView () {
-        try {
-            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-        }
-        catch (Exception e) {
-
-        }
         cJugarPartida = new CJugarPartida();
         cLogin = new CLogin();
     }
@@ -47,7 +48,7 @@ public class MainView extends JFrame implements ActionListener{
         inicializarButton();
         menu = Box.createVerticalBox();
 
-        Image image = kit.getImage("res/unnamed.png");
+        Image image = kit.getImage("res/image/unnamed.png");
         setIconImage(image);
 
         JPanel tmp1 = new JPanel();
@@ -55,7 +56,7 @@ public class MainView extends JFrame implements ActionListener{
         menu.add(tmp1);
 
         JPanel tmp5 = new JPanel();
-        tmp5.add(new JLabel(new ImageIcon("res/unnamed.png")));
+        tmp5.add(new JLabel(new ImageIcon("res/image/unnamed.png")));
         menu.add(tmp5);
 
         JPanel tmp = new JPanel();
@@ -82,6 +83,14 @@ public class MainView extends JFrame implements ActionListener{
         tmp4.add(sortirButton);
         menu.add(tmp4);
 
+        Box box = Box.createHorizontalBox();
+        box.add(previousSkin);
+        box.add(Box.createHorizontalStrut(20));
+        box.add(nextSkin);
+
+        menu.add(Box.createVerticalStrut(5));
+        menu.add(box);
+
         mainPanel = new JPanel();
         mainPanel.add(menu);
         setContentPane(mainPanel);
@@ -97,6 +106,41 @@ public class MainView extends JFrame implements ActionListener{
         consultarNivellButton.addActionListener(this);
         sortirButton = new JButton("Sortir");
         sortirButton.addActionListener(this);
+        nextSkin = new JButton(" next ");
+        nextSkin.addActionListener(this);
+        previousSkin = new JButton(" previous ");
+        previousSkin.addActionListener(this);
+    }
+
+    public void changeSkin(){
+        switch (skinId){
+            case 0: SubstanceLookAndFeel.setSkin(new AutumnSkin());break;
+            case 1: SubstanceLookAndFeel.setSkin(new BusinessSkin());break;
+            case 2: SubstanceLookAndFeel.setSkin(new BusinessBlackSteelSkin());break;
+            case 3: SubstanceLookAndFeel.setSkin(new BusinessBlueSteelSkin());break;
+            case 4: SubstanceLookAndFeel.setSkin(new ChallengerDeepSkin());break;
+            case 5: SubstanceLookAndFeel.setSkin(new CremeSkin());break;
+            case 6: SubstanceLookAndFeel.setSkin(new CremeCoffeeSkin());break;
+            case 7: SubstanceLookAndFeel.setSkin(new DustSkin());break;
+            case 8: SubstanceLookAndFeel.setSkin(new DustCoffeeSkin());break;
+            case 9: SubstanceLookAndFeel.setSkin(new EmeraldDuskSkin());break;
+            case 10: SubstanceLookAndFeel.setSkin(new GeminiSkin());break;
+            case 11: SubstanceLookAndFeel.setSkin(new GraphiteSkin());break;
+            case 12: SubstanceLookAndFeel.setSkin(new GraphiteAquaSkin());break;
+            case 13: SubstanceLookAndFeel.setSkin(new GraphiteGlassSkin());break;
+            case 14: SubstanceLookAndFeel.setSkin(new MagellanSkin());break;
+            case 15: SubstanceLookAndFeel.setSkin(new MarinerSkin());break;
+            case 16: SubstanceLookAndFeel.setSkin(new MistAquaSkin());break;
+            case 17: SubstanceLookAndFeel.setSkin(new MistSilverSkin());break;
+            case 18: SubstanceLookAndFeel.setSkin(new ModerateSkin());break;
+            case 19: SubstanceLookAndFeel.setSkin(new NebulaSkin());break;
+            case 20: SubstanceLookAndFeel.setSkin(new NebulaBrickWallSkin());break;
+            case 21: SubstanceLookAndFeel.setSkin(new OfficeBlack2007Skin());break;
+            case 22: SubstanceLookAndFeel.setSkin(new OfficeBlue2007Skin());break;
+            case 23: SubstanceLookAndFeel.setSkin(new OfficeSilver2007Skin());break;
+            case 24: SubstanceLookAndFeel.setSkin(new RavenSkin());break;
+            case 25: SubstanceLookAndFeel.setSkin(new SaharaSkin());break;
+        }
     }
 
     @Override
@@ -112,6 +156,14 @@ public class MainView extends JFrame implements ActionListener{
         }
         else if (event.getSource() == jugarPartidaButton) {
             jugarPartida();
+        }
+        else if (event.getSource() == previousSkin) {
+            skinId = (skinId-1)%26;
+            changeSkin();
+        }
+        else if (event.getSource() == nextSkin) {
+            skinId = (skinId+1)%26;
+            changeSkin();
         }
     }
 

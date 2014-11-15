@@ -22,10 +22,17 @@ public class CLogin implements ActionListener{
         loginView.tancar();
     }
 
+    public void prOkLogin() {
+        loginView.tancar();
+    }
+
     @Override
     public void actionPerformed(ActionEvent event) {
         if (event.getActionCommand() == "cancel") {
             prCancel();
+        }
+        else if (event.getActionCommand() == "okLogin"){
+            prOkLogin();
         }
     }
 }

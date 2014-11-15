@@ -23,5 +23,6 @@
 		<level name="Gradle: fest-assert-1.2" value="project"/>
 		<level name="Gradle: fest-reflect-1.2" value="project"/>
 		<level name="Gradle: jcip-annotations-1.0" value="project"/>
+		<level name="SubstanceLAF" value="project"/>
 	</levels>
 </component>

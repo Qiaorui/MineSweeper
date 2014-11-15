@@ -1,0 +1,42 @@
+package clases;
+
+import java.awt.Dimension;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
+
+public class Principal extends JFrame{
+	
+	public Principal(){
+		
+		JPanel p=new JPanel();
+		p.add(new JTextField(20));
+		p.add(new JButton("Aceptar"));
+		
+		add(p);
+		
+		this.setSize(new Dimension(250, 100));
+	    this.setLocationRelativeTo(null);
+	    this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+	
+	public static void main(String arg[]){
+		JFrame.setDefaultLookAndFeelDecorated(true);
+	    SwingUtilities.invokeLater(new Runnable() {
+	      public void run() {
+	        try {
+	        	UIManager.setLookAndFeel("org.pushingpixels.substance.api.skin.SubstanceOfficeBlue2007LookAndFeel");
+	        } catch (Exception e) {
+	          System.out.println("Substance Graphite failed to initialize");
+	        }
+	        Principal w = new Principal();
+	        w.setVisible(true);
+	      }
+	    });
+	}
+	
+}

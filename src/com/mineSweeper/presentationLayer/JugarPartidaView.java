@@ -10,19 +10,19 @@ import java.awt.event.ActionListener;
  */
 public class JugarPartidaView {
 
-    LoginFrame login;
-    ConsultarNivell consultarNivell;
-    Partida partida;
+    LoginFrame loginFrame;
+    ConsultarNivellFrame consultarNivellFrame;
+    JugarPartidaFrame jugarPartidaFrame;
 
     public JugarPartidaView(ActionListener actionListener) {
-        login = new LoginFrame(actionListener);
-        consultarNivell = new ConsultarNivell();
-        partida = new Partida();
+        loginFrame = new LoginFrame(actionListener);
+        consultarNivellFrame = new ConsultarNivellFrame();
+        jugarPartidaFrame = new JugarPartidaFrame();
     }
 
     public void inicializar() {
-        login.inicializar();
-        login.setVisible(true);
+        loginFrame.inicializar();
+        loginFrame.setVisible(true);
     }
 
     public void mostraDialog(String missatge) {
@@ -66,23 +66,9 @@ public class JugarPartidaView {
     }
 
     public void tancar(){
-        login.dispose();
+        loginFrame.dispose();
 
     }
 
-
-    private class ConsultarNivell {
-
-        public ConsultarNivell(){
-
-        }
-    }
-
-    private class Partida {
-
-        public Partida(){
-
-        }
-    }
 
 }
