@@ -5,6 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import com.mineSweeper.AdministratorShell;
 import org.pushingpixels.substance.api.SubstanceLookAndFeel;
 import org.pushingpixels.substance.api.skin.*;
 
@@ -48,7 +49,7 @@ public class MainView extends JFrame implements ActionListener{
         inicializarButton();
         menu = Box.createVerticalBox();
 
-        Image image = kit.getImage("res/image/unnamed.png");
+        Image image = kit.createImage(getClass().getResource("/image/unnamed.png"));
         setIconImage(image);
 
         JPanel tmp1 = new JPanel();
@@ -56,7 +57,7 @@ public class MainView extends JFrame implements ActionListener{
         menu.add(tmp1);
 
         JPanel tmp5 = new JPanel();
-        tmp5.add(new JLabel(new ImageIcon("res/image/unnamed.png")));
+        tmp5.add(new JLabel(new ImageIcon(getClass().getResource("/image/unnamed.png"))));
         menu.add(tmp5);
 
         JPanel tmp = new JPanel();
@@ -141,6 +142,8 @@ public class MainView extends JFrame implements ActionListener{
             case 24: SubstanceLookAndFeel.setSkin(new RavenSkin());break;
             case 25: SubstanceLookAndFeel.setSkin(new SaharaSkin());break;
         }
+
+        AdministratorShell.getInstance().showText("Skin ID: "+skinId+"\n");
     }
 
     @Override
