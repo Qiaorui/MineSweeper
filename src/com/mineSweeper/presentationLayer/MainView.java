@@ -50,6 +50,7 @@ public class MainView extends JFrame implements ActionListener{
         menu = Box.createVerticalBox();
 
         Image image = kit.createImage(getClass().getResource("/image/unnamed.png"));
+        //Image image=kit.getImage("res/image/unnamed.png");
         setIconImage(image);
 
         JPanel tmp1 = new JPanel();
@@ -58,6 +59,7 @@ public class MainView extends JFrame implements ActionListener{
 
         JPanel tmp5 = new JPanel();
         tmp5.add(new JLabel(new ImageIcon(getClass().getResource("/image/unnamed.png"))));
+        //tmp5.add(new JLabel(new ImageIcon("res/image/unnamed.png")));
         menu.add(tmp5);
 
         JPanel tmp = new JPanel();
