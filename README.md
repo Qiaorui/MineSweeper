@@ -1,21 +1,9 @@
-## MineSweeper
+##                  MineSweeper
 
-### Compile
+![Alt text](/res/image/unnamed.png)
 
-    gradle assemble
+### Version.beta
 
-### build and jar
 
-    gradle build
+Output found in `out`
 
-### Generate Javadoc
-
-    gradle javadoc
-
-Output found in `build/docs/javadoc`
-
-### Run gradle faster
-
-Always use `gradle --daemon` to cache the binary and its loaded plugins:
-
-    alias gradle='gradle --daemon'
