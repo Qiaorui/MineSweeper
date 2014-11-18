@@ -33,7 +33,7 @@ public class AdministratorShell extends JFrame {
     private void inicializar(){
         setSize(ancho, altura);    //tamany de la ventana
         setTitle("Administrator Shell");
-
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         textArea = new JTextArea("Welcome to the Administrator Shell\n" +
                 "-----------------------------------------------------------------\n" +
                 "This is beta version, you can't enter command for now :)\n" +

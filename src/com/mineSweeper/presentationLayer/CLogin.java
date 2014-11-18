@@ -1,12 +1,14 @@
 package com.mineSweeper.presentationLayer;
 
+import com.mineSweeper.AdministratorShell;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
  * Created by qiaorui on 11/14/14.
  */
-public class CLogin implements ActionListener{
+public class CLogin implements InterfaceLogin{
 
     LoginView loginView;
 
@@ -18,21 +20,17 @@ public class CLogin implements ActionListener{
         loginView.inicializar();
     }
 
-    public void prCancel(){
-        loginView.tancar();
-    }
 
-    public void prOkLogin() {
+    @Override
+    public void prOkFerAutenticacio(String username, String password) {
+        AdministratorShell.getInstance().showText("Logging: "+username+"  "+password+"\n");
         loginView.tancar();
     }
 
     @Override
-    public void actionPerformed(ActionEvent event) {
-        if (event.getActionCommand() == "cancel") {
-            prCancel();
-        }
-        else if (event.getActionCommand() == "okLogin"){
-            prOkLogin();
-        }
+    public void prCancel(){
+        loginView.tancar();
     }
+
+
 }

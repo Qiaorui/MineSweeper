@@ -1,13 +1,16 @@
 package com.mineSweeper.presentationLayer;
 
+import com.mineSweeper.AdministratorShell;
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
  * Created by qiaorui on 11/14/14.
  */
-public class LoginFrame extends JFrame {
+public class LoginFrame extends JFrame implements ActionListener{
 
 
     private JButton okButton;
@@ -15,14 +18,14 @@ public class LoginFrame extends JFrame {
     private JTextField usernameArea;
     private JTextField passwordArea;
     private JPanel mainPanel;
-    private ActionListener actionListener;
+    private InterfaceLogin login;
 
     private final int ancho = 250;
     private final int altura = 250;
 
 
-    public LoginFrame(ActionListener actionListener){
-        this.actionListener = actionListener;
+    public LoginFrame(InterfaceLogin login){
+        this.login = login;
     }
 
     public void inicializar(){
@@ -30,7 +33,7 @@ public class LoginFrame extends JFrame {
         Dimension dimension = kit.getScreenSize();     //dimension es la dimension de la pantalla
         setSize(ancho, altura);    //tamany de la ventana
         setLocation(( dimension.width - ancho) / 2, (dimension.height - altura) / 2);
-        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setTitle("Login");
         setResizable(false);
 
@@ -71,16 +74,23 @@ public class LoginFrame extends JFrame {
 
     private void inicializarElement(){
         okButton = new JButton("OK");
-        okButton.setActionCommand("okLogin");
-        okButton.addActionListener(actionListener);
+        okButton.addActionListener(this);
         cancelButton = new JButton("Cancel");
-        cancelButton.setActionCommand("cancel");
-        cancelButton.addActionListener(actionListener);
+        cancelButton.addActionListener(this);
         usernameArea = new JTextField(12);
         usernameArea.setText("username");
         passwordArea = new JTextField(12);
         passwordArea.setText("password");
     }
 
+    @Override
+    public void actionPerformed(ActionEvent event) {
+        if (event.getSource() == okButton) {
+            login.prOkFerAutenticacio(usernameArea.getText(),passwordArea.getText());
+        }
+        if (event.getSource() == cancelButton) {
+            login.prCancel();
+        }
+    }
 
 }

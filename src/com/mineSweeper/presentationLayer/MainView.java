@@ -22,6 +22,7 @@ public class MainView extends JFrame implements ActionListener{
     private JButton sortirButton;
     private CJugarPartida cJugarPartida;
     private CLogin cLogin;
+    private CConsultarNivell cConsultarNivell;
 
     private final int ancho = 350;
     private final int altura = 600;
@@ -32,10 +33,20 @@ public class MainView extends JFrame implements ActionListener{
     private int skinId = 24;
 
     public MainView () {
-        cJugarPartida = new CJugarPartida();
-        cLogin = new CLogin();
+
     }
 
+    public void setCJugarPartida(CJugarPartida cJugarPartida) {
+        this.cJugarPartida = cJugarPartida;
+    }
+
+    public void setCLogin(CLogin cLogin) {
+        this.cLogin = cLogin;
+    }
+
+    public void setCConsultarNivell(CConsultarNivell cConsultarNivell) {
+        this.cConsultarNivell = cConsultarNivell;
+    }
 
     public void inicializar() {
         Toolkit kit = Toolkit.getDefaultToolkit();
@@ -157,7 +168,7 @@ public class MainView extends JFrame implements ActionListener{
             login();
         }
         else if (event.getSource() == consultarNivellButton) {
-
+            consultarNivell();
         }
         else if (event.getSource() == jugarPartidaButton) {
             jugarPartida();
@@ -170,6 +181,10 @@ public class MainView extends JFrame implements ActionListener{
             skinId = (skinId+1)%26;
             changeSkin();
         }
+    }
+
+    public void consultarNivell() {
+        cConsultarNivell.inicializar();
     }
 
     public void jugarPartida() {

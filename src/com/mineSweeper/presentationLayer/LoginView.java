@@ -1,5 +1,7 @@
 package com.mineSweeper.presentationLayer;
 
+import com.mineSweeper.domainLayer.domainControllers.CULogin;
+
 import java.awt.event.ActionListener;
 
 /**
@@ -8,15 +10,18 @@ import java.awt.event.ActionListener;
 public class LoginView {
 
     LoginFrame loginFrame;
+    CLogin cLogin;
 
-    public LoginView(ActionListener actionListener){
-        loginFrame = new LoginFrame(actionListener);
+    public LoginView(CLogin cLogin){
+        this.cLogin = cLogin;
     }
 
     public void inicializar(){
+        loginFrame = new LoginFrame(cLogin);
         loginFrame.inicializar();
         loginFrame.setVisible(true);
     }
+
 
     public void tancar(){
         loginFrame.dispose();

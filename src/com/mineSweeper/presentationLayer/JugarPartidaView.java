@@ -1,36 +1,41 @@
 package com.mineSweeper.presentationLayer;
 
 
+import com.mineSweeper.AdministratorShell;
 import com.mineSweeper.domainLayer.struct.Dades;
-
-import java.awt.event.ActionListener;
 
 /**
  * Created by qiaorui on 11/14/14.
  */
 public class JugarPartidaView {
 
-    LoginFrame loginFrame;
-    ConsultarNivellFrame consultarNivellFrame;
-    JugarPartidaFrame jugarPartidaFrame;
+    private LoginFrame loginFrame;
+    private ConsultarNivellFrame consultarNivellFrame;
+    private JugarPartidaFrame jugarPartidaFrame;
+    private CJugarPartida cJugarPartida;
 
-    public JugarPartidaView(ActionListener actionListener) {
-        loginFrame = new LoginFrame(actionListener);
-        consultarNivellFrame = new ConsultarNivellFrame();
-        jugarPartidaFrame = new JugarPartidaFrame();
+    public JugarPartidaView(CJugarPartida cJugarPartida) {
+        this.cJugarPartida = cJugarPartida;
     }
 
     public void inicializar() {
+        loginFrame = new LoginFrame(cJugarPartida);
+
+
         loginFrame.inicializar();
         loginFrame.setVisible(true);
     }
+
 
     public void mostraDialog(String missatge) {
 
     }
 
     public void mostraNivells(Dades[] dades) {
-
+        loginFrame.dispose();
+        consultarNivellFrame = new ConsultarNivellFrame(cJugarPartida);
+        consultarNivellFrame.inicializar(dades);
+        consultarNivellFrame.setVisible(true);
     }
 
     public void mostraNoExisteixNivell() {
@@ -62,12 +67,16 @@ public class JugarPartidaView {
     }
 
     public void mostraPartida(int nFila, int nColumna){
-
+        consultarNivellFrame.dispose();
+        jugarPartidaFrame = new JugarPartidaFrame(cJugarPartida);
+        jugarPartidaFrame.inicializar(nFila,nColumna);
+        jugarPartidaFrame.setVisible(true);
     }
 
     public void tancar(){
-        loginFrame.dispose();
-
+        if (loginFrame != null)loginFrame.dispose();
+        if (consultarNivellFrame != null)consultarNivellFrame.dispose();
+        if (jugarPartidaFrame != null)jugarPartidaFrame.dispose();
     }
 
 
