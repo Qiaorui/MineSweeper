@@ -13,13 +13,10 @@ public class Resultat {
     public int puntuacio;
     public ArrayList<InformacioDeCasella> informacioDeCasellas;
 
-    public class InformacioDeCasella {
-        public int numeroFila;
-        public int numeroColumna;
-        public int numero;
-    }
 
     public Resultat() {
-
+        acabada = false;
+        guanyada = false;
+        informacioDeCasellas = new ArrayList<InformacioDeCasella>();
     }
 }

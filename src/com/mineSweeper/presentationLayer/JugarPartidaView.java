@@ -3,6 +3,13 @@ package com.mineSweeper.presentationLayer;
 
 import com.mineSweeper.AdministratorShell;
 import com.mineSweeper.domainLayer.struct.Dades;
+import com.mineSweeper.domainLayer.struct.InformacioDeCasella;
+import com.mineSweeper.domainLayer.struct.Resultat;
+
+import javax.sound.midi.MidiDevice;
+import javax.swing.*;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * Created by qiaorui on 11/14/14.
@@ -55,15 +62,19 @@ public class JugarPartidaView {
     }
 
     public void mostraGuanyda(int punt) {
-
+        JOptionPane.showMessageDialog(new JFrame(),"Ha guanyat la partida amb punt "+punt);
     }
 
     public void mostraPerdida() {
-
+        JOptionPane.showMessageDialog(new JFrame(), "Ha perdut la partida");
     }
 
-    public void mostraDescobrirCasella(int fila, int columna){
-
+    public void mostraDescobrirCasella(ArrayList<InformacioDeCasella> informacioDeCasellas){
+        Iterator<InformacioDeCasella> nombreIterator = informacioDeCasellas.iterator();
+        while(nombreIterator.hasNext()){
+            InformacioDeCasella casella = nombreIterator.next();
+            jugarPartidaFrame.descobrirCasella(casella.numeroFila, casella.numeroColumna, casella.numero);
+        }
     }
 
     public void mostraPartida(int nFila, int nColumna){

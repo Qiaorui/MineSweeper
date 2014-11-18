@@ -12,5 +12,12 @@ public class Dades {
     public Dades() {
 
     }
+    public Dades(String nom, int nombreCasellaxFila, int nombreCasellaxColumna, int nombreMines) {
+        this.nom = nom;
+        this.nombreCasellaxFila = nombreCasellaxFila;
+        this.nombreCasellaxColumna = nombreCasellaxColumna;
+        this.nombreMines = nombreMines;
+    }
+
 
 }
