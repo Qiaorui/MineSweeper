@@ -63,10 +63,12 @@ public class JugarPartidaView {
 
     public void mostraGuanyda(int punt) {
         JOptionPane.showMessageDialog(new JFrame(),"Ha guanyat la partida amb punt "+punt);
+        jugarPartidaFrame.dispose();
     }
 
     public void mostraPerdida() {
         JOptionPane.showMessageDialog(new JFrame(), "Ha perdut la partida");
+        jugarPartidaFrame.dispose();
     }
 
     public void mostraDescobrirCasella(ArrayList<InformacioDeCasella> informacioDeCasellas){
