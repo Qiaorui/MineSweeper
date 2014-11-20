@@ -67,8 +67,7 @@ public class JugarPartidaView {
     }
 
     public void mostraPerdida() {
-        JOptionPane.showMessageDialog(new JFrame(), "Ha perdut la partida");
-        jugarPartidaFrame.dispose();
+        jugarPartidaFrame.perder();
     }
 
     public void mostraDescobrirCasella(ArrayList<InformacioDeCasella> informacioDeCasellas){
@@ -89,7 +88,7 @@ public class JugarPartidaView {
     public void tancar(){
         if (loginFrame != null)loginFrame.dispose();
         if (consultarNivellFrame != null)consultarNivellFrame.dispose();
-        if (jugarPartidaFrame != null)jugarPartidaFrame.dispose();
+        if (jugarPartidaFrame != null) jugarPartidaFrame.tancar();
     }
 
 

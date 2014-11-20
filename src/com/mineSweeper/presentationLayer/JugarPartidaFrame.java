@@ -13,13 +13,12 @@ import java.awt.event.ActionListener;
 public class JugarPartidaFrame extends JFrame implements ActionListener {
 
     private InterfaceJugarPartida jugarPartida;
-
+    private LoseFrame loseFrame;
     private JButton okButton;
     private JButton sortirButton;
     private JLabel messageArea;
     private JPanel mainPanel;
     private JButton[][] map;
-
     private int ancho;
     private int altura;
 
@@ -77,12 +76,30 @@ public class JugarPartidaFrame extends JFrame implements ActionListener {
     }
 
     public void descobrirCasella(int fila, int columna, int numero) {
-        map[fila][columna].setText(""+numero);
-        map[fila][columna].setMargin(new Insets(0,0,0,0));
-        map[fila][columna].setFont(new Font("Arial",0,11));
+        if (numero != 0) {
+            map[fila][columna].setText(""+numero);
+            switch (numero) {
+                case 1: map[fila][columna].setForeground(Color.blue); break;
+                case 2: map[fila][columna].setForeground(Color.green); break;
+                case 3: map[fila][columna].setForeground(Color.red); break;
+                case 4: map[fila][columna].setForeground(Color.yellow); break;
+                case 5: map[fila][columna].setForeground(Color.magenta); break;
+                case 6: map[fila][columna].setForeground(Color.orange); break;
+                case 7: map[fila][columna].setForeground(Color.pink ); break;
+                case 8: map[fila][columna].setForeground(Color.black); break;
+            }
+            map[fila][columna].setMargin(new Insets(0,0,0,0));
+            map[fila][columna].setFont(new Font("Arial",Font.BOLD,11));
+        }
+        map[fila][columna].setBackground(Color.lightGray);
         AdministratorShell.getInstance().showText("mapa " + fila + " " + columna + " te numero " + numero);
         map[fila][columna].setVisible(false);
         map[fila][columna].setVisible(true);
+    }
+
+    public void perder() {
+        loseFrame = new LoseFrame(okButton);
+        loseFrame.setVisible(true);
     }
 
 
@@ -93,6 +110,11 @@ public class JugarPartidaFrame extends JFrame implements ActionListener {
         sortirButton.addActionListener(this);
         messageArea = new JLabel();
         messageArea.setText("error");
+    }
+
+    public void tancar() {
+        if (loseFrame != null)loseFrame.dispose();
+        dispose();
     }
 
 
@@ -115,6 +137,30 @@ public class JugarPartidaFrame extends JFrame implements ActionListener {
                 }
             }
         }
+    }
+
+
+    private class LoseFrame extends JFrame {
+
+        private LoseFrame(JButton button) {
+            Toolkit kit = Toolkit.getDefaultToolkit();
+            Dimension dimension = kit.getScreenSize();     //dimension es la dimension de la pantalla
+            setSize(500, 500);
+            setLocation((dimension.width - 500) / 2, (dimension.height - 500) / 2);
+            JPanel main = new JPanel(new BorderLayout());
+            main.setBorder(BorderFactory.createEmptyBorder(20,20,15,20));
+            JPanel tmp2 = new JPanel();
+            tmp2.add(new JLabel("Has perdut la partida"));
+            main.add(tmp2,BorderLayout.NORTH);
+            main.add(new JLabel(new ImageIcon(getClass().getResource("/image/boom.gif"))),BorderLayout.CENTER);
+            // main.add(new JLabel(new ImageIcon("res/images/run.gif")),BorderLayout.CENTER);
+            JPanel tmp = new JPanel();
+            tmp.add(button);
+            main.add(tmp, BorderLayout.SOUTH);
+            getContentPane().add(main);
+        }
+
+
     }
 
 
