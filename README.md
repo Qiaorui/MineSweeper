@@ -8,7 +8,9 @@ Version beta
 Domain Layer `done`  
 MainView     `done`  
 Login        `done`  
-
+Consultar nivell `done`  
+Jugar Partida `done`   
+Using stub `done`  
 
 
 ### Jar
