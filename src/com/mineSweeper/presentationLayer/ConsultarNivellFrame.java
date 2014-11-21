@@ -51,6 +51,7 @@ public class ConsultarNivellFrame extends JFrame implements ActionListener{
 
         nivells = new JList<String>(information);
         nivells.setName("Nivells");
+        nivells.setSelectedIndex(0);
         JPanel tmp = new JPanel();
         tmp.add(nivells);
         box.add(tmp);
