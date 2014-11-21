@@ -66,8 +66,8 @@ public class JugarPartidaView {
         jugarPartidaFrame.dispose();
     }
 
-    public void mostraPerdida() {
-        jugarPartidaFrame.perder();
+    public void mostraPerdida(ArrayList<InformacioDeCasella> informacioDeCasellas) {
+        jugarPartidaFrame.perder(informacioDeCasellas);
     }
 
     public void mostraDescobrirCasella(ArrayList<InformacioDeCasella> informacioDeCasellas){

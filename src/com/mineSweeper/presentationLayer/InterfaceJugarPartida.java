@@ -1,6 +1,9 @@
 package com.mineSweeper.presentationLayer;
 
+import com.mineSweeper.domainLayer.struct.InformacioDeCasella;
 import com.mineSweeper.domainLayer.struct.Resultat;
+
+import java.util.ArrayList;
 
 /**
  * Created by qiaorui on 11/18/14.

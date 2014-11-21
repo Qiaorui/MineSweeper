@@ -1,11 +1,15 @@
 package com.mineSweeper.presentationLayer;
 
+import com.mineSweeper.AdministratorShell;
 import com.mineSweeper.domainLayer.domainControllers.CUJugarPartida;
+import com.mineSweeper.domainLayer.domainModel.Administrator;
 import com.mineSweeper.domainLayer.struct.Dades;
 import com.mineSweeper.domainLayer.struct.InformacioDeCasella;
 import com.mineSweeper.domainLayer.struct.Resultat;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Objects;
 
 /**
  * Created by qiaorui on 11/17/14.
@@ -24,6 +28,18 @@ public class CUJugarPartidaStub extends CUJugarPartida{
         public Posicio(int x, int y) {
             this.x = x;
             this.y = y;
+        }
+
+        @Override
+        public int hashCode(){
+            return (x + y)*(x + y + 1)/2 + y;
+        }
+
+
+        @Override
+        public boolean equals(Object object){
+            Posicio posicio = (Posicio)object;
+            return (this.x == posicio.x && this.y == posicio.y);
         }
     }
 
@@ -80,11 +96,19 @@ public class CUJugarPartidaStub extends CUJugarPartida{
             mina =  new boolean[16][30];
             assignarMines(99);
         }
+        for (int i=0; i <map.length;++i) {
+            for (int j=0; j<map[0].length;++j){
+                if (mina[i][j])AdministratorShell.getInstance().showText("1 ");
+                else AdministratorShell.getInstance().showText("0 ");
+            }
+            AdministratorShell.getInstance().showText("\n");
+        }
     }
 
     @Override
     public Resultat descobrirCasella(int fila, int columna) {
         Resultat resultat = new Resultat();
+        descobrit[fila][columna] =true;
         if (mina[fila][columna]) {
             resultat.acabada = true;
             resultat.guanyada = false;
@@ -93,6 +117,7 @@ public class CUJugarPartidaStub extends CUJugarPartida{
             resultat.informacioDeCasellas.add(new InformacioDeCasella(fila, columna, map[fila][columna]));
             if (map[fila][columna] == 0) descobrirVeins(fila,columna,resultat);
             if (comprovaPartidaGuanyada()) {
+                AdministratorShell.getInstance().showText("Guanyat!!\n");
                 resultat.acabada = resultat.guanyada = true;
                 resultat.puntuacio = 999;
             }
@@ -109,6 +134,17 @@ public class CUJugarPartidaStub extends CUJugarPartida{
     @Override
     public void desmarcarCasella(int fila, int columna) {
 
+    }
+
+    @Override
+    public ArrayList<InformacioDeCasella> getMines() {
+        ArrayList<InformacioDeCasella> informacioDeCasellas = new ArrayList<InformacioDeCasella>();
+        for (int i=0; i < map.length; ++i) {
+            for (int j = 0; j < map[0].length; ++j){
+                if (mina[i][j]) informacioDeCasellas.add(new InformacioDeCasella(i,j,-1));
+            }
+        }
+        return informacioDeCasellas;
     }
 
 
@@ -128,6 +164,8 @@ public class CUJugarPartidaStub extends CUJugarPartida{
 
 
     private void assignarMines(int nMines) {
+
+
         HashSet<Posicio> mines = new HashSet<Posicio>();
         while (mines.size() < nMines) {
             mines.add(new Posicio((int)(Math.random()*map.length), (int)(Math.random()*map[0].length)));
@@ -147,9 +185,10 @@ public class CUJugarPartidaStub extends CUJugarPartida{
 
     private boolean comprovaPartidaGuanyada() {
         boolean guanyada = true;
-        for (int i = 0; i < map.length && guanyada; i++) {
-            for (int j = 0; j < map[0].length && guanyada; j++) {
-                if (!mina[i][j]) guanyada = descobrit[i][j];
+        for (int i = 0; i < map.length; i++) {
+            for (int j = 0; j < map[0].length; j++) {
+                //AdministratorShell.getInstance().showText("casella "+i+" "+j+" comprova :"+descobrit[i][j]+"\n");
+                if (!mina[i][j] && !descobrit[i][j]) guanyada = false;
             }
         }
         return guanyada;

@@ -39,12 +39,13 @@ public class AdministratorShell extends JFrame {
                 "This is beta version, you can't enter command for now :)\n" +
                 "********************************************************\n");
         textArea.setLineWrap(true);
-        textArea.setAutoscrolls(true);
         textField = new JTextField();
-
+        textArea.setAutoscrolls(true);
 
         mainPanel = new JPanel(new BorderLayout());
-        mainPanel.add(textArea, BorderLayout.CENTER);
+        ScrollPane scrollPane = new ScrollPane();
+        scrollPane.add(textArea);
+        mainPanel.add(scrollPane, BorderLayout.CENTER);
         mainPanel.add(textField, BorderLayout.SOUTH);
         getContentPane().add(mainPanel);
 

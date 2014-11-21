@@ -1,11 +1,14 @@
 package com.mineSweeper.presentationLayer;
 
 import com.mineSweeper.AdministratorShell;
+import com.mineSweeper.domainLayer.struct.InformacioDeCasella;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * Created by qiaorui on 11/15/14.
@@ -92,12 +95,20 @@ public class JugarPartidaFrame extends JFrame implements ActionListener {
             map[fila][columna].setFont(new Font("Arial",Font.BOLD,11));
         }
         map[fila][columna].setBackground(Color.lightGray);
-        AdministratorShell.getInstance().showText("mapa " + fila + " " + columna + " te numero " + numero);
+        AdministratorShell.getInstance().showText("mapa " + fila + " " + columna + " te numero " + numero+"\n");
         map[fila][columna].setVisible(false);
         map[fila][columna].setVisible(true);
     }
 
-    public void perder() {
+    public void perder(ArrayList<InformacioDeCasella> informacioDeCasellas) {
+        Iterator<InformacioDeCasella> nombreIterator = informacioDeCasellas.iterator();
+        while(nombreIterator.hasNext()){
+            InformacioDeCasella casella = nombreIterator.next();
+            map[casella.numeroFila][casella.numeroColumna].setIcon(new ImageIcon(getClass().getResource("/image/v8venZS.png")));
+            map[casella.numeroFila][casella.numeroColumna].setVisible(false);
+            map[casella.numeroFila][casella.numeroColumna].setVisible(true);
+        }
+
         loseFrame = new LoseFrame(okButton);
         loseFrame.setVisible(true);
     }

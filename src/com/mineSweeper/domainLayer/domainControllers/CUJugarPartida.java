@@ -5,8 +5,10 @@ import com.mineSweeper.domainLayer.domainModel.Jugador;
 import com.mineSweeper.domainLayer.domainModel.Nivell;
 import com.mineSweeper.domainLayer.domainModel.Partida;
 import com.mineSweeper.domainLayer.struct.Dades;
+import com.mineSweeper.domainLayer.struct.InformacioDeCasella;
 import com.mineSweeper.domainLayer.struct.Resultat;
 
+import java.util.ArrayList;
 import java.util.Set;
 
 /**
@@ -42,6 +44,10 @@ public class CUJugarPartida {
         Resultat resultat = partida.descobrirCasella(fila, columna);
         if (resultat.acabada) jugador.acabaPartidaAcutual();
         return resultat;
+    }
+
+    public ArrayList<InformacioDeCasella> getMines(){
+        return null;
     }
 
     public void marcarCasella(int fila, int columna) {
