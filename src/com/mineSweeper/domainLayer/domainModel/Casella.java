@@ -25,16 +25,27 @@ public class Casella {
         return numero;
     }
 
+/*
     public void marcarCasella() {
         if (estaDescoberta); //exc jaDescoberta
         else if (estaMarcada); //exc jaMarcada
         else estaMarcada = true;
     }
 
-    public void desmarcarCasella() {
-        if (estaDescoberta); //exc jaDescoberta
-        else if (!estaMarcada); //exc noMarcada
+    public boolean desmarcarCasella() {
+        //if (estaDescoberta); //exc jaDescoberta
+        if (!estaMarcada) ; //exc noMarcada
         else estaMarcada = false;
+    }*/
+
+    public boolean marcarDesmarcarCasella() throws RuntimeException{
+       /* if (estaDescoberta) {
+            throw new RuntimeException("La casella està descoberta");
+        }
+        else */
+        if (!estaMarcada) estaMarcada = true; //exc noMarcada
+        else estaMarcada = false;
+        return estaMarcada;
     }
 
     public void assignarMina() {

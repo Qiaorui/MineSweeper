@@ -53,12 +53,13 @@ public class JugarPartidaView {
 
     }
 
-    public void mostraDesmarcarCasella(int fila, int columna) {
+    /*public void mostraDesmarcarCasella(int fila, int columna) {
+        jugarPartidaFrame.desmarcarCasella(fila,columna);
+    }*/
 
-    }
-
-    public void mostraMarcarCasella(int fila, int columna) {
-
+    public void mostraMarcarDesmarcarCasella(int fila, int columna, boolean marcat) {
+        if (marcat) jugarPartidaFrame.marcarCasella(fila,columna);
+        else jugarPartidaFrame.desmarcarCasella(fila,columna);
     }
 
     public void mostraGuanyda(int punt) {

@@ -1,5 +1,6 @@
 package com.mineSweeper.presentationLayer;
 
+import com.mineSweeper.AdministratorShell;
 import com.mineSweeper.domainLayer.domainControllers.CUJugarPartida;
 import com.mineSweeper.domainLayer.struct.Dades;
 import com.mineSweeper.domainLayer.struct.Resultat;
@@ -46,7 +47,7 @@ public class CJugarPartida implements InterfaceLogin, InterfaceConsultarNivell, 
         }
         else jugarPartidaView.mostraDescobrirCasella(resultat.informacioDeCasellas);
     }
-
+/*
     @Override
     public void prMarcarCasella(int fila, int columna) {
         jugarPartidaView.mostraMarcarCasella(fila, columna);
@@ -55,6 +56,14 @@ public class CJugarPartida implements InterfaceLogin, InterfaceConsultarNivell, 
     @Override
     public void prDesmarcarCasella(int fila, int columna) {
         jugarPartidaView.mostraDesmarcarCasella(fila, columna);
+    }
+*/
+
+    @Override
+    public void prMarcarDesmarcarCasella(int fila, int columna) {
+        boolean b =  cuJugarPartida.marcarDesmarcarCasella(fila, columna);
+        jugarPartidaView.mostraMarcarDesmarcarCasella(fila, columna,b);
+        AdministratorShell.getInstance().showText("fila: "+fila+" columna: "+columna+"  "+b);
     }
 
     @Override

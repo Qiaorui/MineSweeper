@@ -12,9 +12,9 @@ public interface InterfaceJugarPartida {
 
     public void prDescobrirCasella(int fila, int columna);
 
-    public void prMarcarCasella(int fila, int columna);
+    public void prMarcarDesmarcarCasella(int fila, int columna);
 
-    public void prDesmarcarCasella(int fila, int columna);
+    //public void prDesmarcarCasella(int fila, int columna);
 
     public void prOkMissatge();
 
