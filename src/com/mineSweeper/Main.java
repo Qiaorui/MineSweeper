@@ -11,7 +11,6 @@ public class Main {
     public static void main(String[] args) {
         JDialog.setDefaultLookAndFeelDecorated(true);
         JFrame.setDefaultLookAndFeelDecorated(true);
-
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {

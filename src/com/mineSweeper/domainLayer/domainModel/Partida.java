@@ -22,9 +22,22 @@ public class Partida {
 
     private class Posicio {
         public int x, y;
+
         public Posicio(int x, int y) {
             this.x = x;
             this.y = y;
+        }
+
+        @Override
+        public int hashCode() {
+            return (x + y) * (x + y + 1) / 2 + y;
+        }
+
+
+        @Override
+        public boolean equals(Object object) {
+            Posicio posicio = (Posicio) object;
+            return (this.x == posicio.x && this.y == posicio.y);
         }
     }
 
@@ -101,7 +114,7 @@ public class Partida {
         }*/
         for (int i = 0; i < casellas.length && guanyada; i++) {
             for (int j = 0; j < casellas[0].length && guanyada; j++) {
-                if (!casellas[i][j].teMina()) guanyada = casellas[i][j].estaDescoberta();
+                if (!casellas[i][j].teMina() && !casellas[i][j].estaDescoberta()) guanyada = false;
             }
         }
         return guanyada;

@@ -189,7 +189,6 @@ public class MainView extends JFrame implements ActionListener{
 
     public void jugarPartida() {
         cJugarPartida.inicializar();
-        //setVisible(false);
     }
 
     public void login(){

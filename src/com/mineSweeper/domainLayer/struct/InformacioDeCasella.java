@@ -16,4 +16,5 @@ public class InformacioDeCasella {
         this.numeroColumna = numeroColumna;
         this.numero = numero;
     }
+
 }
