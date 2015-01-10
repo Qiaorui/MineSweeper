@@ -7,13 +7,15 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.util.ArrayList;
 import java.util.Iterator;
 
 /**
  * Created by qiaorui on 11/15/14.
  */
-public class JugarPartidaFrame extends JFrame implements ActionListener {
+public class JugarPartidaFrame extends JFrame implements ActionListener, MouseListener {
 
     private InterfaceJugarPartida jugarPartida;
     private LoseFrame loseFrame;
@@ -53,7 +55,9 @@ public class JugarPartidaFrame extends JFrame implements ActionListener {
                 this.map[i][j] = new JButton();
                 this.map[i][j].setPreferredSize(new Dimension(25,25));
               //  this.map[i][j].setBackground(Color.LIGHT_GRAY);
+                //this.map[i][j].addMouseListener(new RightClicker());
                 this.map[i][j].addActionListener(this);
+                this.map[i][j].addMouseListener(this);
                 map.add(this.map[i][j]);
             }
         }
@@ -95,7 +99,20 @@ public class JugarPartidaFrame extends JFrame implements ActionListener {
             map[fila][columna].setFont(new Font("Arial",Font.BOLD,11));
         }
         map[fila][columna].setBackground(Color.lightGray);
+        map[fila][columna].setIcon(null);
         AdministratorShell.getInstance().showText("mapa " + fila + " " + columna + " te numero " + numero+"\n");
+        map[fila][columna].setVisible(false);
+        map[fila][columna].setVisible(true);
+    }
+
+    public void marcarCasella(int fila, int columna) {
+        map[fila][columna].setIcon(new ImageIcon(getClass().getResource("/image/flag.png")));
+        map[fila][columna].setVisible(false);
+        map[fila][columna].setVisible(true);
+    }
+
+    public void desmarcarCasella(int fila, int columna) {
+        map[fila][columna].setIcon(null);
         map[fila][columna].setVisible(false);
         map[fila][columna].setVisible(true);
     }
@@ -137,7 +154,7 @@ public class JugarPartidaFrame extends JFrame implements ActionListener {
         else if (event.getSource() == sortirButton) {
             jugarPartida.prSortir();
         }
-        else {
+/*        else {
             for (int i=0; i < map.length; ++i){
                 for (int j=0; j < map[0].length; ++j) {
 
@@ -147,7 +164,52 @@ public class JugarPartidaFrame extends JFrame implements ActionListener {
                     }
                 }
             }
+        }*/
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        if (e.getButton() == MouseEvent.BUTTON3) {
+            for (int i = 0; i < map.length; ++i) {
+                for (int j = 0; j < map[0].length; ++j) {
+                    if (e.getSource() == map[i][j]) {
+                        AdministratorShell.getInstance().showText("Marcar/Desmarcar " + i + "  " + j + "\n");
+                        if (map[i][j].getText() == "") jugarPartida.prMarcarDesmarcarCasella(i, j);
+                    }
+                }
+            }
         }
+        else if (e.getButton() == MouseEvent.BUTTON1) {
+            for (int i = 0; i < map.length; ++i) {
+                for (int j = 0; j < map[0].length; ++j) {
+
+                    if (e.getSource() == map[i][j]) {
+                        AdministratorShell.getInstance().showText("Descobrir " + i + "  " + j + "\n");
+                        jugarPartida.prDescobrirCasella(i, j);
+                    }
+                }
+            }
+        }
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+
     }
 
 

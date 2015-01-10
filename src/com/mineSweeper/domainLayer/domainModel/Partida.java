@@ -59,13 +59,18 @@ public class Partida {
         assignarMines(nivell.getNombreMines());
         estrategiaPuntuacio = EstrategiaPuntuacioFactory.getInstance().getEstrategiaPuntuacioAleatori();
     }
-
+/*
     public void marcarPartida(int fila, int columna) {
         casellas[fila][columna].marcarCasella();
     }
 
     public void desmarcarPartida(int fila, int columna) {
-        casellas[fila][columna].desmarcarCasella();
+        return casellas[fila][columna].marcarDesmarcarCasella();
+    }
+*/
+
+    public boolean marcarDesmarcarCasella(int fila, int columna) {
+        return casellas[fila][columna].marcarDesmarcarCasella();
     }
 
     public Resultat descobrirCasella(int fila, int columna) {

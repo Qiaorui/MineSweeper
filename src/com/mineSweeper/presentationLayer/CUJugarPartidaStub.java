@@ -22,6 +22,7 @@ public class CUJugarPartidaStub extends CUJugarPartida{
     private int[][] map;
     private boolean[][] descobrit;
     private boolean[][] mina;
+    private boolean[][] marcat;
 
     private class Posicio {
         public int x, y;
@@ -79,6 +80,7 @@ public class CUJugarPartidaStub extends CUJugarPartida{
         if (nivellNom == "principante") {
             map = new int[9][9];
             descobrit = new boolean[9][9];
+            marcat = new boolean [9][9];
             mina =  new boolean[9][9];
             assignarMines(10);
         }
@@ -86,6 +88,7 @@ public class CUJugarPartidaStub extends CUJugarPartida{
         if (nivellNom == "intermedio") {
             map = new int[16][16];
             descobrit = new boolean[16][16];
+            marcat = new boolean[16][16];
             mina =  new boolean[16][16];
             assignarMines(40);
         }
@@ -93,6 +96,7 @@ public class CUJugarPartidaStub extends CUJugarPartida{
         if (nivellNom == "avanzado") {
             map = new int[16][30];
             descobrit = new boolean[16][30];
+            marcat = new boolean[16][30];
             mina =  new boolean[16][30];
             assignarMines(99);
         }
@@ -125,15 +129,23 @@ public class CUJugarPartidaStub extends CUJugarPartida{
 
         return resultat;
     }
-
+/*
     @Override
-    public void marcarCasella(int fila, int columna) {
-
+    public void marcarCasella(int fila, int columna) throws RuntimeException{
+        if (marcat[fila][columna]) throw new RuntimeException("La casella ja està marcada");
+        else marcat[fila][columna] = true;
     }
 
     @Override
     public void desmarcarCasella(int fila, int columna) {
+        if (!marcat[fila][columna]) throw new RuntimeException("La casella no està marcada");
+        else marcat[fila][columna] = false;
+    }*/
 
+    @Override
+    public boolean marcarDesmarcarCasella(int fila, int columna) {
+        marcat[fila][columna] = !marcat[fila][columna];
+        return marcat[fila][columna];
     }
 
     @Override

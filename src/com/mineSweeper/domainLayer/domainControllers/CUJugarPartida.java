@@ -49,12 +49,17 @@ public class CUJugarPartida {
     public ArrayList<InformacioDeCasella> getMines(){
         return null;
     }
-
+/*
     public void marcarCasella(int fila, int columna) {
         partida.marcarPartida(fila, columna);
     }
 
-    public void desmarcarCasella(int fila, int columna) {
-        partida.desmarcarPartida(fila, columna);
+    public boolean desmarcarCasella(int fila, int columna) {
+        return partida.desmarcarPartida(fila, columna);
+    }
+    */
+
+    public boolean marcarDesmarcarCasella(int fila, int columna) {
+        return partida.marcarDesmarcarCasella(fila, columna);
     }
 }
