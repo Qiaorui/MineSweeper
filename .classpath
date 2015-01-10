@@ -3,8 +3,8 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="res"/>
-	<classpathentry kind="src" path="src/test/resources"/>
-	<classpathentry kind="src" path="test/src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/SubstanceLAF"/>
+	<classpathentry kind="lib" path="C:/Users/Mr.Z/Documents/MineSweeper/libs/SubstanceLAF.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/hibernate"/>
 	<classpathentry kind="output" path="build/classes/main"/>
 </classpath>

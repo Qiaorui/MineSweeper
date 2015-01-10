@@ -1,10 +1,11 @@
 package com.mineSweeper.domainLayer.domainModel;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 import com.mineSweeper.domainLayer.struct.Dades;
 
-/**
- * Created by qiaorui on 14-10-29.
- */
+@Entity
 public class Nivell {
 
     private String nom;
@@ -13,8 +14,28 @@ public class Nivell {
     private int nombreMines;
 
 
+    @Id
+    public String getNom() {
+		return nom;
+	}
 
-    public int getNombreCasellaxFila() {
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public void setNombreCasellaxFila(int nombreCasellaxFila) {
+		this.nombreCasellaxFila = nombreCasellaxFila;
+	}
+
+	public void setNombreCasellaxColumna(int nombreCasellaxColumna) {
+		this.nombreCasellaxColumna = nombreCasellaxColumna;
+	}
+
+	public void setNombreMines(int nombreMines) {
+		this.nombreMines = nombreMines;
+	}
+
+	public int getNombreCasellaxFila() {
         return nombreCasellaxFila;
     }
 

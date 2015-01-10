@@ -1,5 +1,6 @@
 package com.mineSweeper.presentationLayer;
 
+import com.mineSweeper.AdministratorShell;
 import com.mineSweeper.domainLayer.struct.Dades;
 
 /**
@@ -15,6 +16,7 @@ public class ConsultarNivellView {
     }
 
     public void inicializar(Dades[] dades){
+    	AdministratorShell.getInstance().showText("Dades : " +dades.length);
         consultarNivellFrame = new ConsultarNivellFrame(cConsultarNivell);
         consultarNivellFrame.inicializar(dades);
         consultarNivellFrame.setVisible(true);
