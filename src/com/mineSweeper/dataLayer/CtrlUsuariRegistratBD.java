@@ -5,7 +5,7 @@ import org.hibernate.Session;
 import com.mineSweeper.domainLayer.domainModel.UsuariRegistrat;
 
 
-public class CtrlUsuariRegistrat {
+public class CtrlUsuariRegistratBD {
 
     public UsuariRegistrat getUsuariRegistrat (String username) {
     	
