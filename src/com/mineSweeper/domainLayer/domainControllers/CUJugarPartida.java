@@ -1,5 +1,6 @@
 package com.mineSweeper.domainLayer.domainControllers;
 
+import com.mineSweeper.AdministratorShell;
 import com.mineSweeper.domainLayer.dataInterface.DataControllerFactory;
 import com.mineSweeper.domainLayer.domainModel.Jugador;
 import com.mineSweeper.domainLayer.domainModel.Nivell;
@@ -27,7 +28,7 @@ public class CUJugarPartida {
         CULogin cuLogin = new CULogin();
         cuLogin.Login(username, password);
         jugador = DataControllerFactory.getInstance().getCtrlJugador().getJugador(username);
-        if (jugador == null) throw new RuntimeException("L'usuari no és jugador");
+        if (jugador == null) throw new RuntimeException("L'usuari no es jugador");
     }
 
     public Dades[] obtenirNivells() {
@@ -37,13 +38,19 @@ public class CUJugarPartida {
 
     public void crearPartida(String nivellNom) {
         Nivell nivell = DataControllerFactory.getInstance().getCtrlNivell().getNivell(nivellNom);
+        
+        
         partida = new Partida(nivell, jugador);
+        DataControllerFactory.getInstance().getCtrlPartida().createPartida(partida);
         jugador.jugaParida(partida);
+        DataControllerFactory.getInstance().getCtrlJugador().updateJugador(jugador);
     }
 
     public Resultat descobrirCasella(int fila, int columna) {
         Resultat resultat = partida.descobrirCasella(fila, columna);
         if (resultat.acabada) jugador.acabaPartidaAcutual();
+        DataControllerFactory.getInstance().getCtrlPartida().createPartida(partida);
+        DataControllerFactory.getInstance().getCtrlJugador().updateJugador(jugador);
         return resultat;
     }
 

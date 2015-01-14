@@ -16,6 +16,8 @@ public class CtrlCasellaBD implements CtrlCasella{
     public Casella getCasella(Partida p, int numeroFila, int numeroColumna) {
     	ConnexionPgl.getInstance();
 		Session session = ConnexionPgl.getFactory().getCurrentSession();
+		session.beginTransaction();
+		
 		Casella c = (Casella) session.createQuery("from Casella where "+" "
 				+ "partidaid = "+p.getIdPartida()+" and numeroFila = "+numeroFila+" and numeroColumna = "+numeroColumna+"").uniqueResult();
 		
@@ -25,14 +27,20 @@ public class CtrlCasellaBD implements CtrlCasella{
     }
     public void createCasella(Casella a) {
     	ConnexionPgl.getInstance();
-		Session session = ConnexionPgl.getFactory().getCurrentSession();
-		session.save(a);
+    	
+		
+    	Session session = ConnexionPgl.getFactory().getCurrentSession();
+    	session.beginTransaction();
+		
+    	session.save(a);
 		session.getTransaction().commit();
     	
     }
     public void updateCasellas(Casella a) {
     	ConnexionPgl.getInstance();
 		Session session = ConnexionPgl.getFactory().getCurrentSession();
+		session.beginTransaction();
+		
 		session.update(a);
 		session.getTransaction().commit();
     }

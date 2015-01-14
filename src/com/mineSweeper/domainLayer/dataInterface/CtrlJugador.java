@@ -8,4 +8,6 @@ import com.mineSweeper.domainLayer.domainModel.Jugador;
 public interface CtrlJugador {
 
     public Jugador getJugador(String username);
+    public void createJugador(Jugador j);
+    public void updateJugador(Jugador j);
 }

@@ -32,29 +32,23 @@ public class datetest {
 		config.configure("hibernate.cfg.xml");
 		factory = config.buildSessionFactory();
 		
-		new SchemaExport(config).create(true, true);
+		//new SchemaExport(config).create(true, true);
 		
 		
 		Session session = factory.getCurrentSession();
 		session.beginTransaction();
 		
-		Jugador j = new Jugador();
-		j.setCognom("dw");
-		j.setEmail("uhuhu");
-		j.setNom("jijij");
-		j.setPwd("huhuhuhu");
-		j.setUsername("huhuh");
+		
 		
 		Administrator a = new Administrator();
 		a.setPwd("huhuhuhu");
 		a.setUsername("huhuh");
 		a.setTlfn("445454");
+		String username= "123";
+		Jugador j = (Jugador) session.createQuery("from Jugador where username = '"+username+"'").uniqueResult();
 		
-		UsuariRegistrat u = new UsuariRegistrat();
-		u.setPwd("huhuhuhu");
-		u.setUsername("huhuh");
-		
-		session.save(j);
+		UsuariRegistrat u = (UsuariRegistrat) session.createQuery("from UsuariRegistrat where username = '"+username+"'").uniqueResult();
+	
 		session.getTransaction().commit();	
 	}
 

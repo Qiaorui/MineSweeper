@@ -21,7 +21,7 @@ public class CULogin {
         }
         else if (!usuariRegistrat.comprovaPwd(password))
         {
-            throw new RuntimeException("El password no és correcte");
+            throw new RuntimeException("El password no es correcte");
         }; //excepcio: password not valid
     }
 }
