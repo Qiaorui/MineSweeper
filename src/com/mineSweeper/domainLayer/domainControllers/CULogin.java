@@ -12,10 +12,16 @@ public class CULogin {
 
     }
 
-    public boolean Login(String username, String password) {
+    public void Login(String username, String password) {
         DataControllerFactory dataControllerFactory = DataControllerFactory.getInstance();
         UsuariRegistrat usuariRegistrat = dataControllerFactory.getCtrlUsuariRegistrat().getUsuariRegistrat(username);
-        if (!usuariRegistrat.comprovaPwd(password)); //excepcio: password not valid
-        return true;
+        if (usuariRegistrat == null)
+        {
+            throw new RuntimeException("L'usuari amb el nom "+ username + " no existeix");
+        }
+        else if (!usuariRegistrat.comprovaPwd(password))
+        {
+            throw new RuntimeException("El password no és correcte");
+        }; //excepcio: password not valid
     }
 }

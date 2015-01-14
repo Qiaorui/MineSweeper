@@ -2,6 +2,7 @@ package com.mineSweeper.presentationLayer;
 
 import com.mineSweeper.AdministratorShell;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -11,6 +12,7 @@ import java.awt.event.ActionListener;
 public class CLogin implements InterfaceLogin{
 
     LoginView loginView;
+
 
     public CLogin(){
         loginView = new LoginView(this);
@@ -23,14 +25,20 @@ public class CLogin implements InterfaceLogin{
 
     @Override
     public void prOkFerAutenticacio(String username, String password) {
-        AdministratorShell.getInstance().showText("Logging: "+username+"  "+password+"\n");
-        loginView.tancar();
+        try {
+            AdministratorShell.getInstance().showText("Logging: " + username + "  " + password + "\n");
+            loginView.tancar();
+        }
+        catch (RuntimeException e)
+        {
+            if (e.getMessage() != "") JOptionPane.showMessageDialog(new JFrame(), e.getMessage());
+        }
     }
+
+
 
     @Override
     public void prCancel(){
         loginView.tancar();
     }
-
-
 }

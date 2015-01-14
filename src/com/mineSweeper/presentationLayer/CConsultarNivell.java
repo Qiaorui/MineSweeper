@@ -2,6 +2,8 @@ package com.mineSweeper.presentationLayer;
 
 import com.mineSweeper.domainLayer.domainControllers.CUConsultarNivells;
 
+import javax.swing.*;
+
 /**
  * Created by qiaorui on 11/18/14.
  */
@@ -16,7 +18,13 @@ public class CConsultarNivell implements InterfaceConsultarNivell{
     }
 
     public void inicializar() {
-        consultarNivellView.inicializar(cuConsultarNivells.consultarNivells());
+        try {
+            consultarNivellView.inicializar(cuConsultarNivells.consultarNivells());
+        }
+        catch (RuntimeException e)
+        {
+            if (e.getMessage() != null) JOptionPane.showMessageDialog(new JFrame(), e.getMessage());
+        }
 
     }
 

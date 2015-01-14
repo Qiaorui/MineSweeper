@@ -25,7 +25,7 @@ public class CUConsultarNivells {
         DataControllerFactory dataControllerFactory = DataControllerFactory.getInstance();
         List nivells = dataControllerFactory.getCtrlNivell().getAll();
         
-        if (nivells.size() == 0); //throw an exception
+        if (nivells.size() == 0) throw new RuntimeException("No hi ha nivells"); //throw an exception
         
         Dades[] dades = new Dades[nivells.size()];
         

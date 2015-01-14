@@ -27,6 +27,7 @@ public class Partida {
     private boolean estaAcabada;
     private boolean estaguanyada;
     private int nombreTirades;
+    private Jugador jugador;
 
     @OneToOne()
 	@JoinColumn(name = "NivelNom",nullable = false, updatable=false)
@@ -107,7 +108,8 @@ public class Partida {
         }
     }
 
-    public Partida(Nivell nivell) {
+    public Partida(Nivell nivell, Jugador jugador) {
+        this.jugador = jugador;
         this.nivell = nivell;
         estaAcabada = false;
         estaguanyada = false;
@@ -116,13 +118,13 @@ public class Partida {
         Buscamines.getInstance().incrementaId();
         int fila = this.nivell.getNombreCasellaxFila();
         int columna = this.nivell.getNombreCasellaxColumna();
-        casellas = new Casella[fila + columna];
+        casellas = new Casella[fila*columna];
         for (int i = 0; i < fila; i++) {
             for (int j = 0; j < columna; j++) {
-                casellas[i+j] = new Casella(i+1,j+1, this);
+                casellas[i*columna+j] = new Casella(i+1,j+1, this);
             }
         }
-        //assignarMines(nivell.getNombreMines());
+        assignarMines(nivell.getNombreMines());
         estrategiaPuntuacio = EstrategiaPuntuacioFactory.getInstance().getEstrategiaPuntuacioAleatori();
     }
 /*
@@ -134,27 +136,27 @@ public class Partida {
         return casellas[fila][columna].marcarDesmarcarCasella();
     }
 */
-/*
+
     public boolean marcarDesmarcarCasella(int fila, int columna) {
-        return casellas[fila][columna].marcarDesmarcarCasella();
+        return casellas[fila*nivell.getNombreCasellaxColumna()+columna].marcarDesmarcarCasella();
     }
 
     public Resultat descobrirCasella(int fila, int columna) {
         Resultat resultat = new Resultat();
-        boolean teMina = casellas[fila][columna].descobrirCasella();
+        boolean teMina = casellas[fila*nivell.getNombreCasellaxFila()+columna].descobrirCasella();
         nombreTirades++;
         if (teMina) {
             resultat.acabada = estaAcabada = true;
             resultat.guanyada = estaguanyada = false;
         }
         else {
-            if (casellas[fila][columna].getNumero() == 0) descobrirVeins(fila, columna);
+            if (casellas[fila*nivell.getNombreCasellaxFila()+columna].getNumero() == 0) descobrirVeins(fila, columna);
             boolean guanyada = comprovaPartidaGuanyada();
             resultat.guanyada = estaguanyada = guanyada;
             resultat.acabada = estaAcabada = guanyada;
             if (guanyada) {
                 resultat.puntuacio = estrategiaPuntuacio.getPuntuacio(this);
-                AdapterFactory.getInstance().getMissatgeria().enviarMissatge(
+                AdapterFactory.getInstance().getMissatgeria().enviarMissatge(jugador.getEmail(),
                         "partida:"+idPartida+" té punt "+resultat.puntuacio);
             }
         }
@@ -168,10 +170,10 @@ public class Partida {
     private void descobrirVeins(int fila, int columna) {
         for (int i = fila-1; i < fila+2; i++) {
             for (int j = columna-1; j < columna+2; j++) {
-                if (i >= 0 && i < casellas.length && j >= 0 && j < casellas[0].length) {
-                    if (!casellas[i][j].estaDescoberta() && !casellas[i][j].estaMarcada()) {
-                        casellas[i][j].descobrirCasella();
-                        if (casellas[i][j].getNumero() == 0) descobrirVeins(i,j);
+                if (i >= 0 && i < nivell.getNombreCasellaxFila() && j >= 0 && j < nivell.getNombreCasellaxColumna()) {
+                    if (!casellas[i*nivell.getNombreCasellaxFila()+j].estaDescoberta() && !casellas[i*nivell.getNombreCasellaxFila()+j].estaMarcada()) {
+                        casellas[i*nivell.getNombreCasellaxFila()+j].descobrirCasella();
+                        if (casellas[i*nivell.getNombreCasellaxFila()+j].getNumero() == 0) descobrirVeins(i,j);
                     }
                 }
             }
@@ -180,12 +182,12 @@ public class Partida {
 
     private boolean comprovaPartidaGuanyada() {
         boolean guanyada = true;
-        /*for (Casella casella : casellas) {
+        for (Casella casella : casellas) {
             if (!casella.teMina()) guanyada = casella.estaDescoberta();
-        }*//*
-        for (int i = 0; i < casellas.length && guanyada; i++) {
-            for (int j = 0; j < casellas[0].length && guanyada; j++) {
-                if (!casellas[i][j].teMina() && !casellas[i][j].estaDescoberta()) guanyada = false;
+        }
+        for (int i = 0; i < nivell.getNombreCasellaxFila() && guanyada; i++) {
+            for (int j = 0; j < nivell.getNombreCasellaxColumna() && guanyada; j++) {
+                if (!casellas[i*nivell.getNombreCasellaxFila()+j].teMina() && !casellas[i*nivell.getNombreCasellaxFila()+j].estaDescoberta()) guanyada = false;
             }
         }
         return guanyada;
@@ -194,18 +196,18 @@ public class Partida {
     private void assignarMines(int nMines) {
         HashSet<Posicio> mines = new HashSet<Posicio>();
         while (mines.size() < nMines) {
-            mines.add(new Posicio((int)(Math.random()*casellas.length), (int)(Math.random()*casellas[0].length)));
+            mines.add(new Posicio((int)(Math.random()*nivell.getNombreCasellaxFila()), (int)(Math.random()*nivell.getNombreCasellaxColumna())));
         }
         for (Posicio posicio : mines){
-            casellas[posicio.x][posicio.y].assignarMina();
+            casellas[posicio.x*nivell.getNombreCasellaxFila()+posicio.y].assignarMina();
             for (int i = posicio.x-1; i < posicio.x+2; i++) {
                 for (int j = posicio.y-1; j < posicio.y+2; j++) {
-                    if (i >= 0 && i < casellas.length && j >= 0 && j < casellas[0].length) {
-                        if (!casellas[i][j].teMina()) casellas[i][j].sumNum();
+                    if (i >= 0 && i < nivell.getNombreCasellaxFila() && j >= 0 && j < nivell.getNombreCasellaxColumna()) {
+                        if (!casellas[i*nivell.getNombreCasellaxFila()+j].teMina()) casellas[i*nivell.getNombreCasellaxFila()+j].sumNum();
                     }
                 }
             }
         }
     }
-*/
+
 }

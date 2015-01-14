@@ -23,10 +23,11 @@ public class CUJugarPartida {
 
     }
 
-    public void ferAutenticaicio(String username, String password) {
+    public void ferAutenticacio(String username, String password) {
         CULogin cuLogin = new CULogin();
         cuLogin.Login(username, password);
         jugador = DataControllerFactory.getInstance().getCtrlJugador().getJugador(username);
+        if (jugador == null) throw new RuntimeException("L'usuari no és jugador");
     }
 
     public Dades[] obtenirNivells() {
@@ -36,7 +37,7 @@ public class CUJugarPartida {
 
     public void crearPartida(String nivellNom) {
         Nivell nivell = DataControllerFactory.getInstance().getCtrlNivell().getNivell(nivellNom);
-        partida = new Partida(nivell);
+        partida = new Partida(nivell, jugador);
         jugador.jugaParida(partida);
     }
 

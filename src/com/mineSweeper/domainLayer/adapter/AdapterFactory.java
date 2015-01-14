@@ -6,10 +6,10 @@ package com.mineSweeper.domainLayer.adapter;
 public class AdapterFactory {
 
     private static volatile AdapterFactory instance;
-    private MissatgeriaAdapter missatgeriaAdapter;
+    private InterfaceMissatgeriaAdapter interfacemissatgeriaAdapter;
 
     private AdapterFactory(){
-        missatgeriaAdapter = new ServeiMissatgeria();
+        interfacemissatgeriaAdapter = new MissatgeriaAdapter();
     }
 
 
@@ -24,7 +24,7 @@ public class AdapterFactory {
         return instance;
     }
 
-    public MissatgeriaAdapter getMissatgeria() {
-        return missatgeriaAdapter;
+    public InterfaceMissatgeriaAdapter getMissatgeria() {
+        return interfacemissatgeriaAdapter;
     }
 }

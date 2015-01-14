@@ -5,6 +5,7 @@ import com.mineSweeper.domainLayer.domainControllers.CUJugarPartida;
 import com.mineSweeper.domainLayer.struct.Dades;
 import com.mineSweeper.domainLayer.struct.Resultat;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -28,8 +29,14 @@ public class CJugarPartida implements InterfaceLogin, InterfaceConsultarNivell, 
 
     @Override
     public void prOkFerAutenticacio(String username, String password) {
-        cuJugarPartida.ferAutenticaicio(username, password);
-        jugarPartidaView.mostraNivells(cuJugarPartida.obtenirNivells());
+        try {
+            cuJugarPartida.ferAutenticacio(username, password);
+            jugarPartidaView.mostraNivells(cuJugarPartida.obtenirNivells());
+        }
+        catch (RuntimeException e)
+        {
+            if (e.getMessage() != "") JOptionPane.showMessageDialog(new JFrame(),e.getMessage());
+        }
     }
 
     @Override

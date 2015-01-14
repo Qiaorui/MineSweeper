@@ -1,9 +1,16 @@
 package com.mineSweeper.domainLayer.adapter;
 
-/**
- * Created by qiaorui on 14-10-28.
- */
-public interface MissatgeriaAdapter {
+import com.mineSweeper.domainLayer.service.SvEmail;
 
-    public void enviarMissatge (String missatge);
+/**
+ * Created by liya on 14/1/15.
+ */
+public class MissatgeriaAdapter implements InterfaceMissatgeriaAdapter{
+
+
+    @Override
+    public void enviarMissatge(String receiver, String missatge) {
+        SvEmail svEmail = new SvEmail(receiver, missatge);
+        svEmail.enviar();
+    }
 }
