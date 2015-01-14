@@ -143,6 +143,8 @@ public class Partida {
 
     public Resultat descobrirCasella(int fila, int columna) {
         Resultat resultat = new Resultat();
+        if (casellas[fila*nivell.getNombreCasellaxColumna()+columna].estaMarcada()) throw new RuntimeException("La casella ja està Marcada");
+        else if (casellas[fila*nivell.getNombreCasellaxColumna()+columna].estaDescoberta()) throw new RuntimeException("La casella ja està descoberta");
         boolean teMina = casellas[fila*nivell.getNombreCasellaxFila()+columna].descobrirCasella();
         nombreTirades++;
         if (teMina) {
@@ -150,7 +152,7 @@ public class Partida {
             resultat.guanyada = estaguanyada = false;
         }
         else {
-            if (casellas[fila*nivell.getNombreCasellaxFila()+columna].getNumero() == 0) descobrirVeins(fila, columna);
+            if (casellas[fila*nivell.getNombreCasellaxColumna()+columna].getNumero() == 0) descobrirVeins(fila, columna);
             boolean guanyada = comprovaPartidaGuanyada();
             resultat.guanyada = estaguanyada = guanyada;
             resultat.acabada = estaAcabada = guanyada;
@@ -171,9 +173,9 @@ public class Partida {
         for (int i = fila-1; i < fila+2; i++) {
             for (int j = columna-1; j < columna+2; j++) {
                 if (i >= 0 && i < nivell.getNombreCasellaxFila() && j >= 0 && j < nivell.getNombreCasellaxColumna()) {
-                    if (!casellas[i*nivell.getNombreCasellaxFila()+j].estaDescoberta() && !casellas[i*nivell.getNombreCasellaxFila()+j].estaMarcada()) {
-                        casellas[i*nivell.getNombreCasellaxFila()+j].descobrirCasella();
-                        if (casellas[i*nivell.getNombreCasellaxFila()+j].getNumero() == 0) descobrirVeins(i,j);
+                    if (!casellas[i*nivell.getNombreCasellaxColumna()+j].estaDescoberta() && !casellas[i*nivell.getNombreCasellaxColumna()+j].estaMarcada()) {
+                        casellas[i*nivell.getNombreCasellaxColumna()+j].descobrirCasella();
+                        if (casellas[i*nivell.getNombreCasellaxColumna()+j].getNumero() == 0) descobrirVeins(i,j);
                     }
                 }
             }
@@ -187,7 +189,7 @@ public class Partida {
         }
         for (int i = 0; i < nivell.getNombreCasellaxFila() && guanyada; i++) {
             for (int j = 0; j < nivell.getNombreCasellaxColumna() && guanyada; j++) {
-                if (!casellas[i*nivell.getNombreCasellaxFila()+j].teMina() && !casellas[i*nivell.getNombreCasellaxFila()+j].estaDescoberta()) guanyada = false;
+                if (!casellas[i*nivell.getNombreCasellaxColumna()+j].teMina() && !casellas[i*nivell.getNombreCasellaxColumna()+j].estaDescoberta()) guanyada = false;
             }
         }
         return guanyada;
@@ -199,11 +201,11 @@ public class Partida {
             mines.add(new Posicio((int)(Math.random()*nivell.getNombreCasellaxFila()), (int)(Math.random()*nivell.getNombreCasellaxColumna())));
         }
         for (Posicio posicio : mines){
-            casellas[posicio.x*nivell.getNombreCasellaxFila()+posicio.y].assignarMina();
+            casellas[posicio.x*nivell.getNombreCasellaxColumna()+posicio.y].assignarMina();
             for (int i = posicio.x-1; i < posicio.x+2; i++) {
                 for (int j = posicio.y-1; j < posicio.y+2; j++) {
                     if (i >= 0 && i < nivell.getNombreCasellaxFila() && j >= 0 && j < nivell.getNombreCasellaxColumna()) {
-                        if (!casellas[i*nivell.getNombreCasellaxFila()+j].teMina()) casellas[i*nivell.getNombreCasellaxFila()+j].sumNum();
+                        if (!casellas[i*nivell.getNombreCasellaxColumna()+j].teMina()) casellas[i*nivell.getNombreCasellaxColumna()+j].sumNum();
                     }
                 }
             }
