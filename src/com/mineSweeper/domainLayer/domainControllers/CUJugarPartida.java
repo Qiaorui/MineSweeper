@@ -48,9 +48,18 @@ public class CUJugarPartida {
 
     public Resultat descobrirCasella(int fila, int columna) {
         Resultat resultat = partida.descobrirCasella(fila, columna);
-        if (resultat.acabada) jugador.acabaPartidaAcutual();
-        DataControllerFactory.getInstance().getCtrlPartida().createPartida(partida);
-        DataControllerFactory.getInstance().getCtrlJugador().updateJugador(jugador);
+        if (resultat.acabada)  {
+        	jugador.acabaPartidaAcutual();
+        	DataControllerFactory.getInstance().getCtrlPartida().createPartida(partida);
+        	DataControllerFactory.getInstance().getCtrlJugador().updateJugador(jugador);
+        }
+        if(resultat.informacioDeCasellas.size() > 0) {
+        	for(int i = 0; i < resultat.informacioDeCasellas.size(); i++) {
+        		DataControllerFactory.getInstance().getCtrlCasella().updateCasellas
+        		(partida.obtenercasella(resultat.informacioDeCasellas.get(i).numeroFila, 
+        				resultat.informacioDeCasellas.get(i).numeroColumna));
+        	}
+        }
         return resultat;
     }
 

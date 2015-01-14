@@ -46,6 +46,10 @@ public class Partida {
 	public void setEstrategiaPuntuacio(EstrategiaPuntuacio estrategiaPuntuacio) {
 		this.estrategiaPuntuacio = estrategiaPuntuacio;
 	}
+	
+	public void configurarCasellas(Casella[] c) {
+		this.casellas = c;
+	}
 	/*
 	@OneToMany(targetEntity=Casella.class, cascade=CascadeType.ALL,fetch=FetchType.EAGER)
 	@OrderColumn
@@ -62,7 +66,7 @@ public class Partida {
 	public int getIdPartida() {
 		return idPartida;
 	}
-
+	
 	public void setIdPartida(int idPartida) {
 		this.idPartida = idPartida;
 	}
@@ -136,6 +140,9 @@ public class Partida {
         return casellas[fila][columna].marcarDesmarcarCasella();
     }
 */
+    public Casella obtenercasella(int fila, int columna) {
+    	return casellas[fila*nivell.getNombreCasellaxColumna()+columna];
+    }
 
     public boolean marcarDesmarcarCasella(int fila, int columna) {
         return casellas[fila*nivell.getNombreCasellaxColumna()+columna].marcarDesmarcarCasella();
