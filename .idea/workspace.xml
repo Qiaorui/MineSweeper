@@ -2,22 +2,480 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4bad795a-c8fc-4a87-bd77-fbddda6b7b6e" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\Mr.Z\Documents\MineSweeper\.idea\description.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mr.Z\Documents\MineSweeper\.idea\project-template.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mr.Z\Documents\MineSweeper\.idea\uiDesigner.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Mr.Z\Documents\MineSweeper\MineSweeper.eml" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/resources/background.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/mail.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/resources/tab.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/resources/titlebar.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/resources/titlebar_end.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/ACL.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/class-use/ACL.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/Address.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/class-use/Address.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/AddressException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/class-use/AddressException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/AddressStringTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/AddressStringTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/AddressTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/AddressTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/AndTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/AndTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/webapp/src/taglib/demo/AttachmentInfo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/webapp/src/classes/demo/AttachmentServlet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/AuthenticationFailedException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/class-use/AuthenticationFailedException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/Authenticator.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/class-use/Authenticator.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/BodyPart.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/class-use/BodyPart.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/BodyTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/BodyTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/util/ByteArrayDataSource.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/util/class-use/ByteArrayDataSource.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/CHANGES.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/COMPAT.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/COPYRIGHT.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/CRLFOutputStream.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/ComparisonTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/ComparisonTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/client/ComponentFrame.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/event/ConnectionAdapter.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/event/class-use/ConnectionAdapter.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/event/ConnectionEvent.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/event/class-use/ConnectionEvent.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/event/ConnectionListener.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/event/class-use/ConnectionListener.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/ContentDisposition.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/class-use/ContentDisposition.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/ContentType.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/class-use/ContentType.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/DateTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/DateTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/dsn/DeliveryStatus.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/dsn/class-use/DeliveryStatus.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/dsn/DispositionNotification.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/dsn/class-use/DispositionNotification.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/FetchProfile.Item.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/class-use/FetchProfile.Item.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/FetchProfile.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/class-use/FetchProfile.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/logging/FileErrorManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/webapp/src/classes/demo/FilterServlet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/FlagTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/FlagTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/Flags.Flag.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/class-use/Flags.Flag.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/Flags.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/class-use/Flags.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/Folder.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/class-use/Folder.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/event/FolderAdapter.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/event/class-use/FolderAdapter.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/FolderClosedException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/class-use/FolderClosedException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/event/FolderEvent.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/event/class-use/FolderEvent.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/event/FolderListener.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/event/class-use/FolderListener.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/client/FolderModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/FolderNotFoundException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/class-use/FolderNotFoundException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/client/FolderTreeNode.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/client/FolderViewer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/FromStringTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/FromStringTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/FromTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/FromTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/gimap/GmailFolder.FetchProfileItem.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/gimap/class-use/GmailFolder.FetchProfileItem.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/gimap/GmailFolder.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/gimap/class-use/GmailFolder.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/gimap/GmailMessage.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/gimap/class-use/GmailMessage.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/gimap/GmailMsgIdTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/gimap/class-use/GmailMsgIdTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/gimap/GmailRawSearchTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/gimap/class-use/GmailRawSearchTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/gimap/GmailSSLStore.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/gimap/class-use/GmailSSLStore.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/gimap/GmailStore.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/gimap/class-use/GmailStore.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/gimap/GmailThrIdTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/gimap/class-use/GmailThrIdTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/Header.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/class-use/Header.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/HeaderTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/HeaderTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/HeaderTokenizer.Token.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/class-use/HeaderTokenizer.Token.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/HeaderTokenizer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/class-use/HeaderTokenizer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/IMAPFolder.FetchProfileItem.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/class-use/IMAPFolder.FetchProfileItem.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/IMAPFolder.ProtocolCommand.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/class-use/IMAPFolder.ProtocolCommand.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/IMAPFolder.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/class-use/IMAPFolder.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/IMAPMessage.FetchProfileCondition.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/class-use/IMAPMessage.FetchProfileCondition.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/IMAPMessage.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/class-use/IMAPMessage.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/IMAPSSLStore.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/class-use/IMAPSSLStore.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/IMAPStore.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/class-use/IMAPStore.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/IllegalWriteException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/class-use/IllegalWriteException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/IntegerComparisonTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/IntegerComparisonTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/InternetAddress.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/class-use/InternetAddress.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/InternetHeaders.InternetHeader.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/class-use/InternetHeaders.InternetHeader.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/InternetHeaders.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/class-use/InternetHeaders.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/JavaMail-1.1-changes.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/JavaMail-1.2-changes.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/JavaMail-1.3-changes.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/JavaMail-1.4-changes.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/servlet/JavaMail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/servlet/JavaMailServlet.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/LICENSE.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/webapp/src/taglib/demo/ListAttachmentsTEI.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/webapp/src/taglib/demo/ListAttachmentsTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/webapp/src/taglib/demo/ListMessagesTEI.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/webapp/src/taglib/demo/ListMessagesTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/outlook/MSBodyPart.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/outlook/MSMessage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/outlook/MSMultipartDataSource.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/MailDateFormat.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/class-use/MailDateFormat.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/event/MailEvent.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/event/class-use/MailEvent.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/util/logging/MailHandler.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/util/logging/class-use/MailHandler.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/logging/MailHandlerDemo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/util/MailSSLSocketFactory.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/util/class-use/MailSSLSocketFactory.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/webapp/src/classes/demo/MailUserBean.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/Message.RecipientType.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/class-use/Message.RecipientType.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/Message.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/class-use/Message.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/MessageAware.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/class-use/MessageAware.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/event/MessageChangedEvent.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/event/class-use/MessageChangedEvent.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/event/MessageChangedListener.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/event/class-use/MessageChangedListener.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/MessageContext.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/class-use/MessageContext.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/event/MessageCountAdapter.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/event/class-use/MessageCountAdapter.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/event/MessageCountEvent.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/event/class-use/MessageCountEvent.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/event/MessageCountListener.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/event/class-use/MessageCountListener.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/dsn/MessageHeaders.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/dsn/class-use/MessageHeaders.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/MessageIDTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/MessageIDTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/webapp/src/taglib/demo/MessageInfo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/MessageNumberTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/MessageNumberTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/MessageRemovedException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/class-use/MessageRemovedException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/webapp/src/taglib/demo/MessageTEI.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/webapp/src/taglib/demo/MessageTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/client/MessageViewer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/MessagingException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/class-use/MessagingException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/MethodNotSupportedException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/class-use/MethodNotSupportedException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/MimeBodyPart.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/class-use/MimeBodyPart.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/MimeMessage.RecipientType.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/class-use/MimeMessage.RecipientType.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/MimeMessage.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/class-use/MimeMessage.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/MimeMultipart.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/class-use/MimeMultipart.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/MimePart.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/class-use/MimePart.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/MimePartDataSource.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/class-use/MimePartDataSource.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/MimeUtility.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/class-use/MimeUtility.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/Multipart.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/class-use/Multipart.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/MultipartDataSource.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/class-use/MultipartDataSource.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/dsn/MultipartReport.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/dsn/class-use/MultipartReport.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/client/MultipartViewer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/NOTES.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/NTLMNOTES.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/NewlineOutputStream.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/NewsAddress.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/class-use/NewsAddress.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/NoSuchProviderException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/class-use/NoSuchProviderException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/NotTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/NotTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/OrTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/OrTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/pop3/POP3Folder.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/pop3/class-use/POP3Folder.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/pop3/POP3Message.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/pop3/class-use/POP3Message.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/pop3/POP3SSLStore.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/pop3/class-use/POP3SSLStore.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/pop3/POP3Store.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/pop3/class-use/POP3Store.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/ParameterList.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/class-use/ParameterList.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/ParseException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/class-use/ParseException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/Part.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/class-use/Part.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/PasswordAuthentication.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/class-use/PasswordAuthentication.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/PreencodedMimeBodyPart.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/class-use/PreencodedMimeBodyPart.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/Provider.Type.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/class-use/Provider.Type.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/Provider.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/class-use/Provider.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/Quota.Resource.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/class-use/Quota.Resource.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/Quota.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/class-use/Quota.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/QuotaAwareStore.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/class-use/QuotaAwareStore.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/README.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/README.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/client/README.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/logging/README.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/outlook/README.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/servlet/README.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/ReadOnlyFolderException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/class-use/ReadOnlyFolderException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/util/ReadableMime.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/util/class-use/ReadableMime.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/ReceivedDateTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/ReceivedDateTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/RecipientStringTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/RecipientStringTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/RecipientTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/RecipientTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/dsn/Report.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/dsn/class-use/Report.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/Rights.Right.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/class-use/Rights.Right.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/Rights.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/class-use/Rights.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/smtp/SMTPAddressFailedException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/smtp/class-use/SMTPAddressFailedException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/smtp/SMTPAddressSucceededException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/smtp/class-use/SMTPAddressSucceededException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/smtp/SMTPMessage.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/smtp/class-use/SMTPMessage.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/smtp/SMTPSSLTransport.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/smtp/class-use/SMTPSSLTransport.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/smtp/SMTPSendFailedException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/smtp/class-use/SMTPSendFailedException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/smtp/SMTPSenderFailedException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/smtp/class-use/SMTPSenderFailedException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/smtp/SMTPTransport.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/smtp/class-use/SMTPTransport.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/SSLNOTES.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/SearchException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/SearchException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/SearchTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/SearchTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/SendFailedException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/class-use/SendFailedException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/webapp/src/taglib/demo/SendTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/SentDateTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/SentDateTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/Service.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/class-use/Service.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/Session.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/class-use/Session.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/util/SharedByteArrayInputStream.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/util/class-use/SharedByteArrayInputStream.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/util/SharedFileInputStream.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/util/class-use/SharedFileInputStream.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/SharedInputStream.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/class-use/SharedInputStream.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/client/SimpleAuthenticator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/client/SimpleClient.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/SizeTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/SizeTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/SortTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/class-use/SortTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/Store.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/class-use/Store.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/StoreClosedException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/class-use/StoreClosedException.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/event/StoreEvent.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/event/class-use/StoreEvent.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/event/StoreListener.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/event/class-use/StoreListener.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/client/StoreTreeNode.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/StringTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/StringTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/SubjectTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/class-use/SubjectTerm.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/logging/SummaryFormatter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/logging/SummaryNameFormatter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mineSweeper/domainLayer/service/SvEmail.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/client/TextViewer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/Transport.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/class-use/Transport.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/event/TransportAdapter.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/event/class-use/TransportAdapter.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/event/TransportEvent.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/event/class-use/TransportEvent.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/event/TransportListener.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/event/class-use/TransportListener.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/UIDFolder.FetchProfileItem.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/class-use/UIDFolder.FetchProfileItem.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/UIDFolder.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/class-use/UIDFolder.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/URLName.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/class-use/URLName.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/allclasses-frame.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/allclasses-noframe.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/webapp/build.bat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/webapp/build.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/webapp/src/docroot/compose.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/constant-values.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/copier.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/deprecated-list.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/distributionREADME.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/webapp/src/docroot/errordetails.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/webapp/src/docroot/errorpage.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/folderlist.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/webapp/src/docroot/folders.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/help-doc.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/index-files/index-1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/index-files/index-10.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/index-files/index-11.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/index-files/index-12.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/index-files/index-13.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/index-files/index-14.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/index-files/index-15.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/index-files/index-16.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/index-files/index-17.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/index-files/index-18.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/index-files/index-19.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/index-files/index-2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/index-files/index-20.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/index-files/index-21.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/index-files/index-22.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/index-files/index-23.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/index-files/index-24.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/index-files/index-3.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/index-files/index-4.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/index-files/index-5.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/index-files/index-6.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/index-files/index-7.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/index-files/index-8.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/index-files/index-9.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/webapp/src/docroot/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/webapp/src/docroot/login.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/webapp/src/docroot/logout.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/mail.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/logging/maildemo.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/webapp/src/docroot/messagecontent.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/webapp/src/docroot/messageheaders.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/monitor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/mover.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/msgmultisendsample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/msgsend.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/msgsendsample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/msgshow.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/namespace.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/overview-frame.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/overview-summary.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/overview-tree.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/dsn/package-frame.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/gimap/package-frame.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/package-frame.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/pop3/package-frame.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/smtp/package-frame.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/util/package-frame.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/util/logging/package-frame.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/package-frame.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/event/package-frame.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/package-frame.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/package-frame.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/util/package-frame.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/package-list" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/dsn/package-summary.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/gimap/package-summary.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/package-summary.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/pop3/package-summary.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/smtp/package-summary.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/util/package-summary.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/util/logging/package-summary.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/package-summary.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/event/package-summary.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/package-summary.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/package-summary.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/util/package-summary.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/dsn/package-tree.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/gimap/package-tree.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/package-tree.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/pop3/package-tree.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/smtp/package-tree.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/util/package-tree.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/util/logging/package-tree.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/package-tree.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/event/package-tree.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/package-tree.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/package-tree.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/util/package-tree.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/dsn/package-use.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/gimap/package-use.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/imap/package-use.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/pop3/package-use.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/smtp/package-use.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/util/package-use.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/com/sun/mail/util/logging/package-use.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/package-use.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/event/package-use.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/internet/package-use.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/search/package-use.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/javax/mail/util/package-use.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/populate.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/registry.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/search.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/webapp/src/docroot/send.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/sendfile.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/sendhtml.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/serialized-form.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/client/simple.mailcap" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/smtpsend.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/docs/javadocs/stylesheet.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/webapp/src/taglib/META-INF/taglib.tld" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/transport.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/uidmsgshow.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/webapp/src/docroot/WEB-INF/web.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/javamail-1.4.7/demo/webapp/webapp.README.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MineSweeper.iml" afterPath="$PROJECT_DIR$/MineSweeper.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="MineSweeper.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/build/classes/main/" />
     <ignored path=".idea/dataSources.local.xml" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,123 +495,135 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AdapterFactory.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AdapterFactory.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mineSweeper/domainLayer/adapter/AdapterFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
+            <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="648">
               <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mineSweeper/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="756">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AdministratorShell.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AdministratorShell.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mineSweeper/AdministratorShell.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="646" max-vertical-offset="1071">
+            <state vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="1188">
               <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainView.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainView.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mineSweeper/presentationLayer/MainView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="3145">
+            <state vertical-scroll-proportion="0.0" vertical-offset="396" max-vertical-offset="3672">
               <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JugarPartidaView.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="JugarPartidaView.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mineSweeper/presentationLayer/JugarPartidaView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1547">
+            <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1836">
               <caret line="20" column="37" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InterfaceLogin.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="InterfaceLogin.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mineSweeper/presentationLayer/InterfaceLogin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+            <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="378">
               <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JugarPartidaFrame.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="JugarPartidaFrame.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mineSweeper/presentationLayer/JugarPartidaFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="3009">
+            <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="4482">
               <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CConsultarNivell.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CConsultarNivell.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mineSweeper/presentationLayer/CConsultarNivell.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2" vertical-offset="0" max-vertical-offset="476">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MissatgeriaAdapter.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SvEmail.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/mineSweeper/domainLayer/service/SvEmail.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.64285713" vertical-offset="0" max-vertical-offset="1386">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1328#1562#0" expanded="true" />
+                <element signature="e#1543#1544#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MissatgeriaAdapter.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mineSweeper/domainLayer/adapter/MissatgeriaAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+            <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="270">
               <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ServeiMissatgeria.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mineSweeper/domainLayer/adapter/ServeiMissatgeria.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding>
-                <element signature="method#ServeiMissatgeria#0;class#ServeiMissatgeria#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="true" />
+    </FindUsagesManager>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/src/com/mineSweeper/presentationLayer/CConsultarNivell.java" />
+        <option value="$PROJECT_DIR$/src/com/mineSweeper/domainLayer/service/SvEmail.java" />
+      </list>
+    </option>
   </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1317" />
-    <option name="height" value="784" />
+    <option name="y" value="-4" />
+    <option name="width" value="1366" />
+    <option name="height" value="772" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -166,6 +636,9 @@
     <OptionsSetting value="true" id="Get Latest Version" />
     <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -181,7 +654,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -254,8 +726,67 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MineSweeper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MineSweeper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mineSweeper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="domainLayer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MineSweeper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MineSweeper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MineSweeper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MineSweeper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javamail-1.4.7" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -266,7 +797,7 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/SubstanceLAF.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/libs/javamail-1.4.7/mail.jar!/" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -325,25 +856,59 @@
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
       <method />
     </configuration>
-    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+    <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
-      <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="run-app" />
-      <setting name="depsClasspath" value="false" />
-      <setting name="passParentEnv" value="true" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <setting name="launchBrowser" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JarApplication" factoryName="JAR Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <envs />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -387,111 +952,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <method />
-    </configuration>
-    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
-      <option name="BCName" value="" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="FlashPlayerDebugger.exe" />
-        </LauncherParameters>
-      </option>
-      <option name="moduleName" value="" />
-      <option name="trusted" value="true" />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
-      <module name="" />
-      <option name="TESTING_TYPE" value="0" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
-      <method />
-    </configuration>
-    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
-      <option name="BCName" value="" />
-      <option name="IOSSimulatorSdkPath" value="" />
-      <option name="adlOptions" value="" />
-      <option name="airProgramParameters" value="" />
-      <option name="appDescriptorForEmulator" value="Android" />
-      <option name="debugTransport" value="USB" />
-      <option name="debuggerSdkRaw" value="BC SDK" />
-      <option name="emulator" value="NexusOne" />
-      <option name="emulatorAdlOptions" value="" />
-      <option name="fastPackaging" value="true" />
-      <option name="fullScreenHeight" value="0" />
-      <option name="fullScreenWidth" value="0" />
-      <option name="launchUrl" value="false" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="FlashPlayerDebugger.exe" />
-        </LauncherParameters>
-      </option>
-      <option name="mobileRunTarget" value="Emulator" />
-      <option name="moduleName" value="" />
-      <option name="overriddenMainClass" value="" />
-      <option name="overriddenOutputFileName" value="" />
-      <option name="overrideMainClass" value="false" />
-      <option name="runTrusted" value="true" />
-      <option name="screenDpi" value="0" />
-      <option name="screenHeight" value="0" />
-      <option name="screenWidth" value="0" />
-      <option name="url" value="http://" />
-      <option name="usbDebugPort" value="7936" />
-      <method />
-    </configuration>
-    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list />
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
@@ -542,7 +1002,6 @@
     <task active="true" id="Default" summary="Default task">
       <changelist id="4bad795a-c8fc-4a87-bd77-fbddda6b7b6e" name="Default" comment="" />
       <created>1420814114157</created>
-      <option name="number" value="Default" />
       <updated>1420814114157</updated>
       <workItem from="1420814132191" duration="2658000" />
     </task>
@@ -552,36 +1011,36 @@
     <option name="totallyTimeSpent" value="2658000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1317" height="784" extended-state="6" />
-    <editor active="false" />
+    <frame x="0" y="-4" width="1366" height="772" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288889" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288889" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24980783" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288889" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -602,18 +1061,96 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
-    <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/mineSweeper/domainLayer/adapter/AdapterFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="648">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mineSweeper/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="702">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mineSweeper/AdministratorShell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="1188">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mineSweeper/presentationLayer/MainView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="396" max-vertical-offset="3672">
+          <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mineSweeper/presentationLayer/JugarPartidaView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1836">
+          <caret line="20" column="37" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mineSweeper/presentationLayer/InterfaceLogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="378">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mineSweeper/presentationLayer/JugarPartidaFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="4482">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mineSweeper/presentationLayer/CConsultarNivell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="612">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mineSweeper/domainLayer/adapter/MissatgeriaAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="270">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mineSweeper/domainLayer/adapter/ServeiMissatgeria.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="432">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MineSweeper.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="647">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -621,7 +1158,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="647">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -629,7 +1165,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
           <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -637,11 +1172,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.48" vertical-offset="0" max-vertical-offset="1003">
           <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding>
-            <element signature="method#CJugarPartida#0;class#CJugarPartida#0" expanded="false" />
-            <element signature="method#prOkFerAutenticacio#0;class#CJugarPartida#0" expanded="false" />
-            <element signature="method#prOkCrearPartida#0;class#CJugarPartida#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -649,9 +1179,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="method#ServeiMissatgeria#0;class#ServeiMissatgeria#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -673,11 +1201,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mineSweeper/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="756">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -723,9 +1249,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mineSweeper/presentationLayer/CConsultarNivell.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2" vertical-offset="0" max-vertical-offset="476">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mineSweeper/domainLayer/service/SvEmail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.64285713" vertical-offset="0" max-vertical-offset="1386">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1328#1562#0" expanded="true" />
+            <element signature="e#1543#1544#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -794,7 +1332,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>SubstanceLAF</last-edited>
+          <last-edited>mail</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -807,3 +1345,4 @@
     </states>
   </component>
 </project>
+
