@@ -1,7 +1,10 @@
 package com.mineSweeper.domainLayer.domainModel;
 
-import javax.persistence.Entity;
+
+
+
 import javax.persistence.Id;
+import javax.persistence.Entity;
 
 import com.mineSweeper.domainLayer.struct.Dades;
 
@@ -13,9 +16,8 @@ public class Nivell {
     private int nombreCasellaxColumna;
     private int nombreMines;
 
-
     @Id
-    public String getNom() {
+	public String getNom() {
 		return nom;
 	}
 
@@ -47,7 +49,7 @@ public class Nivell {
         return nombreMines;
     }
 
-    public Dades getDades() {
+    public Dades Dades() {
         Dades dades = new Dades();
         dades.nom = nom;
         dades.nombreCasellaxColumna = nombreCasellaxColumna;

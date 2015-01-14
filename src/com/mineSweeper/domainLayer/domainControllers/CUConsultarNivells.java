@@ -1,6 +1,7 @@
 package com.mineSweeper.domainLayer.domainControllers;
 
 
+
 import com.mineSweeper.domainLayer.dataInterface.DataControllerFactory;
 import com.mineSweeper.domainLayer.domainModel.Nivell;
 import com.mineSweeper.domainLayer.struct.Dades;
@@ -27,13 +28,15 @@ public class CUConsultarNivells {
         if (nivells.size() == 0); //throw an exception
         
         Dades[] dades = new Dades[nivells.size()];
+        
         int i = 0;
         for (Iterator iterator1 = nivells.iterator(); iterator1.hasNext();)
         	{
         	Nivell nivell = (Nivell) iterator1.next();
-        	dades[i] = nivell.getDades();
+        	dades[i] = nivell.Dades();
         	i++;
         }
+        
         return dades;
     }
 

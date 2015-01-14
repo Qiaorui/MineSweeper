@@ -6,21 +6,87 @@ import com.mineSweeper.domainLayer.struct.Resultat;
 
 import java.util.HashSet;
 
-/**
- * Created by qiaorui on 14-10-29.
- */
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.OrderColumn;
+
+@Entity
 public class Partida {
 
     private Nivell nivell;
     private EstrategiaPuntuacio estrategiaPuntuacio;
-    private Casella[][] casellas;
+    private Casella[] casellas;
     private int idPartida;
     private boolean estaAcabada;
     private boolean estaguanyada;
     private int nombreTirades;
 
+    @OneToOne()
+	@JoinColumn(name = "NivelNom",nullable = false, updatable=false)
+    public Nivell getNivell() {
+		return nivell;
+	}
 
-    private class Posicio {
+	public void setNivell(Nivell nivell) {
+		this.nivell = nivell;
+	}
+
+	public EstrategiaPuntuacio obtenerEstrategiaPuntuacio() {
+		return estrategiaPuntuacio;
+	}
+
+	public void setEstrategiaPuntuacio(EstrategiaPuntuacio estrategiaPuntuacio) {
+		this.estrategiaPuntuacio = estrategiaPuntuacio;
+	}
+	/*
+	@OneToMany(targetEntity=Casella.class, cascade=CascadeType.ALL,fetch=FetchType.EAGER)
+	@OrderColumn
+	public Casella[] getCasellas() {
+		return casellas;
+	}
+
+	public void setCasellas(Casella[] casellas) {
+		this.casellas = casellas;
+	}
+	*/
+	@Id
+	@GeneratedValue
+	public int getIdPartida() {
+		return idPartida;
+	}
+
+	public void setIdPartida(int idPartida) {
+		this.idPartida = idPartida;
+	}
+
+	public boolean isEstaAcabada() {
+		return estaAcabada;
+	}
+
+	public void setEstaAcabada(boolean estaAcabada) {
+		this.estaAcabada = estaAcabada;
+	}
+
+	public boolean isEstaguanyada() {
+		return estaguanyada;
+	}
+
+	public void setEstaguanyada(boolean estaguanyada) {
+		this.estaguanyada = estaguanyada;
+	}
+
+	public void setNombreTirades(int nombreTirades) {
+		this.nombreTirades = nombreTirades;
+	}
+
+	private class Posicio {
         public int x, y;
 
         public Posicio(int x, int y) {
@@ -50,13 +116,13 @@ public class Partida {
         Buscamines.getInstance().incrementaId();
         int fila = this.nivell.getNombreCasellaxFila();
         int columna = this.nivell.getNombreCasellaxColumna();
-        casellas = new Casella[fila][columna];
+        casellas = new Casella[fila + columna];
         for (int i = 0; i < fila; i++) {
             for (int j = 0; j < columna; j++) {
-                casellas[i][j] = new Casella(i+1,j+1);
+                casellas[i+j] = new Casella(i+1,j+1, this);
             }
         }
-        assignarMines(nivell.getNombreMines());
+        //assignarMines(nivell.getNombreMines());
         estrategiaPuntuacio = EstrategiaPuntuacioFactory.getInstance().getEstrategiaPuntuacioAleatori();
     }
 /*
@@ -68,7 +134,7 @@ public class Partida {
         return casellas[fila][columna].marcarDesmarcarCasella();
     }
 */
-
+/*
     public boolean marcarDesmarcarCasella(int fila, int columna) {
         return casellas[fila][columna].marcarDesmarcarCasella();
     }
@@ -116,7 +182,7 @@ public class Partida {
         boolean guanyada = true;
         /*for (Casella casella : casellas) {
             if (!casella.teMina()) guanyada = casella.estaDescoberta();
-        }*/
+        }*//*
         for (int i = 0; i < casellas.length && guanyada; i++) {
             for (int j = 0; j < casellas[0].length && guanyada; j++) {
                 if (!casellas[i][j].teMina() && !casellas[i][j].estaDescoberta()) guanyada = false;
@@ -141,5 +207,5 @@ public class Partida {
             }
         }
     }
-
+*/
 }

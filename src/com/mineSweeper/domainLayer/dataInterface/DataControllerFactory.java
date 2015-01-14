@@ -1,8 +1,8 @@
 package com.mineSweeper.domainLayer.dataInterface;
 
-/**
- * Created by qiaorui on 14-10-28.
- */
+import com.mineSweeper.dataLayer.CtrlNivellBD;
+
+
 public class DataControllerFactory {
     private static volatile DataControllerFactory instance;
     private CtrlJugador ctrlJugador;
@@ -11,6 +11,7 @@ public class DataControllerFactory {
     private CtrlPuntuarPerTirades ctrlPuntuarPerTirades;
 
     private DataControllerFactory() {
+    	ctrlNivell = (CtrlNivell) new CtrlNivellBD();
     }
 
     public static DataControllerFactory getInstance() {
