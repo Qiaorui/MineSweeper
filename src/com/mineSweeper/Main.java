@@ -1,6 +1,8 @@
 package com.mineSweeper;
 
 import com.mineSweeper.domainLayer.domainControllers.CUConsultarNivells;
+import com.mineSweeper.domainLayer.domainControllers.CUJugarPartida;
+import com.mineSweeper.domainLayer.domainControllers.CURegistrar;
 import com.mineSweeper.presentationLayer.*;
 
 import org.pushingpixels.substance.api.SubstanceLookAndFeel;
