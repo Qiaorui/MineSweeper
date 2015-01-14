@@ -64,7 +64,7 @@ public class CUJugarPartidaStub extends CUJugarPartida{
     }
 
     @Override
-    public void ferAutenticaicio(String username, String password) {
+    public void ferAutenticacio(String username, String password) {
 
         if (this.username != username);
 

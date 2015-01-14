@@ -58,6 +58,9 @@ public class CUJugarPartida {
         		DataControllerFactory.getInstance().getCtrlCasella().updateCasellas
         		(partida.obtenercasella(resultat.informacioDeCasellas.get(i).numeroFila, 
         				resultat.informacioDeCasellas.get(i).numeroColumna));
+                AdministratorShell.getInstance().showText("updating casella "
+                        +resultat.informacioDeCasellas.get(i).numeroFila+"X"
+                        +resultat.informacioDeCasellas.get(i).numeroColumna+"\n");
         	}
         }
         return resultat;

@@ -7,11 +7,24 @@ import java.util.Objects;
  */
 public class ServeiLocator {
 
-    public ServeiLocator() {
+    private static volatile ServeiLocator instance;
+
+    private ServeiLocator() {
 
     }
 
-    public Objects obtenirServidor(String servidor) {
+    public static ServeiLocator getInstance() {
+        if (instance == null) {
+            synchronized (ServeiLocator.class) {
+                if (instance == null) {
+                    instance = new ServeiLocator();
+                }
+            }
+        }
+        return instance;
+    }
+
+    public Objects obtenirServei(String servei) {
         return null;
     }
 
