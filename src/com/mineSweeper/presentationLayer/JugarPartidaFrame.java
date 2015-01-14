@@ -131,14 +131,21 @@ public class JugarPartidaFrame extends JFrame implements ActionListener, MouseLi
     }
 
 
+    public void showMessage(String message) {
+        messageArea.setText(message);
+        messageArea.setVisible(false);
+        messageArea.setVisible(true);
+    }
+
     private void inicializarElement(){
         okButton = new JButton("OK");
         okButton.addActionListener(this);
         sortirButton = new JButton("Sortir");
         sortirButton.addActionListener(this);
         messageArea = new JLabel();
-        messageArea.setText("error");
+        messageArea.setText("");
     }
+
 
     public void tancar() {
         if (loseFrame != null)loseFrame.dispose();

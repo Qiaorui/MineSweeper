@@ -50,7 +50,7 @@ public class JugarPartidaView {
     }
 
     public void mostraMissatge(String missatge) {
-
+        jugarPartidaFrame.showMessage(missatge);
     }
 
     /*public void mostraDesmarcarCasella(int fila, int columna) {
@@ -58,8 +58,14 @@ public class JugarPartidaView {
     }*/
 
     public void mostraMarcarDesmarcarCasella(int fila, int columna, boolean marcat) {
-        if (marcat) jugarPartidaFrame.marcarCasella(fila,columna);
-        else jugarPartidaFrame.desmarcarCasella(fila,columna);
+        try {
+            if (marcat) jugarPartidaFrame.marcarCasella(fila, columna);
+            else jugarPartidaFrame.desmarcarCasella(fila, columna);
+        }
+        catch (RuntimeException e)
+        {
+            if (e.getMessage() != "") mostraMissatge(e.getMessage());
+        }
     }
 
     public void mostraGuanyda(int punt) {
@@ -71,11 +77,17 @@ public class JugarPartidaView {
         jugarPartidaFrame.perder(informacioDeCasellas);
     }
 
-    public void mostraDescobrirCasella(ArrayList<InformacioDeCasella> informacioDeCasellas){
-        Iterator<InformacioDeCasella> nombreIterator = informacioDeCasellas.iterator();
-        while(nombreIterator.hasNext()){
-            InformacioDeCasella casella = nombreIterator.next();
-            jugarPartidaFrame.descobrirCasella(casella.numeroFila, casella.numeroColumna, casella.numero);
+    public void mostraDescobrirCasella(ArrayList<InformacioDeCasella> informacioDeCasellas) {
+        try {
+            Iterator<InformacioDeCasella> nombreIterator = informacioDeCasellas.iterator();
+            while (nombreIterator.hasNext()) {
+                InformacioDeCasella casella = nombreIterator.next();
+                jugarPartidaFrame.descobrirCasella(casella.numeroFila, casella.numeroColumna, casella.numero);
+            }
+        }
+        catch (RuntimeException e)
+        {
+            if (e.getMessage() != "") mostraMissatge(e.getMessage());
         }
     }
 

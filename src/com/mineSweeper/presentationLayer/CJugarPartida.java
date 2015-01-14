@@ -35,7 +35,7 @@ public class CJugarPartida implements InterfaceLogin, InterfaceConsultarNivell, 
         }
         catch (RuntimeException e)
         {
-            if (e.getMessage() != "") JOptionPane.showMessageDialog(new JFrame(),e.getMessage());
+            if (e.getMessage() != "") JOptionPane.showMessageDialog(new JFrame(), e.getMessage());
         }
     }
 
@@ -47,12 +47,11 @@ public class CJugarPartida implements InterfaceLogin, InterfaceConsultarNivell, 
 
     @Override
     public void prDescobrirCasella(int fila, int columna) {
-        Resultat resultat = cuJugarPartida.descobrirCasella(fila, columna);
-        if (resultat.guanyada) jugarPartidaView.mostraGuanyda(resultat.puntuacio);
-        else if (resultat.acabada) {
-            jugarPartidaView.mostraPerdida(cuJugarPartida.getMines());
-        }
-        else jugarPartidaView.mostraDescobrirCasella(resultat.informacioDeCasellas);
+            Resultat resultat = cuJugarPartida.descobrirCasella(fila, columna);
+            if (resultat.guanyada) jugarPartidaView.mostraGuanyda(resultat.puntuacio);
+            else if (resultat.acabada) {
+                jugarPartidaView.mostraPerdida(cuJugarPartida.getMines());
+            } else jugarPartidaView.mostraDescobrirCasella(resultat.informacioDeCasellas);
     }
 /*
     @Override
