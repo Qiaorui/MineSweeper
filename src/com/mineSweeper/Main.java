@@ -1,6 +1,7 @@
 package com.mineSweeper;
 
 import com.mineSweeper.domainLayer.domainControllers.CUConsultarNivells;
+import com.mineSweeper.domainLayer.domainControllers.CURegistrar;
 import com.mineSweeper.presentationLayer.*;
 
 import org.pushingpixels.substance.api.SubstanceLookAndFeel;
@@ -24,6 +25,7 @@ public class Main {
                     mainView.setCJugarPartida(new CJugarPartida(cuJugarPartidaStub));
                     mainView.setCLogin(new CLogin());
                     mainView.setCConsultarNivell(new CConsultarNivell(cuConsultarNivells));
+                    mainView.setCRegistrar(new CRegistrar(new CURegistrar()));
                     mainView.inicializar();
                 }
                 catch (Exception e) {

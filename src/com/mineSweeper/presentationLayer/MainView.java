@@ -16,6 +16,8 @@ public class MainView extends JFrame implements ActionListener{
 
     private Box menu;
     private JPanel mainPanel;
+
+    private JButton registrarButton;
     private JButton jugarPartidaButton;
     private JButton loginButton;
     private JButton consultarNivellButton;
@@ -23,6 +25,7 @@ public class MainView extends JFrame implements ActionListener{
     private CJugarPartida cJugarPartida;
     private CLogin cLogin;
     private CConsultarNivell cConsultarNivell;
+    private CRegistrar cRegistrar;
 
     private final int ancho = 350;
     private final int altura = 600;
@@ -46,6 +49,10 @@ public class MainView extends JFrame implements ActionListener{
 
     public void setCConsultarNivell(CConsultarNivell cConsultarNivell) {
         this.cConsultarNivell = cConsultarNivell;
+    }
+
+    public void setCRegistrar(CRegistrar cRegistrar) {
+        this.cRegistrar = cRegistrar;
     }
 
     public void inicializar() {
@@ -72,6 +79,13 @@ public class MainView extends JFrame implements ActionListener{
         tmp5.add(new JLabel(new ImageIcon(getClass().getResource("/image/unnamed.png"))));
         //tmp5.add(new JLabel(new ImageIcon("res/image/unnamed.png")));
         menu.add(tmp5);
+
+
+        JPanel tmp6 = new JPanel();
+        tmp6.add(registrarButton);
+        menu.add(tmp6);
+
+        menu.add(Box.createVerticalStrut(5));
 
         JPanel tmp = new JPanel();
         tmp.add(loginButton);
@@ -112,6 +126,8 @@ public class MainView extends JFrame implements ActionListener{
     }
 
     private void inicializarButton() {
+        registrarButton = new JButton("Registrar");
+        registrarButton.addActionListener(this);
         jugarPartidaButton = new JButton("Jugar partida");
         jugarPartidaButton.addActionListener(this);
         loginButton = new JButton("Login");
@@ -181,6 +197,9 @@ public class MainView extends JFrame implements ActionListener{
             skinId = (skinId+1)%26;
             changeSkin();
         }
+        else if (event.getSource() == registrarButton) {
+            registrar();
+        }
     }
 
     public void consultarNivell() {
@@ -193,6 +212,11 @@ public class MainView extends JFrame implements ActionListener{
 
     public void login(){
         cLogin.inicializar();
+    }
+
+
+    public void registrar(){
+        cRegistrar.inicializar();
     }
 
 }
