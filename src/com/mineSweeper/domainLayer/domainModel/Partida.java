@@ -92,6 +92,9 @@ public class Partida {
     /**
      * getPartidaId Getter de l'id de la partida
      * @return
+     * @see com.mineSweeper.domainLayer.domainModel.Jugador
+     * canvi respecte disseny original: separacio de taules
+     * Una per l'historial i una altra per la partida actual
      */
 	@Id
 	@TableGenerator(name= "generatorPatidaID", table= "partidaPKtb", pkColumnName = "empkey",

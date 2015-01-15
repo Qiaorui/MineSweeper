@@ -28,6 +28,9 @@ import javax.persistence.OneToOne;
 public class Jugador extends UsuariRegistrat {
 
     private String email;
+	/**
+	 * partidaActual historial de partides jugades
+	 */
     private Partida partidaActual;
     private List<Partida> partidaJugada;
 
