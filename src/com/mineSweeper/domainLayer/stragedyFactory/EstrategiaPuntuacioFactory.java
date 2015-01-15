@@ -17,12 +17,20 @@ public class EstrategiaPuntuacioFactory {
     private Map<Integer, EstrategiaPuntuacio> puntuarPerTirades; //HashMap!!
 //    private Map<Integer, EstrategiaPuntuacio> puntuarPerTemps;     //HashMap!!
 
+    /**
+     * EstrategiaPuntuacioFactory
+     * Crea una instancia de la clase factoria de estrategias de puntuacion
+     */
     private EstrategiaPuntuacioFactory(){
         puntuarPerTirades = new HashMap<Integer, EstrategiaPuntuacio>();
 //        puntuarPerTemps = new HashMap<Integer, EstrategiaPuntuacio>();
 
     }
 
+    /**
+     * getInstance
+     * @return La instancia del factoria de estrategias de puntuacion
+     */
     public static EstrategiaPuntuacioFactory getInstance() {
         if (instance == null) {
             synchronized (EstrategiaPuntuacioFactory.class) {
@@ -34,6 +42,11 @@ public class EstrategiaPuntuacioFactory {
         return instance;
     }
 
+    /**
+     * getEstrategiaPuntuacioAleatori
+     * @return Una de las estrategias de puntuacion disponibles, elegida
+     * aleatoriamente.
+     */
     public EstrategiaPuntuacio getEstrategiaPuntuacioAleatori() {
         EstrategiaPuntuacio estrategiaPuntuacio;
         Configuracio configuracio = Configuracio.getInstance();
@@ -42,6 +55,11 @@ public class EstrategiaPuntuacioFactory {
         return estrategiaPuntuacio;
     }
 
+    /**
+     * getPuntuarPerTirades
+     * @param maxTirades Define el maximo numero de tiradas permitidas
+     * @return Una estrategia de puntuacion que permite maxTiradas como maximo
+     */
     private EstrategiaPuntuacio getPuntuarPerTirades(int maxTirades) {
         EstrategiaPuntuacio estrategiaPuntuacio;
         if (puntuarPerTirades.containsKey(maxTirades)) {
@@ -54,6 +72,11 @@ public class EstrategiaPuntuacioFactory {
         return estrategiaPuntuacio;
     }
 
+    /**
+     * getPuntuarPerTemps
+     * @param maxSegons Define el maximo numero de segundos permitidos
+     * @return Una estrategia de puntuacion que permite maxSegundos como maximo
+     */
     private EstrategiaPuntuacio getPuntuarPerTemps(int maxSegons) {
         return new PuntuarPerTemps(maxSegons);
     }
