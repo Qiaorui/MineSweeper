@@ -58,14 +58,9 @@ public class JugarPartidaView {
     }*/
 
     public void mostraMarcarDesmarcarCasella(int fila, int columna, boolean marcat) {
-        try {
+
             if (marcat) jugarPartidaFrame.marcarCasella(fila, columna);
             else jugarPartidaFrame.desmarcarCasella(fila, columna);
-        }
-        catch (RuntimeException e)
-        {
-            if (e.getMessage() != "") mostraMissatge(e.getMessage());
-        }
     }
 
     public void mostraGuanyda(int punt) {

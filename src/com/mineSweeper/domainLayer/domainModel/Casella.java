@@ -106,7 +106,7 @@ public class Casella  implements Serializable{
 
     public boolean marcarDesmarcarCasella() throws RuntimeException{
         if (estaDescoberta) {
-            throw new RuntimeException("La casella esta  descoberta");
+            throw new RuntimeException("La casella esta descoberta");
         }
         else {
             if (!estaMarcada) estaMarcada = true; //exc noMarcada

@@ -47,11 +47,19 @@ public class CJugarPartida implements InterfaceLogin, InterfaceConsultarNivell, 
 
     @Override
     public void prDescobrirCasella(int fila, int columna) {
+
+        try {
             Resultat resultat = cuJugarPartida.descobrirCasella(fila, columna);
             if (resultat.guanyada) jugarPartidaView.mostraGuanyda(resultat.puntuacio);
             else if (resultat.acabada) {
                 jugarPartidaView.mostraPerdida(cuJugarPartida.getMines());
             } else jugarPartidaView.mostraDescobrirCasella(resultat.informacioDeCasellas);
+        }
+        catch (RuntimeException e)
+        {
+            if (e.getMessage() != "") jugarPartidaView.mostraMissatge(e.getMessage());
+        }
+
     }
 /*
     @Override
@@ -67,9 +75,17 @@ public class CJugarPartida implements InterfaceLogin, InterfaceConsultarNivell, 
 
     @Override
     public void prMarcarDesmarcarCasella(int fila, int columna) {
-        boolean b =  cuJugarPartida.marcarDesmarcarCasella(fila, columna);
-        jugarPartidaView.mostraMarcarDesmarcarCasella(fila, columna,b);
-        AdministratorShell.getInstance().showText("fila: "+fila+" columna: "+columna+"  "+b);
+
+        try {
+            boolean b =  cuJugarPartida.marcarDesmarcarCasella(fila, columna);
+            jugarPartidaView.mostraMarcarDesmarcarCasella(fila, columna,b);
+            AdministratorShell.getInstance().showText("fila: "+fila+" columna: "+columna+"  "+b);
+        }
+        catch (RuntimeException e)
+        {
+            if (e.getMessage() != "") jugarPartidaView.mostraMissatge(e.getMessage());
+        }
+
     }
 
     @Override
