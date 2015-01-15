@@ -8,10 +8,21 @@ import com.mineSweeper.domainLayer.domainModel.UsuariRegistrat;
  */
 public class CULogin {
 
+    /**
+     * CULogin
+     * Crea una instancia del caso de uso Login
+     */
     public CULogin() {
 
     }
 
+    /**
+     * Login
+     * Realiza en login de un usuario
+     * @param username El username del usuario que quiere hacer login
+     * @param password La contrasena del usuario que quiere hacer login
+     * @return True si la autentificacion se ha hecho correctamente
+     */
     public boolean Login(String username, String password) {
         DataControllerFactory dataControllerFactory = DataControllerFactory.getInstance();
         UsuariRegistrat usuariRegistrat = dataControllerFactory.getCtrlUsuariRegistrat().getUsuariRegistrat(username);

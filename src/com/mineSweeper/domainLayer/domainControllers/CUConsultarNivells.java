@@ -16,11 +16,19 @@ import java.util.Set;
  * Created by qiaorui on 14-10-28.
  */
 public class CUConsultarNivells {
-
+    /**
+     * CUConsultarNivells
+     * Crea una instancia del caso de uso ConsultarNivells
+     */
     public CUConsultarNivells() {
 
     }
 
+    /**
+     * consultarNivells
+     * Consulta informacion sobre los niveles guardados en el sistema
+     * @return dades Los datos de los niveles guardados
+     */
     public Dades[] consultarNivells() {
         DataControllerFactory dataControllerFactory = DataControllerFactory.getInstance();
         List nivells = dataControllerFactory.getCtrlNivell().getAll();
