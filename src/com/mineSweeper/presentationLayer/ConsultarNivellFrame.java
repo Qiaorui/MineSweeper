@@ -23,10 +23,18 @@ public class ConsultarNivellFrame extends JFrame implements ActionListener{
     private JList nivells;
     private Dades[] dades;
 
+    /**
+     * ConsultarNivellFrame Creadora del Frame per a Consultar Nivell
+     * @param consultarNivell Interficies de Consulta Nivell
+     */
     public ConsultarNivellFrame(InterfaceConsultarNivell consultarNivell){
         this.consultarNivell = consultarNivell;
     }
 
+    /**
+     * inicializar inicialitza el frame amb les dades de tots els nivells
+     * @param dades vector amb la informacio corresponent a cada nivell
+     */
     public void inicializar(Dades[] dades){
         Toolkit kit = Toolkit.getDefaultToolkit();
         Dimension dimension = kit.getScreenSize();     //dimension es la dimension de la pantalla
@@ -75,6 +83,9 @@ public class ConsultarNivellFrame extends JFrame implements ActionListener{
         getContentPane().add(mainPanel);
     }
 
+    /**
+     * inicializarElement afegeix botons i els seus events al Frame
+     */
     private void inicializarElement(){
         okButton = new JButton("OK");
         okButton.addActionListener(this);

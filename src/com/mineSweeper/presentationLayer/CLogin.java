@@ -13,7 +13,9 @@ public class CLogin implements InterfaceLogin{
 
     LoginView loginView;
 
-
+    /**
+     * CLogin Creadora de la classe
+     */
     public CLogin(){
         loginView = new LoginView(this);
     }

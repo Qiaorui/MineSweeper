@@ -17,10 +17,17 @@ public class CJugarPartida implements InterfaceLogin, InterfaceConsultarNivell, 
     JugarPartidaView jugarPartidaView;
     CUJugarPartida cuJugarPartida;
 
+    /**
+     * CJugarPartida Creadora de la classe
+     * @param cuJugarPartida Classe cas d'us de jugarPartida
+     */
     public CJugarPartida(CUJugarPartida cuJugarPartida) {
         this.cuJugarPartida = cuJugarPartida;
     }
 
+    /**
+     * inicializar inicialitza la pantalla de jugar partida
+     */
     public void inicializar() {
         jugarPartidaView = new JugarPartidaView(this);
         jugarPartidaView.inicializar();
