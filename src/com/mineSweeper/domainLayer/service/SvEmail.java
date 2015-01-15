@@ -21,30 +21,61 @@ public class SvEmail {
     private String receiver;
     private String text;
 
+    /**
+     * SvEmail
+     * Crea una instancia del servicio de mensajeria
+     */
     public SvEmail(){
     }
 
+    /**
+     * SvEmail
+     * Crea una instancia el servicio de mensajeria dado un
+     * destinatario y un mensaje
+     * @param receiver Direccion de email del destinatario
+     * @param text Texto del mensaje a enviar
+     */
     public SvEmail(String receiver, String text){
         this.receiver = receiver;
         this.text = text;
     }
 
+    /**
+     * getReceiver
+     * @return Direccion de correo electronico del receptor del mensaje
+     */
     public String getReceiver() {
         return receiver;
     }
 
+    /**
+     * setReceiver
+     * @param receiver Asigna una dirección de correo al destinatario
+     */
     public void setReceiver(String receiver) {
         this.receiver = receiver;
     }
 
+    /**
+     * getText
+     * @return Texto del mensaje
+     */
     public String getText() {
         return text;
     }
 
+    /**
+     * setText
+     * @param text Asigna un valor al texto del mensaje
+     */
     public void setText(String text) {
         this.text = text;
     }
 
+    /**
+     * enviar
+     * Envia un email al destinatario con el texto asignado
+     */
     public void enviar() {
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
