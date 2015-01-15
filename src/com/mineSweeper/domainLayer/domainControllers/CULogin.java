@@ -22,6 +22,8 @@ public class CULogin {
      * @param username El username del usuario que quiere hacer login
      * @param password La contrasena del usuario que quiere hacer login
      * @return True si la autentificacion se ha hecho correctamente
+     * @exception java.lang.RuntimeException L'usuari amb el nom donat no existeix
+     * @exception java.lang.RuntimeException El password no es correcte
      */
     public boolean Login(String username, String password) {
         DataControllerFactory dataControllerFactory = DataControllerFactory.getInstance();

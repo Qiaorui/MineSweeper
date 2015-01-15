@@ -65,7 +65,7 @@ public class CUJugarPartida {
 	        Nivell nivell = DataControllerFactory.getInstance().getCtrlNivell().getNivell(nivellNom);
 	        partida = new Partida(nivell, jugador);
 	        DataControllerFactory.getInstance().getCtrlPartida().createPartida(partida);
-	        jugador.jugaParida(partida);
+	        jugador.jugaPartida(partida);
 	        DataControllerFactory.getInstance().getCtrlJugador().updateJugador(jugador);
 	        Casella[] c = partida.obtenerCasellas();
 	        for(int i = 0; i < c.length; i++) {
@@ -98,7 +98,7 @@ public class CUJugarPartida {
         	}
         }
         if (resultat.acabada)  {
-        	jugador.acabaPartidaAcutual();
+        	jugador.acabaPartidaActual();
         	DataControllerFactory.getInstance().getCtrlPartida().updatePartida(partida);
         	DataControllerFactory.getInstance().getCtrlJugador().updateJugador(jugador);
         }

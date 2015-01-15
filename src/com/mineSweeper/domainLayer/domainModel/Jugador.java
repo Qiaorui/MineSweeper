@@ -34,32 +34,61 @@ public class Jugador extends UsuariRegistrat {
     private Partida partidaActual;
     private List<Partida> partidaJugada;
 
+    /**
+     * Jugador
+     * Crea un jugador buit
+     */
     public Jugador() {
     }
 
-    public void jugaParida(Partida partida) {
+    /**
+     * jugaPartida
+     * El jugador juga la partida
+     * @param partida La partida que el jugador juga
+     */
+    public void jugaPartida(Partida partida) {
         partidaActual = partida;
     }
-    
+
+    /**
+     * getEmail
+     * @return email del jugador
+     */
     @Column(unique = true, nullable= false)
     public String getEmail() {
 		return email;
 	}
 
+    /**
+     * setEmail
+     * @param email email del jugador
+     */
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
+
+    /**
+     * getPartidaActual
+     * @return partida que el jugador esta jugant
+     */
 	@OneToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name = "PartidaActualId")
 	public Partida getPartidaActual() {
 		return partidaActual;
 	}
 
+    /**
+     * setPartidaActual
+     * @param partidaActual Partida que el jugador juga
+     */
 	public void setPartidaActual(Partida partidaActual) {
 		this.partidaActual = partidaActual;
 	}
-	
+
+    /**
+     * getPartidaJugada
+     * @return Totes les partides que el jugador ha jugat
+     */
 	@OneToMany(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
 	@JoinTable(name = "PartidaJugada", joinColumns = {@JoinColumn(name="Jugador_Username")},
      inverseJoinColumns = {@JoinColumn(name="partida_id")} )
@@ -67,11 +96,19 @@ public class Jugador extends UsuariRegistrat {
 		return partidaJugada;
 	}
 
+    /**
+     * setPartidaJugada
+     * @param partidaJugada Una lista de partida que el jugador ha jugat.
+     */
 	public void setPartidaJugada(List<Partida> partidaJugada) {
 		this.partidaJugada = partidaJugada;
 	}
 
-	public void acabaPartidaAcutual() {
+    /**
+     * acabaPartidaActual
+     * El jugador acaba la partida actual, doncs la partida actual passa a ser partida jugada.
+     */
+	public void acabaPartidaActual() {
         partidaJugada.add(partidaActual);
         partidaActual = null;
     }

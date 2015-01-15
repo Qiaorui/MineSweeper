@@ -81,7 +81,7 @@ public class DataControllerFactory {
      * getCtrlUsuariRegistrat
      * @return El controlador de datos para puntuar por tiradas
      */
-    public CtrlPuntuarPerTirades getCtrlUsuariRegistrat() {
+    public CtrlPuntuarPerTirades getCtrlPuntuarPerTirades() {
         return ctrlPuntuarPerTirades;
     }
 

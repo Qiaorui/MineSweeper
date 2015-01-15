@@ -28,6 +28,7 @@ public class CUConsultarNivells {
      * consultarNivells
      * Consulta informacion sobre los niveles guardados en el sistema
      * @return dades Los datos de los niveles guardados
+     * @exception java.lang.RuntimeException Si no hi ha cap nivel
      */
     public Dades[] consultarNivells() {
         DataControllerFactory dataControllerFactory = DataControllerFactory.getInstance();

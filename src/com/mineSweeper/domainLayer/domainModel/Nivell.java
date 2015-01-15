@@ -92,6 +92,7 @@ public class Nivell {
      * Dades
      * Obtiene una tupla con todos los parametros del nivel
      * @return Una instancia de dades con los parametros del nivel
+     * @see com.mineSweeper.domainLayer.struct.Dades
      */
     public Dades Dades() {
         Dades dades = new Dades();

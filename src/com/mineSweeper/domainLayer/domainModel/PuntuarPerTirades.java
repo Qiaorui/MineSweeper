@@ -22,9 +22,10 @@ public class PuntuarPerTirades implements EstrategiaPuntuacio {
     }
 
     /**
-     * getPuntuacio Getter de la puntuacio de la partida segons l'estrategia
-     * @param partida
-     * @return
+     * getPuntuacio
+     * Getter de la puntuacio de la partida segons l'estrategia
+     * @param partida La partida que vol saber la puntuacio
+     * @return La puntuacio = maxTirades - tiradesUsades
      */
     @Override
     public int getPuntuacio(Partida partida) {
@@ -32,8 +33,9 @@ public class PuntuarPerTirades implements EstrategiaPuntuacio {
     }
 
     /**
-     * getMaxTirades Getter del numero maxim de tirades de l'estrategia
-     * @return
+     * getMaxTirades
+     * Getter del numero maxim de tirades de l'estrategia
+     * @return maxTirades
      */
     public int getMaxTirades() {
         return maxTirades;

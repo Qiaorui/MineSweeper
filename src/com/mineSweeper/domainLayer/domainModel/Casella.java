@@ -16,6 +16,8 @@ public class Casella  implements Serializable{
     private boolean estaDescoberta;
     private boolean estaMarcada;
     private boolean teMina;
+
+    /** Canvi respecte el disseny original: Casella tiene Partida, sino hibernate no pot generar la tabla */
     private Partida partida;
 
     /**
@@ -170,6 +172,8 @@ public class Casella  implements Serializable{
      * no se puede ni marcar ni desmarcar.
      * @return Cierto si la casilla esta marcada, falso si esta desmarcada
      * @throws RuntimeException Si la casilla esta descubierta
+     * Canvi respecte disseny original: Hem combinat la funcion marcarCasella y desmarcarCasella a aquest per eliminar
+     * excepcions i facilitar el cas de us.
      */
     public boolean marcarDesmarcarCasella() throws RuntimeException{
         if (estaDescoberta) {

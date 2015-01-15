@@ -22,9 +22,10 @@ public class PuntuarPerTemps implements EstrategiaPuntuacio {
     }
 
     /**
-     * getPuntuacio Getter de la puntuacio de la partida segons l'estrategia
-     * @param partida
-     * @return
+     * getPuntuacio
+     * Getter de la puntuacio de la partida segons l'estrategia
+     * @param partida La partida que vol saber la puntuacio
+     * @return la puntuacio = maxTemps - tempsGastat
      */
     @Override
     public int getPuntuacio(Partida partida) {
@@ -32,8 +33,9 @@ public class PuntuarPerTemps implements EstrategiaPuntuacio {
     }
 
     /**
-     * getMaxSegons Getter del numero maxim de segons de l'estrategia
-     * @return
+     * getMaxSegons
+     * Getter del numero maxim de segons de l'estrategia
+     * @return maxSegons
      */
     public long getMaxSegons() {
         return maxSegons;

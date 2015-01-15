@@ -21,7 +21,6 @@ public class Main {
                 SubstanceLookAndFeel.setSkin(new RavenSkin());
                 try {
                     MainView mainView = new MainView();
-                    //CUJugarPartidaStub cuJugarPartidaStub = new CUJugarPartidaStub();
                     CUJugarPartida cuJugarPartida = new CUJugarPartida();
                     CUConsultarNivells cuConsultarNivells = new CUConsultarNivells();
                     mainView.setCJugarPartida(new CJugarPartida(cuJugarPartida));

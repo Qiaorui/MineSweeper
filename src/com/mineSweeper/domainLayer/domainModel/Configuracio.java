@@ -20,7 +20,7 @@ public class Configuracio {
 
     /**
      * getInstance
-     * Ontiene la instancia de la clase de configuracion
+     * Obtiene la instancia de la clase de configuracion
      * @return La instancia de la clase de configuracion
      */
     public static Configuracio getInstance() {
@@ -36,7 +36,7 @@ public class Configuracio {
 
     /**
      * getMaxTirades
-     * @return Numero maximo de tiradas permitidas
+     * @return Numero maximo de tiradas
      */
     public int getMaxTirades() {
         return maxTirades;
@@ -44,7 +44,7 @@ public class Configuracio {
 
     /**
      * getMaxSegons
-     * @return Numero maximo de segundos permitidos
+     * @return Numero maximo de segundos
      */
     public int getMaxSegons() {
         return maxSegons;
