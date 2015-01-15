@@ -33,7 +33,11 @@ public class CJugarPartida implements InterfaceLogin, InterfaceConsultarNivell, 
         jugarPartidaView.inicializar();
     }
 
-
+    /**
+     * prOkFerAutenticacio Crida al cas d'us per a fer lautenticacio i si tot va be mostra les nivells
+     * @param username nom d'usuari introduit
+     * @param password constrasenya introduida
+     */
     @Override
     public void prOkFerAutenticacio(String username, String password) {
         try {
@@ -46,12 +50,24 @@ public class CJugarPartida implements InterfaceLogin, InterfaceConsultarNivell, 
         }
     }
 
+    /**
+     * prOkCrearPartida Crea la partida amb el nivell escollit
+     * @param nivell nom del nivell escollit
+     * @param fila nombre de files del nivell
+     * @param columna nombre de columnes del nivell
+     */
     @Override
     public void prOkCrearPartida(String nivell, int fila, int columna) {
         cuJugarPartida.crearPartida(nivell);
         jugarPartidaView.mostraPartida(fila, columna);
     }
 
+    /**
+     * prDescobrirCasella Crida a descobrir Casella del cas d'us i en cas que la partida s'acabi
+     * mostra la informacio corresponent i sino, actualitza la pantalla amb el nou tauler
+     * @param fila fila del boto clicat
+     * @param columna columa del boto clicat
+     */
     @Override
     public void prDescobrirCasella(int fila, int columna) {
 
@@ -80,6 +96,12 @@ public class CJugarPartida implements InterfaceLogin, InterfaceConsultarNivell, 
     }
 */
 
+    /**
+     * prMarcarDesmarcarCasella Crida a marcarDesmarcar casella del cas d'us i actualitza el tauler
+     * @param fila
+     * @param columna
+     * @Exception En cas que es faci un moviment invalid, es mostra per pantalla
+     */
     @Override
     public void prMarcarDesmarcarCasella(int fila, int columna) {
 
@@ -95,17 +117,25 @@ public class CJugarPartida implements InterfaceLogin, InterfaceConsultarNivell, 
 
     }
 
+    /**
+     * prOkMissatge prOkMissatge Tanca la finestra
+     */
     @Override
     public void prOkMissatge() {
         jugarPartidaView.tancar();
     }
 
+    /**
+     * prCancel Tanca la finestra
+     */
     @Override
     public void prCancel() {
         jugarPartidaView.tancar();
     }
 
-
+    /**
+     * prSortir Tanca la finestra
+     */
     @Override
     public void prSortir() {
         jugarPartidaView.tancar();

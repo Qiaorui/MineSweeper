@@ -94,6 +94,10 @@ public class ConsultarNivellFrame extends JFrame implements ActionListener{
 
     }
 
+    /**
+     * actionPerformed Depenent de l'event, crea la partida o tanca la finestra
+     * @param event
+     */
     @Override
     public void actionPerformed(ActionEvent event) {
         if (event.getSource().equals(okButton)) {

@@ -35,11 +35,20 @@ public class CConsultarNivell implements InterfaceConsultarNivell{
 
     }
 
+    /**
+     * prOkCrearPartida tanca la finestra de Consulta Nivell
+     * @param nivell nom del nivell escollit
+     * @param fila nombre de files del nivell
+     * @param columna nombre de columnes del nivell
+     */
     @Override
     public void prOkCrearPartida(String nivell, int fila, int columna) {
         consultarNivellView.tancar();
     }
 
+    /**
+     * prCancel tanca la finestra de Consulta Nivell
+     */
     @Override
     public void prCancel() {
         consultarNivellView.tancar();

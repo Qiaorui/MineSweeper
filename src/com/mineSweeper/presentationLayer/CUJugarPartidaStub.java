@@ -63,6 +63,11 @@ public class CUJugarPartidaStub extends CUJugarPartida{
         dades[2].nombreMines = 99;
     }
 
+    /**
+     * ferAutenticacio
+     * @param username El username del jugador que autenticara.
+     * @param password El password del jugador que autenticara.
+     */
     @Override
     public void ferAutenticacio(String username, String password) {
 
@@ -70,11 +75,20 @@ public class CUJugarPartidaStub extends CUJugarPartida{
 
     }
 
+
+    /**
+     * Dades Obte les dades de tots els nivells
+     * @return
+     */
     @Override
     public Dades[] obtenirNivells() {
         return dades;
     }
 
+    /**
+     * crearPartida crea la partida amb el nivell nivellNom
+     * @param nivellNom El nom del nivell.
+     */
     @Override
     public void crearPartida(String nivellNom) {
         if (nivellNom == "principante") {
@@ -109,6 +123,12 @@ public class CUJugarPartidaStub extends CUJugarPartida{
         }
     }
 
+    /**
+     * descobrirCasella Actualitza la taula i la retorna
+     * @param fila La fila de la casella que vol descobrir.
+     * @param columna La columna de la casella que vol descobrir.
+     * @return
+     */
     @Override
     public Resultat descobrirCasella(int fila, int columna) {
         Resultat resultat = new Resultat();
@@ -142,12 +162,22 @@ public class CUJugarPartidaStub extends CUJugarPartida{
         else marcat[fila][columna] = false;
     }*/
 
+    /**
+     * marcarDesmarcarCasella Marca o desmarca la casella en la posicio (fila,columa)
+     * @param fila La fila de la casella que vol marcar o desmarcar.
+     * @param columna La columna de la casella que vol marcar o desmarcar.
+     * @return
+     */
     @Override
     public boolean marcarDesmarcarCasella(int fila, int columna) {
         marcat[fila][columna] = !marcat[fila][columna];
         return marcat[fila][columna];
     }
 
+    /**
+     * getMines Retorna la informacio de les caselles
+     * @return
+     */
     @Override
     public ArrayList<InformacioDeCasella> getMines() {
         ArrayList<InformacioDeCasella> informacioDeCasellas = new ArrayList<InformacioDeCasella>();
@@ -159,7 +189,12 @@ public class CUJugarPartidaStub extends CUJugarPartida{
         return informacioDeCasellas;
     }
 
-
+    /**
+     * descobrirVeins Descobreix els veins de la casella en la posicio (fila,columa) i actualitza el resultat de la taula
+     * @param fila fila de la casella descoberta
+     * @param columna columna de la casella descoberta
+     * @param resultat estat de la taula
+     */
     private void descobrirVeins(int fila, int columna, Resultat resultat) {
         for (int i = fila-1; i < fila+2; i++) {
             for (int j = columna-1; j < columna+2; j++) {
@@ -174,7 +209,10 @@ public class CUJugarPartidaStub extends CUJugarPartida{
         }
     }
 
-
+    /**
+     * assignarMines Assigna les mines segons nMines dins el tauler aleatoriament
+     * @param nMines Numero de mines del nivell
+     */
     private void assignarMines(int nMines) {
 
 
@@ -194,7 +232,10 @@ public class CUJugarPartidaStub extends CUJugarPartida{
         }
     }
 
-
+    /**
+     * comprovaPartidaGuanyada Comprova si despres de descobrir casella s'ha guanyat la partida
+     * @return retorna un boolea indicant si ha estat guanyada
+     */
     private boolean comprovaPartidaGuanyada() {
         boolean guanyada = true;
         for (int i = 0; i < map.length; i++) {
