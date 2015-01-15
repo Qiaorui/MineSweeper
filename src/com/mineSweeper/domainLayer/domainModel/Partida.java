@@ -118,8 +118,8 @@ public class Partida {
         estaAcabada = false;
         estaguanyada = false;
         nombreTirades = 0;
-        idPartida = Buscamines.getInstance().getIdPartida()+1;
-        Buscamines.getInstance().incrementaId();
+        //idPartida = Buscamines.getInstance().getIdPartida()+1;
+       //Buscamines.getInstance().incrementaId();
         int fila = this.nivell.getNombreCasellaxFila();
         int columna = this.nivell.getNombreCasellaxColumna();
         casellas = new Casella[fila*columna];
@@ -140,8 +140,12 @@ public class Partida {
         return casellas[fila][columna].marcarDesmarcarCasella();
     }
 */
-    public Casella obtenercasella(int fila, int columna) {
+    public Casella obtenerCasella(int fila, int columna) {
     	return casellas[fila*nivell.getNombreCasellaxColumna()+columna];
+    }
+    
+    public Casella[] obtenerCasellas() {
+    	return casellas;
     }
 
     public boolean marcarDesmarcarCasella(int fila, int columna) {
@@ -150,8 +154,8 @@ public class Partida {
 
     public Resultat descobrirCasella(int fila, int columna) {
         Resultat resultat = new Resultat();
-        if (casellas[fila*nivell.getNombreCasellaxColumna()+columna].estaMarcada()) throw new RuntimeException("La casella ja est√† Marcada");
-        else if (casellas[fila*nivell.getNombreCasellaxColumna()+columna].estaDescoberta()) throw new RuntimeException("La casella ja est√† descoberta");
+        if (casellas[fila*nivell.getNombreCasellaxColumna()+columna].estaMarcada()) throw new RuntimeException("La casella ja esta† Marcada");
+        else if (casellas[fila*nivell.getNombreCasellaxColumna()+columna].estaDescoberta()) throw new RuntimeException("La casella ja esta† descoberta");
         boolean teMina = casellas[fila*nivell.getNombreCasellaxFila()+columna].descobrirCasella();
         nombreTirades++;
         if (teMina) {

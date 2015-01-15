@@ -32,7 +32,7 @@ public class datetest {
 		config.configure("hibernate.cfg.xml");
 		factory = config.buildSessionFactory();
 		
-		//new SchemaExport(config).create(true, true);
+		new SchemaExport(config).create(true, true);
 		
 		
 		Session session = factory.getCurrentSession();
@@ -48,7 +48,7 @@ public class datetest {
 		Jugador j = (Jugador) session.createQuery("from Jugador where username = '"+username+"'").uniqueResult();
 		
 		UsuariRegistrat u = (UsuariRegistrat) session.createQuery("from UsuariRegistrat where username = '"+username+"'").uniqueResult();
-	
+		
 		session.getTransaction().commit();	
 	}
 

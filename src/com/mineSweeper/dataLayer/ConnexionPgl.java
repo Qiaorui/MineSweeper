@@ -2,6 +2,7 @@ package com.mineSweeper.dataLayer;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
+import org.hibernate.tool.hbm2ddl.SchemaExport;
 
 import com.mineSweeper.domainLayer.dataInterface.CtrlJugador;
 import com.mineSweeper.domainLayer.dataInterface.CtrlNivell;
@@ -37,7 +38,7 @@ public class ConnexionPgl {
 		config.configure("hibernate.cfg.xml");
 		factory = config.buildSessionFactory();
 		
-		//new SchemaExport(config).create(true, true);
+		new SchemaExport(config).create(true, true);
     }
 
     public static ConnexionPgl getInstance() {

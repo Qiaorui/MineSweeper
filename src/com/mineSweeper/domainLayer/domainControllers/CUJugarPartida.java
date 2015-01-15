@@ -1,7 +1,9 @@
 package com.mineSweeper.domainLayer.domainControllers;
 
 import com.mineSweeper.AdministratorShell;
+import com.mineSweeper.domainLayer.dataInterface.CtrlCasella;
 import com.mineSweeper.domainLayer.dataInterface.DataControllerFactory;
+import com.mineSweeper.domainLayer.domainModel.Casella;
 import com.mineSweeper.domainLayer.domainModel.Jugador;
 import com.mineSweeper.domainLayer.domainModel.Nivell;
 import com.mineSweeper.domainLayer.domainModel.Partida;
@@ -37,32 +39,42 @@ public class CUJugarPartida {
     }
 
     public void crearPartida(String nivellNom) {
+    	
         Nivell nivell = DataControllerFactory.getInstance().getCtrlNivell().getNivell(nivellNom);
-        
-        
         partida = new Partida(nivell, jugador);
         DataControllerFactory.getInstance().getCtrlPartida().createPartida(partida);
         jugador.jugaParida(partida);
         DataControllerFactory.getInstance().getCtrlJugador().updateJugador(jugador);
+        Casella[] c = partida.obtenerCasellas();
+        for(int i = 0; i < c.length; i++) {
+        	DataControllerFactory.getInstance().getCtrlCasella().createCasella(c[i]);
+        }
+        
     }
 
     public Resultat descobrirCasella(int fila, int columna) {
+
+    	AdministratorShell.getInstance().showText("huhu");
         Resultat resultat = partida.descobrirCasella(fila, columna);
-        if (resultat.acabada)  {
-        	jugador.acabaPartidaAcutual();
-        	DataControllerFactory.getInstance().getCtrlPartida().createPartida(partida);
-        	DataControllerFactory.getInstance().getCtrlJugador().updateJugador(jugador);
-        }
         if(resultat.informacioDeCasellas.size() > 0) {
+
         	for(int i = 0; i < resultat.informacioDeCasellas.size(); i++) {
-        		DataControllerFactory.getInstance().getCtrlCasella().updateCasellas
-        		(partida.obtenercasella(resultat.informacioDeCasellas.get(i).numeroFila, 
-        				resultat.informacioDeCasellas.get(i).numeroColumna));
+        		CtrlCasella cc = DataControllerFactory.getInstance().getCtrlCasella();
+        		cc.updateCasellas(
+        				partida.obtenerCasella(resultat.informacioDeCasellas.get(i).numeroFila-1, 
+        				resultat.informacioDeCasellas.get(i).numeroColumna-1));
+        		
                 AdministratorShell.getInstance().showText("updating casella "
                         +resultat.informacioDeCasellas.get(i).numeroFila+"X"
                         +resultat.informacioDeCasellas.get(i).numeroColumna+"\n");
         	}
         }
+        if (resultat.acabada)  {
+        	jugador.acabaPartidaAcutual();
+        	DataControllerFactory.getInstance().getCtrlPartida().createPartida(partida);
+        	DataControllerFactory.getInstance().getCtrlJugador().updateJugador(jugador);
+        }
+        
         return resultat;
     }
 
@@ -80,6 +92,7 @@ public class CUJugarPartida {
     */
 
     public boolean marcarDesmarcarCasella(int fila, int columna) {
+    	
         return partida.marcarDesmarcarCasella(fila, columna);
     }
 }

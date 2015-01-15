@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.hibernate.Session;
 
+import com.mineSweeper.AdministratorShell;
 import com.mineSweeper.domainLayer.dataInterface.CtrlCasella;
 import com.mineSweeper.domainLayer.domainModel.Casella;
 import com.mineSweeper.domainLayer.domainModel.Jugador;
@@ -40,7 +41,7 @@ public class CtrlCasellaBD implements CtrlCasella{
     	ConnexionPgl.getInstance();
 		Session session = ConnexionPgl.getFactory().getCurrentSession();
 		session.beginTransaction();
-		
+
 		session.update(a);
 		session.getTransaction().commit();
     }
