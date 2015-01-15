@@ -1,5 +1,6 @@
 package com.mineSweeper.domainLayer.stragedyFactory;
 
+import com.mineSweeper.AdministratorShell;
 import com.mineSweeper.domainLayer.domainModel.Configuracio;
 import com.mineSweeper.domainLayer.domainModel.EstrategiaPuntuacio;
 import com.mineSweeper.domainLayer.domainModel.PuntuarPerTemps;

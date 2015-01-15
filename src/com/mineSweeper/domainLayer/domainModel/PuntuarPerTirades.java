@@ -1,5 +1,7 @@
 package com.mineSweeper.domainLayer.domainModel;
 
+import com.mineSweeper.AdministratorShell;
+
 /**
  * Created by qiaorui on 14-10-29.
  */
@@ -15,7 +17,8 @@ public class PuntuarPerTirades implements EstrategiaPuntuacio {
      * @param maxTirades
      */
     public PuntuarPerTirades(int maxTirades) {
-        this.maxTirades = maxTirades;
+    	
+    	this.maxTirades = maxTirades;
     }
 
     /**

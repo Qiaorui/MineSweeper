@@ -83,6 +83,7 @@ public class CUJugarPartida {
      * Canvi respecte disseny original: afegir funcions de BBDD
      */
     public Resultat descobrirCasella(int fila, int columna) {
+
         Resultat resultat = partida.descobrirCasella(fila, columna);
         if(resultat.informacioDeCasellas.size() > 0) {
         	for(int i = 0; i < resultat.informacioDeCasellas.size(); i++) {
@@ -125,6 +126,9 @@ public class CUJugarPartida {
      * estalviar excepcions i facilitar el caso de uso.
      */
     public boolean marcarDesmarcarCasella(int fila, int columna) {
-        return partida.marcarDesmarcarCasella(fila, columna);
+    	boolean aux = partida.marcarDesmarcarCasella(fila, columna);
+    	CtrlCasella cc = DataControllerFactory.getInstance().getCtrlCasella();
+		cc.updateCasellas(partida.obtenerCasella(fila, columna));
+    	return aux;
     }
 }
