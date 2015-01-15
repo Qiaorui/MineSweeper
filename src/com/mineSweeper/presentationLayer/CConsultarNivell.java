@@ -4,9 +4,7 @@ import com.mineSweeper.domainLayer.domainControllers.CUConsultarNivells;
 
 import javax.swing.*;
 
-/**
- * Created by qiaorui on 11/18/14.
- */
+
 public class CConsultarNivell implements InterfaceConsultarNivell{
 
     private ConsultarNivellView consultarNivellView;
