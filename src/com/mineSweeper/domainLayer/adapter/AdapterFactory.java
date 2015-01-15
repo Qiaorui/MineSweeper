@@ -8,11 +8,18 @@ public class AdapterFactory {
     private static volatile AdapterFactory instance;
     private InterfaceMissatgeriaAdapter interfacemissatgeriaAdapter;
 
+    /**
+     * AdapterFactory
+     * Crea una instancia de AdapterFactory
+     */
     private AdapterFactory(){
         interfacemissatgeriaAdapter = new MissatgeriaAdapter();
     }
 
-
+    /**
+     * getInstance
+     * @return La instancia del adaptador
+     */
     public static AdapterFactory getInstance() {
         if (instance == null) {
             synchronized (AdapterFactory.class) {
@@ -24,6 +31,10 @@ public class AdapterFactory {
         return instance;
     }
 
+    /**
+     * getMissatgeria
+     * @return El adaptador de mensajeria
+     */
     public InterfaceMissatgeriaAdapter getMissatgeria() {
         return interfacemissatgeriaAdapter;
     }

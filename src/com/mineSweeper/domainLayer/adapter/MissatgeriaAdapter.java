@@ -8,7 +8,12 @@ import com.mineSweeper.domainLayer.serviceLocator.ServeiLocator;
  */
 public class MissatgeriaAdapter implements InterfaceMissatgeriaAdapter{
 
-
+    /**
+     * enviarMissatge
+     * Envia un mensaje a una direccion de correo electronico
+     * @param receiver La direccion de email a la que queremos enviar el mensaje
+     * @param missatge Texto del mensaje
+     */
     @Override
     public void enviarMissatge(String receiver, String missatge) {
         SvEmail svEmail = ServeiLocator.getInstance().obtenirServei("SvEmail");
