@@ -5,7 +5,9 @@ import com.mineSweeper.domainLayer.domainModel.Partida;
 
 import java.util.List;
 
-
+/**
+ * Interfaz para las casillas en la capa de datos
+ */
 public interface CtrlCasella {
 
     public Casella getCasella(Partida p, int numeroFila, int numeroColumna);
