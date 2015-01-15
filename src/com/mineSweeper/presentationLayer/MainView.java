@@ -40,7 +40,8 @@ public class MainView extends JFrame implements ActionListener{
     }
 
     /**
-     * setCJugarPartida Setter de CJugarPartida
+     * setCJugarPartida
+     * Setter de CJugarPartida
      * @param cJugarPartida
      */
     public void setCJugarPartida(CJugarPartida cJugarPartida) {
@@ -48,7 +49,8 @@ public class MainView extends JFrame implements ActionListener{
     }
 
     /**
-     * setCLogin Setter de CLogin
+     * setCLogin
+     * Setter de CLogin
      * @param cLogin
      */
     public void setCLogin(CLogin cLogin) {
@@ -56,7 +58,8 @@ public class MainView extends JFrame implements ActionListener{
     }
 
     /**
-     * setCConsultarNivell Setter de CConsultarNivell
+     * setCConsultarNivell
+     * Setter de CConsultarNivell
      * @param cConsultarNivell
      */
     public void setCConsultarNivell(CConsultarNivell cConsultarNivell) {
@@ -64,7 +67,8 @@ public class MainView extends JFrame implements ActionListener{
     }
 
     /**
-     * setCRegistrar Setter de cRegistrar
+     * setCRegistrar
+     * Setter de cRegistrar
      * @param cRegistrar
      */
     public void setCRegistrar(CRegistrar cRegistrar) {
@@ -145,7 +149,8 @@ public class MainView extends JFrame implements ActionListener{
     }
 
     /**
-     * inicializarButton Afegeix botons i events al menu principal
+     * inicializarButton
+     * Afegeix botons i events al menu principal
      */
     private void inicializarButton() {
         registrarButton = new JButton("Registrar");
@@ -165,7 +170,8 @@ public class MainView extends JFrame implements ActionListener{
     }
 
     /**
-     * changeSkin Canvia el skin de les finestres
+     * changeSkin
+     * Canvia el skin de les finestres
      */
     public void changeSkin(){
         switch (skinId){

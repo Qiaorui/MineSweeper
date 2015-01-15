@@ -21,11 +21,10 @@ public class Main {
                 SubstanceLookAndFeel.setSkin(new RavenSkin());
                 try {
                     MainView mainView = new MainView();
-                    CUJugarPartida cuJugarPartida = new CUJugarPartida();
-                    CUConsultarNivells cuConsultarNivells = new CUConsultarNivells();
-                    mainView.setCJugarPartida(new CJugarPartida(cuJugarPartida));
+                    mainView.setCJugarPartida(new CJugarPartida( new CUJugarPartida();));
+                    /** Cas d'us Login es per login de admin, no esta acabat.*/
                     mainView.setCLogin(new CLogin());
-                    mainView.setCConsultarNivell(new CConsultarNivell(cuConsultarNivells));
+                    mainView.setCConsultarNivell(new CConsultarNivell(new CUConsultarNivells();));
                     mainView.setCRegistrar(new CRegistrar(new CURegistrar()));
                     mainView.inicializar();
                 }
