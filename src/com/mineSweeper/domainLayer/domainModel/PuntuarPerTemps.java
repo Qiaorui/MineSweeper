@@ -12,17 +12,29 @@ public class PuntuarPerTemps implements EstrategiaPuntuacio {
     public PuntuarPerTemps() {
     }
 
-
+    /**
+     * PuntuarPerTemps Inicialitza l'estrategia
+     * @param maxSegons
+     */
     public PuntuarPerTemps(int maxSegons) {
         this.maxSegons = maxSegons;
         tempsIni = System.currentTimeMillis()/1000;
     }
 
+    /**
+     * getPuntuacio Getter de la puntuacio de la partida segons l'estrategia
+     * @param partida
+     * @return
+     */
     @Override
     public int getPuntuacio(Partida partida) {
         return (int)(maxSegons - (System.currentTimeMillis()/1000 - tempsIni));
     }
 
+    /**
+     * getMaxSegons Getter del numero maxim de segons de l'estrategia
+     * @return
+     */
     public long getMaxSegons() {
         return maxSegons;
     }

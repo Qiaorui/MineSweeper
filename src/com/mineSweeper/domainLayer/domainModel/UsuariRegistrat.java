@@ -25,39 +25,76 @@ public class UsuariRegistrat {
 
     }
 
+	/**
+	 * comprovaPwd Retorna si la contrasenya es igual a pwd
+	 * @param pwd contrasenya introduida
+	 * @return
+	 */
     public boolean comprovaPwd(String pwd) {
         return this.pwd.equals(pwd);
     }
-    
+
+	/**
+	 * getNom Getter del nom de l'usuari enregistrat
+	 * @return
+	 */
 	public String getNom() {
 		return nom;
 	}
 
+	/**
+	 * setNom Setter del nom de l'usuari
+	 * @param nom
+	 */
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
 
+	/**
+	 * getCognom Getter del cognom de l'usuari enregistrat
+	 * @return
+	 */
 	public String getCognom() {
 		return cognom;
 	}
 
+	/**
+	 * setCognom Setter del cognom de l'usuari
+	 * @param cognom
+	 */
 	public void setCognom(String cognom) {
 		this.cognom = cognom;
 	}
 
+	/**
+	 * getUsername Getter del nom d'usuari de l'usuari enregistrat
+	 * @return
+	 */
     @Id
 	public String getUsername() {
 		return username;
 	}
 
+	/**
+	 * setUsername Setter del nom d'usuari de l'usuari
+	 * @param username
+	 */
 	public void setUsername(String username) {
 		this.username = username;
 	}
 
+	/**
+	 * getPwd Getter de la contrasenya de l'usuari enregistrat
+	 * @return
+	 */
 	public String getPwd() {
 		return pwd;
 	}
 
+	/**
+	 * setPwd Setter de la contrasenya de l'usuari
+	 * @param pwd
+	 */
 	public void setPwd(String pwd) {
 		this.pwd = pwd;
 	}
