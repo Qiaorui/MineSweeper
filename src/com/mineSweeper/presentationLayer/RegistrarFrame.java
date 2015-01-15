@@ -24,11 +24,17 @@ public class RegistrarFrame extends JFrame implements ActionListener{
     private final int ancho = 350;
     private final int altura = 350;
 
+    /**
+     * Creadora del frame de Registrar
+     * @param interfaceRegistrar
+     */
     public RegistrarFrame(InterfaceRegistrar interfaceRegistrar) {
         registrar = interfaceRegistrar;
     }
 
-
+    /**
+     * inicializar inicialitza el frame
+     */
     public void inicializar(){
         Toolkit kit = Toolkit.getDefaultToolkit();
         Dimension dimension = kit.getScreenSize();     //dimension es la dimension de la pantalla
@@ -90,6 +96,9 @@ public class RegistrarFrame extends JFrame implements ActionListener{
         getContentPane().add(mainPanel);
     }
 
+    /**
+     * inicializarElement Afegeix botons i events al frame
+     */
     private void inicializarElement(){
         okButton = new JButton("OK");
         okButton.addActionListener(this);
@@ -107,6 +116,10 @@ public class RegistrarFrame extends JFrame implements ActionListener{
         emailArea.setText("tuEmail@email.com");
     }
 
+    /**
+     * actionPerformed captura els events dels botons i crida a registrar o tanca la finestra segons correspongui
+     * @param event
+     */
     @Override
     public void actionPerformed(ActionEvent event) {
         if (event.getSource() == okButton) {

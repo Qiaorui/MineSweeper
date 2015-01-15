@@ -28,7 +28,10 @@ public class JugarPartidaFrame extends JFrame implements ActionListener, MouseLi
     private int altura;
 
 
-
+    /**
+     * JugarPartidaFrame creadora del Frame
+     * @param jugarPartida interficie de jugarPartida
+     */
     public JugarPartidaFrame(InterfaceJugarPartida jugarPartida) {
         this.jugarPartida = jugarPartida;
     }
@@ -82,6 +85,12 @@ public class JugarPartidaFrame extends JFrame implements ActionListener, MouseLi
         getContentPane().add(mainPanel);
     }
 
+    /**
+     * descobrirCasella pinta la casella situada en (fila,columna) amb el numero si en te
+     * @param fila fila de la casella
+     * @param columna columna de la casella
+     * @param numero numero de la casella
+     */
     public void descobrirCasella(int fila, int columna, int numero) {
         if (numero != 0) {
             map[fila][columna].setText(""+numero);
@@ -105,18 +114,32 @@ public class JugarPartidaFrame extends JFrame implements ActionListener, MouseLi
         map[fila][columna].setVisible(true);
     }
 
+    /**
+     * marcarCasella Pinta la icona que indica que la casella ja esta marcada
+     * @param fila fila de la casella
+     * @param columna columa de la casella
+     */
     public void marcarCasella(int fila, int columna) {
         map[fila][columna].setIcon(new ImageIcon(getClass().getResource("/image/flag.png")));
         map[fila][columna].setVisible(false);
         map[fila][columna].setVisible(true);
     }
 
+    /**
+     * desmarcarCasella despinta la icona que indica que la casella ja esta marcada
+     * @param fila fila de la casella
+     * @param columna columna de la casella
+     */
     public void desmarcarCasella(int fila, int columna) {
         map[fila][columna].setIcon(null);
         map[fila][columna].setVisible(false);
         map[fila][columna].setVisible(true);
     }
 
+    /**
+     * perder Mostra la imatge de partida perduda
+     * @param informacioDeCasellas
+     */
     public void perder(ArrayList<InformacioDeCasella> informacioDeCasellas) {
         Iterator<InformacioDeCasella> nombreIterator = informacioDeCasellas.iterator();
         while(nombreIterator.hasNext()){
@@ -130,13 +153,19 @@ public class JugarPartidaFrame extends JFrame implements ActionListener, MouseLi
         loseFrame.setVisible(true);
     }
 
-
+    /**
+     * showMessage Mostra el missatge message
+     * @param message
+     */
     public void showMessage(String message) {
         messageArea.setText(message);
         messageArea.setVisible(false);
         messageArea.setVisible(true);
     }
 
+    /**
+     * inicializarElement Afegeix botons i events al Frame
+     */
     private void inicializarElement(){
         okButton = new JButton("OK");
         okButton.addActionListener(this);
@@ -146,13 +175,18 @@ public class JugarPartidaFrame extends JFrame implements ActionListener, MouseLi
         messageArea.setText("");
     }
 
-
+    /**
+     * tancar Tanca la finestra
+     */
     public void tancar() {
         if (loseFrame != null)loseFrame.dispose();
         dispose();
     }
 
-
+    /**
+     * actionPerformed Rep els events dels clicks dels botons i surt o mostra un missatge
+     * @param event
+     */
     @Override
     public void actionPerformed(ActionEvent event) {
         if (event.getSource() == okButton) {
@@ -174,6 +208,10 @@ public class JugarPartidaFrame extends JFrame implements ActionListener, MouseLi
         }*/
     }
 
+    /**
+     * mouseClicked Intercepta els events del ratoli i busca la casella que s'ha clicat. Marca/Desmarca o descobreix segons el boto
+     * @param e event del ratoli
+     */
     @Override
     public void mouseClicked(MouseEvent e) {
         if (e.getButton() == MouseEvent.BUTTON3) {
@@ -222,6 +260,10 @@ public class JugarPartidaFrame extends JFrame implements ActionListener, MouseLi
 
     private class LoseFrame extends JFrame {
 
+        /**
+         * Crea el frame de partida perduda
+         * @param button
+         */
         private LoseFrame(JButton button) {
             Toolkit kit = Toolkit.getDefaultToolkit();
             Dimension dimension = kit.getScreenSize();     //dimension es la dimension de la pantalla

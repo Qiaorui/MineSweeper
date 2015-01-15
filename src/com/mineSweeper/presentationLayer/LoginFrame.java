@@ -23,11 +23,17 @@ public class LoginFrame extends JFrame implements ActionListener{
     private final int ancho = 250;
     private final int altura = 250;
 
-
+    /**
+     * Creadora del frame de Login
+     * @param login
+     */
     public LoginFrame(InterfaceLogin login){
         this.login = login;
     }
 
+    /**
+     * inicializar inicialitza el frame
+     */
     public void inicializar(){
         Toolkit kit = Toolkit.getDefaultToolkit();
         Dimension dimension = kit.getScreenSize();     //dimension es la dimension de la pantalla
@@ -72,6 +78,9 @@ public class LoginFrame extends JFrame implements ActionListener{
         getContentPane().add(mainPanel);
     }
 
+    /**
+     * inicializarElement Afegeix botons i events al frame
+     */
     private void inicializarElement(){
         okButton = new JButton("OK");
         okButton.addActionListener(this);
@@ -83,6 +92,10 @@ public class LoginFrame extends JFrame implements ActionListener{
         passwordArea.setText("password");
     }
 
+    /**
+     * actionPerformed Captura els clicks dels botons i crida les funcions corresponents
+     * @param event
+     */
     @Override
     public void actionPerformed(ActionEvent event) {
         if (event.getSource() == okButton) {

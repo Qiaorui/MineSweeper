@@ -14,7 +14,6 @@ public class AdministratorShell extends JFrame {
     private final int ancho = 400;
     private final int altura = 550;
 
-
     private AdministratorShell(){
         inicializar();
     }

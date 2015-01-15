@@ -39,22 +39,41 @@ public class MainView extends JFrame implements ActionListener{
 
     }
 
+    /**
+     * setCJugarPartida Setter de CJugarPartida
+     * @param cJugarPartida
+     */
     public void setCJugarPartida(CJugarPartida cJugarPartida) {
         this.cJugarPartida = cJugarPartida;
     }
 
+    /**
+     * setCLogin Setter de CLogin
+     * @param cLogin
+     */
     public void setCLogin(CLogin cLogin) {
         this.cLogin = cLogin;
     }
 
+    /**
+     * setCConsultarNivell Setter de CConsultarNivell
+     * @param cConsultarNivell
+     */
     public void setCConsultarNivell(CConsultarNivell cConsultarNivell) {
         this.cConsultarNivell = cConsultarNivell;
     }
 
+    /**
+     * setCRegistrar Setter de cRegistrar
+     * @param cRegistrar
+     */
     public void setCRegistrar(CRegistrar cRegistrar) {
         this.cRegistrar = cRegistrar;
     }
 
+    /**
+     * inicializar inicialitza la pantalla del menu principal
+     */
     public void inicializar() {
         Toolkit kit = Toolkit.getDefaultToolkit();
         Dimension dimension = kit.getScreenSize();     //dimension es la dimension de la pantalla
@@ -125,6 +144,9 @@ public class MainView extends JFrame implements ActionListener{
         setVisible(true);
     }
 
+    /**
+     * inicializarButton Afegeix botons i events al menu principal
+     */
     private void inicializarButton() {
         registrarButton = new JButton("Registrar");
         registrarButton.addActionListener(this);
@@ -142,6 +164,9 @@ public class MainView extends JFrame implements ActionListener{
         previousSkin.addActionListener(this);
     }
 
+    /**
+     * changeSkin Canvia el skin de les finestres
+     */
     public void changeSkin(){
         switch (skinId){
             case 0: SubstanceLookAndFeel.setSkin(new AutumnSkin());break;
@@ -175,6 +200,10 @@ public class MainView extends JFrame implements ActionListener{
         AdministratorShell.getInstance().showText("Skin ID: "+skinId+"\n");
     }
 
+    /**
+     * actionPerformed captura els events i segons aquests crida les funcions corresponents
+     * @param event
+     */
     @Override
     public void actionPerformed (ActionEvent event) {
         if (event.getSource() == sortirButton) {
@@ -202,19 +231,30 @@ public class MainView extends JFrame implements ActionListener{
         }
     }
 
+    /**
+     * consultarNivell crida el controlador de Consultar nivell
+     */
     public void consultarNivell() {
         cConsultarNivell.inicializar();
     }
 
+    /**
+     * jugarPartida crida el controlador de jugar Partida
+     */
     public void jugarPartida() {
         cJugarPartida.inicializar();
     }
 
+    /**
+     * crida el controlador de login
+     */
     public void login(){
         cLogin.inicializar();
     }
 
-
+    /**
+     * crida el controlador de Registrar
+     */
     public void registrar(){
         cRegistrar.inicializar();
     }
