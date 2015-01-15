@@ -49,7 +49,7 @@ public class CtrlPartidaBD implements CtrlPartida {
 		session.getTransaction().commit();
     }
     
-    public void updatePatida(Partida partida) {
+    public void updatePartida(Partida partida) {
     	ConnexionPgl.getInstance();
 		Session session = ConnexionPgl.getFactory().getCurrentSession();
 		session.beginTransaction();

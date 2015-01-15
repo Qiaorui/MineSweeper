@@ -39,16 +39,15 @@ public class CUJugarPartida {
     }
 
     public void crearPartida(String nivellNom) {
-    
-        Nivell nivell = DataControllerFactory.getInstance().getCtrlNivell().getNivell(nivellNom);
-        partida = new Partida(nivell, jugador);
-        DataControllerFactory.getInstance().getCtrlPartida().createPartida(partida);
-        jugador.jugaParida(partida);
-        DataControllerFactory.getInstance().getCtrlJugador().updateJugador(jugador);
-        Casella[] c = partida.obtenerCasellas();
-        for(int i = 0; i < c.length; i++) {
-        	DataControllerFactory.getInstance().getCtrlCasella().createCasella(c[i]);
-        }
+	        Nivell nivell = DataControllerFactory.getInstance().getCtrlNivell().getNivell(nivellNom);
+	        partida = new Partida(nivell, jugador);
+	        DataControllerFactory.getInstance().getCtrlPartida().createPartida(partida);
+	        jugador.jugaParida(partida);
+	        DataControllerFactory.getInstance().getCtrlJugador().updateJugador(jugador);
+	        Casella[] c = partida.obtenerCasellas();
+	        for(int i = 0; i < c.length; i++) {
+	        	DataControllerFactory.getInstance().getCtrlCasella().createCasella(c[i]);
+	        }
         
     }
 
@@ -68,12 +67,10 @@ public class CUJugarPartida {
         	}
         }
         if (resultat.acabada)  {
-        	AdministratorShell.getInstance().showText("Descsfsfweubrir");
         	jugador.acabaPartidaAcutual();
-        	DataControllerFactory.getInstance().getCtrlPartida().createPartida(partida);
+        	DataControllerFactory.getInstance().getCtrlPartida().updatePartida(partida);
         	DataControllerFactory.getInstance().getCtrlJugador().updateJugador(jugador);
-            partida = null;
-            jugador = null;
+        	
         }
         
         return resultat;

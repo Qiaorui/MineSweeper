@@ -9,5 +9,5 @@ public interface CtrlPartida {
 
     public Partida getPartida(int partidaid);
     public void createPartida(Partida partida);
-    public void updatePatida(Partida partida);
+    public void updatePartida(Partida partida);
 }

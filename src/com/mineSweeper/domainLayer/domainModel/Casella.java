@@ -9,7 +9,7 @@ import javax.persistence.ManyToOne;
 
 @Entity
 public class Casella  implements Serializable{
-
+	
     private int numeroFila;
     private int numeroColumna;
     private int numero;
@@ -18,7 +18,9 @@ public class Casella  implements Serializable{
     private boolean teMina;
     private Partida partida;
     
-    
+    Casella() {
+    	
+    }
     @Id
     @ManyToOne
     @JoinColumn(name="PartidaId")

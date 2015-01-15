@@ -13,12 +13,14 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.OrderColumn;
+import javax.persistence.TableGenerator;
 
 @Entity
 public class Partida {
@@ -26,12 +28,14 @@ public class Partida {
     private Nivell nivell;
     private EstrategiaPuntuacio estrategiaPuntuacio;
     private Casella[] casellas;
-    private int idPartida;
+    private int partidaId;
     private boolean estaAcabada;
     private boolean estaguanyada;
     private int nombreTirades;
     private Jugador jugador;
-
+    public Partida() {
+	}
+    
     @OneToOne()
 	@JoinColumn(name = "NivelNom",nullable = false, updatable=false)
     public Nivell getNivell() {
@@ -65,13 +69,15 @@ public class Partida {
 	}
 	*/
 	@Id
-	@GeneratedValue
-	public int getIdPartida() {
-		return idPartida;
+	@TableGenerator(name= "generatorPatidaID", table= "partidaPKtb", pkColumnName = "empkey",
+					pkColumnValue = "partidaValue", allocationSize = 1)
+	@GeneratedValue(strategy=GenerationType.TABLE, generator="generatorPatidaID")
+	public int getPartidaId() {
+		return partidaId;
 	}
 	
-	public void setIdPartida(int idPartida) {
-		this.idPartida = idPartida;
+	public void setPartidaId(int idPartida) {
+		this.partidaId = idPartida;
 	}
 
 	public boolean isEstaAcabada() {
@@ -163,7 +169,7 @@ public class Partida {
     }
 
     public Resultat descobrirCasella(int fila, int columna) {
-    	 Resultat resultat = new Resultat();
+    	Resultat resultat = new Resultat();
         if (casellas[fila*nivell.getNombreCasellaxColumna()+columna].estaMarcada()) throw new RuntimeException("La casella ja esta Marcada");
         else if (casellas[fila*nivell.getNombreCasellaxColumna()+columna].estaDescoberta()) throw new RuntimeException("La casella ja esta descoberta");
         boolean teMina = casellas[fila*nivell.getNombreCasellaxFila()+columna].descobrirCasella();
@@ -180,7 +186,7 @@ public class Partida {
             if (guanyada) {
                 resultat.puntuacio = estrategiaPuntuacio.getPuntuacio(this);
                 AdapterFactory.getInstance().getMissatgeria().enviarMissatge(jugador.getEmail(),
-                        "partida:"+idPartida+" te punt "+resultat.puntuacio);
+                        "partida:"+partidaId+" te punt "+resultat.puntuacio);
             }
         }
         resultat.informacioDeCasellas.add(new InformacioDeCasella(fila,columna,casellas[fila*nivell.getNombreCasellaxColumna()+columna].getNumero()));

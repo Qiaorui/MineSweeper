@@ -10,7 +10,7 @@ public class Configuracio {
     private int maxSegons;
 
     private Configuracio() {
-
+    	maxTirades = 100;
     }
 
     public static Configuracio getInstance() {
