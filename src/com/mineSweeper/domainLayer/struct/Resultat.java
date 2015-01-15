@@ -13,7 +13,10 @@ public class Resultat {
     public int puntuacio;
     public ArrayList<InformacioDeCasella> informacioDeCasellas;
 
-
+    /**
+     * Resultat
+     * Crea una instancia de la clase de resultado
+     */
     public Resultat() {
         acabada = false;
         guanyada = false;
