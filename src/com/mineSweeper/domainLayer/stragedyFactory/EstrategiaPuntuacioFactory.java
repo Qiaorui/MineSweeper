@@ -48,7 +48,7 @@ public class EstrategiaPuntuacioFactory {
             estrategiaPuntuacio = puntuarPerTirades.get(maxTirades);
         }
         else {
-            estrategiaPuntuacio = new PuntuarPerTirades();
+            estrategiaPuntuacio = new PuntuarPerTirades(maxTirades);
             puntuarPerTirades.put(maxTirades, estrategiaPuntuacio);
         }
         return estrategiaPuntuacio;
