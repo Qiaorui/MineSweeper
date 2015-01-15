@@ -50,6 +50,7 @@ public class CJugarPartida implements InterfaceLogin, InterfaceConsultarNivell, 
             Resultat resultat = cuJugarPartida.descobrirCasella(fila, columna);
             if (resultat.guanyada) jugarPartidaView.mostraGuanyda(resultat.puntuacio);
             else if (resultat.acabada) {
+            	AdministratorShell.getInstance().showText("De");
                 jugarPartidaView.mostraPerdida(cuJugarPartida.getMines());
             } else jugarPartidaView.mostraDescobrirCasella(resultat.informacioDeCasellas);
     }

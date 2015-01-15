@@ -31,7 +31,6 @@ public class CtrlNivellBD implements CtrlNivell {
 		
 		session.getTransaction().commit();
 		
-		
 		return n;
     }
 
@@ -40,6 +39,7 @@ public class CtrlNivellBD implements CtrlNivell {
 		Session session = ConnexionPgl.getFactory().getCurrentSession();
 		session.beginTransaction();
     	List nivells = session.createQuery("from Nivell").list();
+    	session.getTransaction().commit();
 		return nivells;
     }
 }

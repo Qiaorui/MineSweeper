@@ -39,7 +39,7 @@ public class CUJugarPartida {
     }
 
     public void crearPartida(String nivellNom) {
-    	
+    
         Nivell nivell = DataControllerFactory.getInstance().getCtrlNivell().getNivell(nivellNom);
         partida = new Partida(nivell, jugador);
         DataControllerFactory.getInstance().getCtrlPartida().createPartida(partida);
@@ -54,15 +54,13 @@ public class CUJugarPartida {
 
     public Resultat descobrirCasella(int fila, int columna) {
 
-    	AdministratorShell.getInstance().showText("huhu");
         Resultat resultat = partida.descobrirCasella(fila, columna);
         if(resultat.informacioDeCasellas.size() > 0) {
-
         	for(int i = 0; i < resultat.informacioDeCasellas.size(); i++) {
         		CtrlCasella cc = DataControllerFactory.getInstance().getCtrlCasella();
         		cc.updateCasellas(
-        				partida.obtenerCasella(resultat.informacioDeCasellas.get(i).numeroFila-1, 
-        				resultat.informacioDeCasellas.get(i).numeroColumna-1));
+        				partida.obtenerCasella(resultat.informacioDeCasellas.get(i).numeroFila, 
+        				resultat.informacioDeCasellas.get(i).numeroColumna));
         		
                 AdministratorShell.getInstance().showText("updating casella "
                         +resultat.informacioDeCasellas.get(i).numeroFila+"X"
@@ -70,6 +68,7 @@ public class CUJugarPartida {
         	}
         }
         if (resultat.acabada)  {
+        	AdministratorShell.getInstance().showText("Descsfsfweubrir");
         	jugador.acabaPartidaAcutual();
         	DataControllerFactory.getInstance().getCtrlPartida().createPartida(partida);
         	DataControllerFactory.getInstance().getCtrlJugador().updateJugador(jugador);

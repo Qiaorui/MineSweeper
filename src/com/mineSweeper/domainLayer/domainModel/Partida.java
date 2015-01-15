@@ -163,7 +163,7 @@ public class Partida {
     }
 
     public Resultat descobrirCasella(int fila, int columna) {
-        Resultat resultat = new Resultat();
+    	 Resultat resultat = new Resultat();
         if (casellas[fila*nivell.getNombreCasellaxColumna()+columna].estaMarcada()) throw new RuntimeException("La casella ja esta Marcada");
         else if (casellas[fila*nivell.getNombreCasellaxColumna()+columna].estaDescoberta()) throw new RuntimeException("La casella ja esta descoberta");
         boolean teMina = casellas[fila*nivell.getNombreCasellaxFila()+columna].descobrirCasella();
@@ -173,7 +173,6 @@ public class Partida {
             resultat.guanyada = estaguanyada = false;
         }
         else {
-            resultat.informacioDeCasellas.add(new InformacioDeCasella(fila,columna,casellas[fila*nivell.getNombreCasellaxColumna()+columna].getNumero()));
             if (casellas[fila*nivell.getNombreCasellaxColumna()+columna].getNumero() == 0) descobrirVeins(fila, columna,resultat);
             boolean guanyada = comprovaPartidaGuanyada();
             resultat.guanyada = estaguanyada = guanyada;
@@ -181,9 +180,10 @@ public class Partida {
             if (guanyada) {
                 resultat.puntuacio = estrategiaPuntuacio.getPuntuacio(this);
                 AdapterFactory.getInstance().getMissatgeria().enviarMissatge(jugador.getEmail(),
-                        "partida:"+idPartida+" té punt "+resultat.puntuacio);
+                        "partida:"+idPartida+" te punt "+resultat.puntuacio);
             }
         }
+        resultat.informacioDeCasellas.add(new InformacioDeCasella(fila,columna,casellas[fila*nivell.getNombreCasellaxColumna()+columna].getNumero()));
         return resultat;
     }
 

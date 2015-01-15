@@ -18,7 +18,6 @@ public class CtrlJugadorBD implements CtrlJugador{
 		Jugador j = (Jugador) session.createQuery("from Jugador where username = '"+username+"'").uniqueResult();
 	
 		session.getTransaction().commit();
-		AdministratorShell.getInstance().showText("gygyg");
 		return j;
 	}
 	

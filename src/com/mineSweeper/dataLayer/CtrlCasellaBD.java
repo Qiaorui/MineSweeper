@@ -51,6 +51,7 @@ public class CtrlCasellaBD implements CtrlCasella{
 		Session session = ConnexionPgl.getFactory().getCurrentSession();
 		session.beginTransaction();
     	List casellas = session.createQuery("from Casella where partidaid = "+p.getIdPartida()+"").list();
-		return casellas;
+    	session.getTransaction().commit();
+    	return casellas;
     }
 }
