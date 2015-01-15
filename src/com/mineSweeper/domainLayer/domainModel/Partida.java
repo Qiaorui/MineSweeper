@@ -35,25 +35,45 @@ public class Partida {
     private Jugador jugador;
     public Partida() {
 	}
-    
+
+    /**
+     * getNivell Getter de l'atribut nivell
+     * @return
+     */
     @OneToOne()
 	@JoinColumn(name = "NivelNom",nullable = false, updatable=false)
     public Nivell getNivell() {
 		return nivell;
 	}
 
+    /**
+     * setNivell Setter de l'atribut nivell
+     * @param nivell
+     */
 	public void setNivell(Nivell nivell) {
 		this.nivell = nivell;
 	}
 
+    /**
+     * obtenerEstrategiaPuntuacio Getter de l'estrategia de puntuacio
+     * @return
+     */
 	public EstrategiaPuntuacio obtenerEstrategiaPuntuacio() {
 		return estrategiaPuntuacio;
 	}
 
+    /**
+     * setEstrategiaPuntuacio Setter de l'estrategia de puntuacio
+     * @param estrategiaPuntuacio
+     */
 	public void setEstrategiaPuntuacio(EstrategiaPuntuacio estrategiaPuntuacio) {
 		this.estrategiaPuntuacio = estrategiaPuntuacio;
 	}
-	
+
+    /**
+     * configurarCasellas Setter del conjunt de caselles del tauler de la partida
+     * @param c
+     */
 	public void configurarCasellas(Casella[] c) {
 		this.casellas = c;
 	}
@@ -68,6 +88,11 @@ public class Partida {
 		this.casellas = casellas;
 	}
 	*/
+
+    /**
+     * getPartidaId Getter de l'id de la partida
+     * @return
+     */
 	@Id
 	@TableGenerator(name= "generatorPatidaID", table= "partidaPKtb", pkColumnName = "empkey",
 					pkColumnValue = "partidaValue", allocationSize = 1)
@@ -75,27 +100,51 @@ public class Partida {
 	public int getPartidaId() {
 		return partidaId;
 	}
-	
+
+    /**
+     * setPartidaId Setter de l'id de la Partida
+     * @param idPartida
+     */
 	public void setPartidaId(int idPartida) {
 		this.partidaId = idPartida;
 	}
 
+    /**
+     * isEstaAcabada Getter de estaAcabada
+     * @return
+     */
 	public boolean isEstaAcabada() {
 		return estaAcabada;
 	}
 
+    /**
+     * setEstaAcabada Setter de l'atribut estaAcabada
+     * @param estaAcabada
+     */
 	public void setEstaAcabada(boolean estaAcabada) {
 		this.estaAcabada = estaAcabada;
 	}
 
+    /**
+     * isEstaguanyada Getter de l'atribut estaguanyada
+     * @return
+     */
 	public boolean isEstaguanyada() {
 		return estaguanyada;
 	}
 
+    /**
+     * setEstaguanyada Setter de l'atribut estaGuanyada
+     * @param estaguanyada
+     */
 	public void setEstaguanyada(boolean estaguanyada) {
 		this.estaguanyada = estaguanyada;
 	}
 
+    /**
+     * setNombreTirades Setter del nombre de tirades
+     * @param nombreTirades
+     */
 	public void setNombreTirades(int nombreTirades) {
 		this.nombreTirades = nombreTirades;
 	}
@@ -121,6 +170,11 @@ public class Partida {
         }
     }
 
+    /**
+     * Partida Creadora de la classe Partida amb el nivell nivell i jugador jugador
+     * @param nivell
+     * @param jugador
+     */
     public Partida(Nivell nivell, Jugador jugador) {
         this.jugador = jugador;
         this.nivell = nivell;
@@ -156,18 +210,44 @@ public class Partida {
         return casellas[fila][columna].marcarDesmarcarCasella();
     }
 */
+
+    /**
+     * obtenerCasella Getter de la casella en la posicio (fila, columna)
+     * @param fila
+     * @param columna
+     * @return
+     */
     public Casella obtenerCasella(int fila, int columna) {
     	return casellas[fila*nivell.getNombreCasellaxColumna()+columna];
     }
-    
+
+    /**
+     * obtenerCasellas Getter del conjunt de caselles del tauler de la Partida
+     * @return
+     */
     public Casella[] obtenerCasellas() {
     	return casellas;
     }
 
+    /**
+     * marcarDesmarcarCasella Marca o desmarca la casella amb posicio (fila,columna), segons toqui
+     * @param fila
+     * @param columna
+     * @return
+     * @see com.mineSweeper.domainLayer.struct.Resultat
+     * Canvi respecte disseny original: afegir funcions de BBDD
+     */
     public boolean marcarDesmarcarCasella(int fila, int columna) {
         return casellas[fila*nivell.getNombreCasellaxColumna()+columna].marcarDesmarcarCasella();
     }
 
+    /**
+     * descobrirCasella descobreix la casella amb posicio (fila, columna) i si no te mina, descobreix els veins.
+     * Si la partida es guanyada, ho mostrara per pantalla i acabara la partida
+     * @param fila
+     * @param columna
+     * @return
+     */
     public Resultat descobrirCasella(int fila, int columna) {
     	Resultat resultat = new Resultat();
         if (casellas[fila*nivell.getNombreCasellaxColumna()+columna].estaMarcada()) throw new RuntimeException("La casella ja esta Marcada");
@@ -193,6 +273,10 @@ public class Partida {
         return resultat;
     }
 
+    /**
+     * getNombreTirades Getter del nombre de tirades
+     * @return
+     */
     public int getNombreTirades() {
         return nombreTirades;
     }
@@ -211,6 +295,10 @@ public class Partida {
         }
     }
 
+    /**
+     * comprovaPartidaGuanyada Comprova si la partida es guanyada despres de descobrir casella
+     * @return
+     */
     private boolean comprovaPartidaGuanyada() {
         boolean guanyada = true;
         for (Casella casella : casellas) {
@@ -224,6 +312,10 @@ public class Partida {
         return guanyada;
     }
 
+    /**
+     * assignarMines Afegeix nMines mines al tauler de la nova partida
+     * @param nMines numero de mines a afegir
+     */
     private void assignarMines(int nMines) {
         HashSet<Posicio> mines = new HashSet<Posicio>();
         while (mines.size() < nMines) {
@@ -241,6 +333,10 @@ public class Partida {
         }
     }
 
+    /**
+     * obtenerMines Getter de les mines del tauler
+     * @return
+     */
     public ArrayList<InformacioDeCasella> obtenerMines() {
         ArrayList<InformacioDeCasella> informacioDeCasellas = new ArrayList<InformacioDeCasella>();
         for (int i=0; i < nivell.getNombreCasellaxFila(); ++i) {
