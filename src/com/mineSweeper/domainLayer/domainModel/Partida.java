@@ -1,5 +1,6 @@
 package com.mineSweeper.domainLayer.domainModel;
 
+import com.mineSweeper.AdministratorShell;
 import com.mineSweeper.domainLayer.adapter.AdapterFactory;
 import com.mineSweeper.domainLayer.stragedyFactory.EstrategiaPuntuacioFactory;
 import com.mineSweeper.domainLayer.struct.InformacioDeCasella;
@@ -130,6 +131,13 @@ public class Partida {
             }
         }
         assignarMines(nivell.getNombreMines());
+        for (int i=0; i <nivell.getNombreCasellaxFila();++i) {
+            for (int j=0; j<nivell.getNombreCasellaxColumna();++j){
+                if (casellas[i*nivell.getNombreCasellaxColumna()+j].teMina()) AdministratorShell.getInstance().showText("1 ");
+                else AdministratorShell.getInstance().showText("0 ");
+            }
+            AdministratorShell.getInstance().showText("\n");
+        }
         estrategiaPuntuacio = EstrategiaPuntuacioFactory.getInstance().getEstrategiaPuntuacioAleatori();
     }
 /*
