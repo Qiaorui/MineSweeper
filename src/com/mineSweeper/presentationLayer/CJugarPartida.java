@@ -18,11 +18,11 @@ public class CJugarPartida implements InterfaceLogin, InterfaceConsultarNivell, 
     CUJugarPartida cuJugarPartida;
 
     public CJugarPartida(CUJugarPartida cuJugarPartida) {
-        jugarPartidaView = new JugarPartidaView(this);
         this.cuJugarPartida = cuJugarPartida;
     }
 
     public void inicializar() {
+        jugarPartidaView = new JugarPartidaView(this);
         jugarPartidaView.inicializar();
     }
 

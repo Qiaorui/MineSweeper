@@ -72,6 +72,8 @@ public class CUJugarPartida {
         	jugador.acabaPartidaAcutual();
         	DataControllerFactory.getInstance().getCtrlPartida().createPartida(partida);
         	DataControllerFactory.getInstance().getCtrlJugador().updateJugador(jugador);
+            partida = null;
+            jugador = null;
         }
         
         return resultat;
