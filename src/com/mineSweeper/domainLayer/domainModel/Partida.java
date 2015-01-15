@@ -2,6 +2,7 @@ package com.mineSweeper.domainLayer.domainModel;
 
 import com.mineSweeper.domainLayer.adapter.AdapterFactory;
 import com.mineSweeper.domainLayer.stragedyFactory.EstrategiaPuntuacioFactory;
+import com.mineSweeper.domainLayer.struct.InformacioDeCasella;
 import com.mineSweeper.domainLayer.struct.Resultat;
 
 import java.util.HashSet;
@@ -154,8 +155,8 @@ public class Partida {
 
     public Resultat descobrirCasella(int fila, int columna) {
         Resultat resultat = new Resultat();
-        if (casellas[fila*nivell.getNombreCasellaxColumna()+columna].estaMarcada()) throw new RuntimeException("La casella ja esta  Marcada");
-        else if (casellas[fila*nivell.getNombreCasellaxColumna()+columna].estaDescoberta()) throw new RuntimeException("La casella ja esta  descoberta");
+        if (casellas[fila*nivell.getNombreCasellaxColumna()+columna].estaMarcada()) throw new RuntimeException("La casella ja esta Marcada");
+        else if (casellas[fila*nivell.getNombreCasellaxColumna()+columna].estaDescoberta()) throw new RuntimeException("La casella ja esta descoberta");
         boolean teMina = casellas[fila*nivell.getNombreCasellaxFila()+columna].descobrirCasella();
         nombreTirades++;
         if (teMina) {
@@ -163,7 +164,8 @@ public class Partida {
             resultat.guanyada = estaguanyada = false;
         }
         else {
-            if (casellas[fila*nivell.getNombreCasellaxColumna()+columna].getNumero() == 0) descobrirVeins(fila, columna);
+            resultat.informacioDeCasellas.add(new InformacioDeCasella(fila,columna,casellas[fila*nivell.getNombreCasellaxColumna()+columna].getNumero()));
+            if (casellas[fila*nivell.getNombreCasellaxColumna()+columna].getNumero() == 0) descobrirVeins(fila, columna,resultat);
             boolean guanyada = comprovaPartidaGuanyada();
             resultat.guanyada = estaguanyada = guanyada;
             resultat.acabada = estaAcabada = guanyada;
@@ -180,13 +182,14 @@ public class Partida {
         return nombreTirades;
     }
 
-    private void descobrirVeins(int fila, int columna) {
+    private void descobrirVeins(int fila, int columna, Resultat resultat) {
         for (int i = fila-1; i < fila+2; i++) {
             for (int j = columna-1; j < columna+2; j++) {
                 if (i >= 0 && i < nivell.getNombreCasellaxFila() && j >= 0 && j < nivell.getNombreCasellaxColumna()) {
                     if (!casellas[i*nivell.getNombreCasellaxColumna()+j].estaDescoberta() && !casellas[i*nivell.getNombreCasellaxColumna()+j].estaMarcada()) {
                         casellas[i*nivell.getNombreCasellaxColumna()+j].descobrirCasella();
-                        if (casellas[i*nivell.getNombreCasellaxColumna()+j].getNumero() == 0) descobrirVeins(i,j);
+                        resultat.informacioDeCasellas.add(new InformacioDeCasella(i,j,casellas[i*nivell.getNombreCasellaxColumna()+j].getNumero()));
+                        if (casellas[i*nivell.getNombreCasellaxColumna()+j].getNumero() == 0) descobrirVeins(i,j,resultat);
                     }
                 }
             }
