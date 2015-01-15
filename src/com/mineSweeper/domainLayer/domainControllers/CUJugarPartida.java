@@ -79,7 +79,7 @@ public class CUJugarPartida {
     }
 
     public ArrayList<InformacioDeCasella> getMines(){
-        return null;
+        return partida.obtenerMines();
     }
 /*
     public void marcarCasella(int fila, int columna) {

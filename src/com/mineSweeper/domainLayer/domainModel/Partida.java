@@ -6,6 +6,7 @@ import com.mineSweeper.domainLayer.stragedyFactory.EstrategiaPuntuacioFactory;
 import com.mineSweeper.domainLayer.struct.InformacioDeCasella;
 import com.mineSweeper.domainLayer.struct.Resultat;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 
 import javax.persistence.CascadeType;
@@ -232,6 +233,16 @@ public class Partida {
                 }
             }
         }
+    }
+
+    public ArrayList<InformacioDeCasella> obtenerMines() {
+        ArrayList<InformacioDeCasella> informacioDeCasellas = new ArrayList<InformacioDeCasella>();
+        for (int i=0; i < nivell.getNombreCasellaxFila(); ++i) {
+            for (int j = 0; j < nivell.getNombreCasellaxColumna(); ++j){
+                if (casellas[i*nivell.getNombreCasellaxColumna()+j].teMina()) informacioDeCasellas.add(new InformacioDeCasella(i,j,-1));
+            }
+        }
+        return informacioDeCasellas;
     }
 
 }
