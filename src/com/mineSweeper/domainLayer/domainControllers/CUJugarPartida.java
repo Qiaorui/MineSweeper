@@ -22,10 +22,21 @@ public class CUJugarPartida {
     private Partida partida;
     private Jugador jugador;
 
+    /**
+     * CUJugarPartida
+     * Crea una instrancia de Caso de uso de Jugar Partida.
+     */
     public CUJugarPartida() {
 
     }
 
+    /**
+     * ferAutenticacio
+     * Autenticar un jugador, y guarda al sistema.
+     * @param username El username del jugador que autenticara.
+     * @param password El password del jugador que autenticara.
+     * @exception java.lang.RuntimeException usuario no es jugador
+     */
     public void ferAutenticacio(String username, String password) {
         CULogin cuLogin = new CULogin();
         cuLogin.Login(username, password);
@@ -33,11 +44,22 @@ public class CUJugarPartida {
         if (jugador == null) throw new RuntimeException("L'usuari no es jugador");
     }
 
+    /**
+     * obtenirNivells
+     * Obtenir tot nivells que hi ha al sistema
+     * @return Dades dades de tots nivells
+     * @see com.mineSweeper.domainLayer.struct.Dades
+     */
     public Dades[] obtenirNivells() {
         CUConsultarNivells cuConsultarNivells = new CUConsultarNivells();
         return cuConsultarNivells.consultarNivells();
     }
 
+    /**
+     * creaPartida
+     * crea una partida nueva amb nivel donat
+     * @param nivellNom El nom del nivell.
+     */
     public void crearPartida(String nivellNom) {
 	        Nivell nivell = DataControllerFactory.getInstance().getCtrlNivell().getNivell(nivellNom);
 	        partida = new Partida(nivell, jugador);
@@ -48,11 +70,17 @@ public class CUJugarPartida {
 	        for(int i = 0; i < c.length; i++) {
 	        	DataControllerFactory.getInstance().getCtrlCasella().createCasella(c[i]);
 	        }
-        
     }
 
+    /**
+     * descobrirCasella
+     * El usuario descobre una casella.
+     * @param fila La fila de la casella que vol descobrir.
+     * @param columna La columna de la casella que vol descobrir.
+     * @return Resultat resultat del descobrir.
+     * @see com.mineSweeper.domainLayer.struct.Resultat
+     */
     public Resultat descobrirCasella(int fila, int columna) {
-
         Resultat resultat = partida.descobrirCasella(fila, columna);
         if(resultat.informacioDeCasellas.size() > 0) {
         	for(int i = 0; i < resultat.informacioDeCasellas.size(); i++) {
@@ -70,27 +98,31 @@ public class CUJugarPartida {
         	jugador.acabaPartidaAcutual();
         	DataControllerFactory.getInstance().getCtrlPartida().updatePartida(partida);
         	DataControllerFactory.getInstance().getCtrlJugador().updateJugador(jugador);
-        	
         }
-        
         return resultat;
     }
 
+    /**
+     * getMines
+     * Retorna totes les posicions de totes mines de la partida actual.
+     * @return una lista de posicions de totes les caselles que tenen mines.
+     * @see com.mineSweeper.domainLayer.struct.InformacioDeCasella
+     * Canvi respecte disseny original: aquest es un nova función, per mostrar les mines en la partida.
+     */
     public ArrayList<InformacioDeCasella> getMines(){
         return partida.obtenerMines();
     }
-/*
-    public void marcarCasella(int fila, int columna) {
-        partida.marcarPartida(fila, columna);
-    }
 
-    public boolean desmarcarCasella(int fila, int columna) {
-        return partida.desmarcarPartida(fila, columna);
-    }
-    */
-
+    /**
+     * marcarDesmarcarCasella
+     * Marcar o demarcar una casella.
+     * @param fila La fila de la casella que vol marcar o desmarcar.
+     * @param columna La columna de la casella que vol marcar o desmarcar.
+     * @return cert
+     * Canvi respecte disseny original: combinar marcarCasella y desmarcarCasella del disseny original per
+     * estalviar excepcions i facilitar el caso de uso.
+     */
     public boolean marcarDesmarcarCasella(int fila, int columna) {
-    	
         return partida.marcarDesmarcarCasella(fila, columna);
     }
 }

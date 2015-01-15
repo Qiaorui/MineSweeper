@@ -1,5 +1,7 @@
 package com.mineSweeper.domainLayer.serviceLocator;
 
+import com.mineSweeper.domainLayer.service.SvEmail;
+
 import java.util.Objects;
 
 /**
@@ -24,8 +26,9 @@ public class ServeiLocator {
         return instance;
     }
 
-    public Objects obtenirServei(String servei) {
-        return null;
+    public SvEmail obtenirServei(String servei) {
+        if (servei == "SvEmail") return new SvEmail();
+        else return null;
     }
 
 }

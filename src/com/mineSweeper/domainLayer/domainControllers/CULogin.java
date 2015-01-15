@@ -12,7 +12,7 @@ public class CULogin {
 
     }
 
-    public void Login(String username, String password) {
+    public boolean Login(String username, String password) {
         DataControllerFactory dataControllerFactory = DataControllerFactory.getInstance();
         UsuariRegistrat usuariRegistrat = dataControllerFactory.getCtrlUsuariRegistrat().getUsuariRegistrat(username);
         if (usuariRegistrat == null)
@@ -23,5 +23,6 @@ public class CULogin {
         {
             throw new RuntimeException("El password no es correcte");
         }; //excepcio: password not valid
+        return true;
     }
 }
