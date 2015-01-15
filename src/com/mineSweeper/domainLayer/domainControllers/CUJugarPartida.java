@@ -59,6 +59,7 @@ public class CUJugarPartida {
      * creaPartida
      * crea una partida nueva amb nivel donat
      * @param nivellNom El nom del nivell.
+     * Canvi respecte disseny original: afegir funcions de BBDD
      */
     public void crearPartida(String nivellNom) {
 	        Nivell nivell = DataControllerFactory.getInstance().getCtrlNivell().getNivell(nivellNom);
@@ -79,6 +80,7 @@ public class CUJugarPartida {
      * @param columna La columna de la casella que vol descobrir.
      * @return Resultat resultat del descobrir.
      * @see com.mineSweeper.domainLayer.struct.Resultat
+     * Canvi respecte disseny original: afegir funcions de BBDD
      */
     public Resultat descobrirCasella(int fila, int columna) {
         Resultat resultat = partida.descobrirCasella(fila, columna);
